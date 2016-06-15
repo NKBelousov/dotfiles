@@ -68,8 +68,7 @@ nnoremap [q :cprev<CR>
 
 syntax enable
 set background=dark
-let g:solarized_termtrans = 1
-colorscheme solarized
+colorscheme monokai
 " echo 'TERM=xterm-256color' >>  ~/.bashrc
 
 " Run these commands before startup
