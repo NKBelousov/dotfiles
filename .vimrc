@@ -8,9 +8,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'mattn/emmet-vim'
+Plugin 'mhinz/vim-startify'
 Plugin 'scrooloose/nerdtree'
 Plugin 'sickill/vim-monokai'
-Plugin 'skammer/vim-css-color'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -62,8 +62,6 @@ nnoremap j gj
 nnoremap k gk
 nnoremap <leader>n :tabn<CR>
 nnoremap <leader>p :tabp<CR>
-nnoremap ]q :cnext<CR>
-nnoremap [q :cprev<CR>
 
 syntax enable
 set background=dark
