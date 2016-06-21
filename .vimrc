@@ -5,15 +5,12 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'easymotion/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
+Plugin 'majutsushi/tagbar'
 Plugin 'mattn/emmet-vim'
-Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'sickill/vim-monokai'
 Plugin 'skammer/vim-css-color'
-Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -54,10 +51,12 @@ set laststatus=2
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 set nobackup
+set noswapfile
 
-let mapleader=","
+let mapleader=" "
 nnoremap <leader>f :CtrlP<CR>
 nnoremap <leader>o :NERDTreeToggle<CR>
+nnoremap <leader>c :TagbarToggle<CR>
 nnoremap <space> :noh<CR>
 nnoremap j gj
 nnoremap k gk
@@ -74,3 +73,6 @@ colorscheme monokai
 " Run these commands before startup
 autocmd VimEnter * AirlineTheme dark
 autocmd BufWritePre * :%s/\s\+$//e
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType html,xhtml setl ofu=htmlcomplete#CompleteTags
