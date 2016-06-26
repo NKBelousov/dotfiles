@@ -37,6 +37,7 @@ set shiftwidth=4
 set smarttab
 set expandtab
 
+set gdefault
 set showmatch
 set hlsearch
 set incsearch
@@ -55,14 +56,22 @@ set nobackup
 set noswapfile
 
 let mapleader=" "
-nnoremap <leader>f :CtrlP<CR>
+nnoremap <leader>g :CtrlP<CR>
+nnoremap <leader>f /
+nnoremap <leader>F :Grep<space>
+nnoremap <leader>h :%s/
+nnoremap <leader>H :GrepReplace<space>
 nnoremap <leader>o :NERDTreeToggle<CR>
 nnoremap <leader>c :TagbarToggle<CR>
-nnoremap <space> :noh<CR>
-nnoremap j gj
-nnoremap k gk
+nnoremap <leader><space> :noh<CR>
 nnoremap <leader>n :tabn<CR>
 nnoremap <leader>p :tabp<CR>
+nnoremap j gj
+nnoremap k gk
+nnoremap <leader>j <C-]>
+nnoremap <leader>k <C-O>
+nnoremap <F4> <C-]>
+nnoremap <F12> :!ctags -R .<cr>
 
 syntax enable
 set background=dark
