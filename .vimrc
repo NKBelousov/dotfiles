@@ -55,6 +55,8 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 set nobackup
 set noswapfile
 
+let g:ctrlp_custom_ignore = 'vendor\|node_modules\|.git'
+
 let mapleader=" "
 nnoremap <leader>g :CtrlP<CR>
 nnoremap <leader>f /
@@ -71,7 +73,19 @@ nnoremap k gk
 nnoremap <leader>j <C-]>
 nnoremap <leader>k <C-O>
 nnoremap <F4> <C-]>
-nnoremap <F12> :!ctags -R .<cr>
+nnoremap <F12> :!ctags -R --exclude=node_modules .<cr>
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+inoremap <C-h> <C-o>h
+inoremap <C-j> <C-o>j
+inoremap <C-k> <C-o>k
+inoremap <C-l> <C-o>l
 
 syntax enable
 set background=dark
