@@ -5,7 +5,8 @@
     editor = vim
 	whitespace = trailing-space,space-before-tab
 [alias]
-    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)[%an]%Creset' --abbrev-commit --date=short --all
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)[%an]%Creset' --abbrev-commit --date=short
+    lga = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)[%an]%Creset' --abbrev-commit --date=short --all
     whatadded = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)[%an]%Creset' --abbrev-commit --date=short --all --diff-filter=A --
 
     sl = stash list
@@ -13,14 +14,19 @@
     sp = stash pop
     ss = stash sav
 
+    cp = cherry-pick
+    cpa = cherry-pick --abort
+    cpc = cherry-pick --continue
+
     rb = rebase --interactive
     rba = rebase --abort
     rbc = rebase --continue
-    rbs = rebase --skipe
+    rbs = rebase --skip
 
     undo = checkout -p
     unstage = reset HEAD --
     filelog = log -u
+    mt = mergetool
 [color]
 	ui = auto
 [color "branch"]
