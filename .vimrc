@@ -5,13 +5,22 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'dkprice/vim-easygrep'
+Plugin 'JulesWang/css.vim'
+Plugin 'ap/vim-css-color'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'mattn/emmet-vim'
 Plugin 'mhinz/vim-startify'
+Plugin 'morhetz/gruvbox'
+Plugin 'mxw/vim-jsx'
+Plugin 'othree/html5.vim'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'othree/yajs.vim'
+Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree'
-Plugin 'sickill/vim-monokai'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -19,7 +28,6 @@ Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()
 
 filetype plugin on
-filetype indent on
 set autoread
 set wildmenu
 set ruler
@@ -60,9 +68,8 @@ let g:ctrlp_custom_ignore = 'vendor\|node_modules\|.git'
 let mapleader=" "
 nnoremap <leader>g :CtrlP<CR>
 nnoremap <leader>f /
-nnoremap <leader>F :Grep<space>
+nnoremap <leader>F :Ack!<space>
 nnoremap <leader>h :%s/
-nnoremap <leader>H :GrepReplace<space>
 nnoremap <leader>o :NERDTreeToggle<CR>
 nnoremap <leader>c :TagbarToggle<CR>
 nnoremap <leader><space> :noh<CR>
@@ -88,13 +95,13 @@ inoremap <C-k> <C-o>k
 inoremap <C-l> <C-o>l
 
 syntax enable
-set background=dark
-colorscheme monokai
+set background=light
+colorscheme gruvbox
 " echo 'TERM=xterm-256color' >>  ~/.bashrc
 
 " Run these commands before startup
-autocmd VimEnter * AirlineTheme dark
+autocmd VimEnter * AirlineTheme gruvbox
 autocmd BufWritePre * :%s/\s\+$//e
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,xhtml setl ofu=htmlcomplete#CompleteTags
