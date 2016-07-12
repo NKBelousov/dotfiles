@@ -21,6 +21,7 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'othree/yajs.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -67,8 +68,9 @@ let g:ctrlp_custom_ignore = 'vendor\|node_modules\|.git'
 
 let mapleader=" "
 nnoremap <leader>g :CtrlP<CR>
+nnoremap <leader>G :silent Ack<space>
 nnoremap <leader>f /
-nnoremap <leader>F :Ack!<space>
+nnoremap <leader>F :silent Ggrep<space>
 nnoremap <leader>h :%s/
 nnoremap <leader>o :NERDTreeToggle<CR>
 nnoremap <leader>c :TagbarToggle<CR>
@@ -95,6 +97,7 @@ inoremap <C-k> <C-o>k
 inoremap <C-l> <C-o>l
 
 syntax enable
+set t_Co=256
 set background=light
 colorscheme gruvbox
 " echo 'TERM=xterm-256color' >>  ~/.bashrc
