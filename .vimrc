@@ -6,14 +6,18 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'JulesWang/css.vim'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'Valloric/MatchTagAlways'
 Plugin 'ap/vim-css-color'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'mileszs/ack.vim'
+Plugin 'honza/vim-snippets'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'mattn/emmet-vim'
 Plugin 'mhinz/vim-startify'
+Plugin 'mileszs/ack.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'mxw/vim-jsx'
 Plugin 'othree/html5.vim'
@@ -29,6 +33,8 @@ Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()
 
 filetype plugin on
+filetype plugin indent on
+
 set autoread
 set wildmenu
 set ruler
@@ -45,6 +51,8 @@ set tabstop=4
 set shiftwidth=4
 set smarttab
 set expandtab
+set smartindent
+set autoindent
 
 set gdefault
 set showmatch
@@ -65,6 +73,11 @@ set nobackup
 set noswapfile
 
 let g:ctrlp_custom_ignore = 'vendor\|node_modules\|.git'
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsEditSplit="vertical"
+let g:neocomplete#enable_at_startup = 1
 
 let mapleader=" "
 nnoremap <leader>g :CtrlP<CR>
@@ -95,6 +108,7 @@ inoremap <C-h> <C-o>h
 inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
 inoremap <C-l> <C-o>l
+map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 
 syntax enable
 set t_Co=256
@@ -106,5 +120,6 @@ colorscheme gruvbox
 autocmd VimEnter * AirlineTheme gruvbox
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,xhtml setl ofu=htmlcomplete#CompleteTags
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
