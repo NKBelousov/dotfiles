@@ -13,10 +13,12 @@ Plugin 'ap/vim-css-color'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'honza/vim-snippets'
+Plugin 'justinj/vim-react-snippets'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'mattn/emmet-vim'
 Plugin 'mhinz/vim-startify'
+Plugin 'mickaobrien/vim-stackoverflow'
 Plugin 'mileszs/ack.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'mxw/vim-jsx'
@@ -25,6 +27,8 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'othree/yajs.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'sjl/gundo.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
@@ -78,6 +82,17 @@ let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit="vertical"
 let g:neocomplete#enable_at_startup = 1
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_css_checkers = ['csslint']
+let g:syntastic_php_checkers = ['php']
 
 let mapleader=" "
 nnoremap <leader>g :CtrlP<CR>
@@ -109,6 +124,7 @@ inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
 inoremap <C-l> <C-o>l
 map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+nnoremap <leader>s :StackOverflow<space>
 
 syntax enable
 set t_Co=256
