@@ -12,6 +12,7 @@ Plugin 'Valloric/MatchTagAlways'
 Plugin 'ap/vim-css-color'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'honza/vim-snippets'
 Plugin 'justinj/vim-react-snippets'
 Plugin 'kien/ctrlp.vim'
@@ -76,12 +77,14 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 set nobackup
 set noswapfile
 
-let g:ctrlp_custom_ignore = 'vendor\|node_modules\|.git'
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let NERDTreeShowHidden=1
 let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:ctrlp_custom_ignore = 'vendor\|node_modules\|.git'
 let g:neocomplete#enable_at_startup = 1
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
