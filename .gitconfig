@@ -12,7 +12,7 @@
     sl = stash list
     sd = stash drop
     sp = stash pop
-    ss = stash sav
+    ss = stash save
 
     cp = cherry-pick
     cpa = cherry-pick --abort
