@@ -7,7 +7,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'JulesWang/css.vim'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'Shougo/neocomplcache.vim'
 Plugin 'ap/vim-css-color'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'cakebaker/scss-syntax.vim'
@@ -22,6 +22,7 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'othree/yajs.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
+Plugin 'jonathanfilip/vim-lucius'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -121,10 +122,10 @@ syntax sync minlines=256
 
 set t_Co=256
 set background=dark
-colorscheme solarized
+colorscheme lucius
 
 " Run these commands before startup
-autocmd VimEnter * AirlineTheme solarized
+autocmd VimEnter * AirlineTheme lucius
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
