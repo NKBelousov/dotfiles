@@ -10,7 +10,6 @@ Plugin 'JulesWang/css.vim'
 Plugin 'Shougo/neocomplcache.vim'
 Plugin 'ap/vim-css-color'
 Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'gcorne/vim-sass-lint'
 Plugin 'kien/ctrlp.vim'
@@ -21,11 +20,12 @@ Plugin 'othree/html5.vim'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'othree/yajs.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'jonathanfilip/vim-lucius'
+Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-surround'
+Plugin 'joonty/vim-phpqa'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 
@@ -71,20 +71,12 @@ set noswapfile
 
 let NERDTreeShowHidden=1
 let g:ctrlp_custom_ignore = 'vendor\|node_modules\|.git'
+let g:acp_enableAtStartup = 0
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_min_syntax_length = 3
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_css_checkers = ['csslint']
-let g:syntastic_sass_checkers = ['sass_lint']
-let g:syntastic_scss_checkers = ['sass_lint']
-let g:syntastic_php_checkers = ['php']
 
 let mapleader=" "
 nnoremap <leader>g :CtrlP<CR>
@@ -122,12 +114,18 @@ syntax sync minlines=256
 
 set t_Co=256
 set background=dark
-colorscheme lucius
+colorscheme badwolf
 
-" Run these commands before startup
-autocmd VimEnter * AirlineTheme lucius
+autocmd VimEnter * AirlineTheme badwolf
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+
+if !exists('g:neocomplcache_force_omni_patterns')
+  let g:neocomplcache_force_omni_patterns = {}
+endif
+let g:neocomplcache_force_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+let g:neocomplcache_force_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplcache_force_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
