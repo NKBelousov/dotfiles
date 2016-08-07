@@ -116,12 +116,30 @@ set t_Co=256
 set background=dark
 colorscheme badwolf
 
+function! LintScss()
+    set makeprg=scss-lint
+    silent make
+    copen
+    redraw!
+endfunction
+
+function! LintJS()
+    set makeprg=eslint\ --config\ ~/.eslintrc\ %
+    silent make
+    copen
+    redraw!
+endfunction
+
 autocmd VimEnter * AirlineTheme badwolf
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd BufWritePost *.scss call LintScss()
+autocmd BufWritePost *.js call LintJS()
+autocmd BufWritePost *.jsx call LintJS()
+
 
 if !exists('g:neocomplcache_force_omni_patterns')
   let g:neocomplcache_force_omni_patterns = {}
