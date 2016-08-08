@@ -8,10 +8,15 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'JulesWang/css.vim'
 Plugin 'Shougo/neocomplcache.vim'
+Plugin 'SirVer/ultisnips'
 Plugin 'ap/vim-css-color'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'gcorne/vim-sass-lint'
+Plugin 'honza/vim-snippets'
+Plugin 'joonty/vim-phpqa'
+Plugin 'justinj/vim-react-snippets'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'mileszs/ack.vim'
@@ -22,10 +27,8 @@ Plugin 'othree/yajs.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-surround'
-Plugin 'joonty/vim-phpqa'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 
@@ -76,7 +79,10 @@ let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_min_syntax_length = 3
 
-
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
 
 let mapleader=" "
 nnoremap <leader>g :CtrlP<CR>
