@@ -24,7 +24,9 @@ Plugin 'mxw/vim-jsx'
 Plugin 'othree/html5.vim'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'othree/yajs.vim'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
@@ -83,6 +85,9 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
+
+let g:user_emmet_leader_key='<space>'
+
 
 let mapleader=" "
 nnoremap <leader>g :CtrlP<CR>
