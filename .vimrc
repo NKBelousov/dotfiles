@@ -7,8 +7,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'JulesWang/css.vim'
-Plugin 'Shougo/neocomplcache.vim'
 Plugin 'SirVer/ultisnips'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'ap/vim-css-color'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -26,6 +26,7 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'othree/yajs.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-surround'
@@ -77,17 +78,36 @@ set noswapfile
 let NERDTreeShowHidden=1
 let g:ctrlp_custom_ignore = 'vendor\|node_modules\|.git'
 let g:acp_enableAtStartup = 0
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_min_syntax_length = 3
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
-let g:user_emmet_leader_key='<space>'
+let g:user_emmet_leader_key=','
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_sass_checkers = ['sass_lint']
+let g:syntastic_scss_checkers = ['sass_lint']
+
+let g:syntastic_error_symbol = '❌'
+let g:syntastic_style_error_symbol = '⁉️'
+let g:syntastic_warning_symbol = '⚠️'
+let g:syntastic_style_warning_symbol = '💩'
+
+highlight link SyntasticErrorSign SignColumn
+highlight link SyntasticWarningSign SignColumn
+highlight link SyntasticStyleErrorSign SignColumn
+highlight link SyntasticStyleWarningSign SignColumn
 
 let mapleader=" "
 nnoremap <leader>g :CtrlP<CR>
@@ -103,6 +123,7 @@ nnoremap k gk
 nnoremap <leader>j <C-]>
 nnoremap <leader>k <C-O>
 nnoremap <F4> :Ack! <cword><CR>
+nnoremap <F5> :redraw!<CR>
 nnoremap <F12> :!ctags -R --exclude=node_modules .<cr>
 inoremap <Up> <NOP>
 inoremap <Down> <NOP>
@@ -117,7 +138,6 @@ inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
 inoremap <C-l> <C-o>l
 map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
-nnoremap <leader>s :StackOverflow<space>
 set pastetoggle=<F2>
 
 syntax enable
@@ -127,34 +147,9 @@ set t_Co=256
 set background=dark
 colorscheme badwolf
 
-function! LintScss()
-    set makeprg=scss-lint
-    silent make
-    copen
-    redraw!
-endfunction
-
-function! LintJS()
-    set makeprg=eslint\ --config\ ~/.eslintrc\ %
-    silent make
-    copen
-    redraw!
-endfunction
-
 autocmd VimEnter * AirlineTheme badwolf
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd BufWritePost *.scss call LintScss()
-autocmd BufWritePost *.js call LintJS()
-autocmd BufWritePost *.jsx call LintJS()
-
-
-if !exists('g:neocomplcache_force_omni_patterns')
-  let g:neocomplcache_force_omni_patterns = {}
-endif
-let g:neocomplcache_force_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-let g:neocomplcache_force_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-let g:neocomplcache_force_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
