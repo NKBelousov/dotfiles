@@ -1,0 +1,16 @@
+{
+  "libs": [
+    "browser",
+    "jquery",
+    "backbone",
+    "react",
+    "react-dom",
+    "underscore"
+  ],
+  "plugins": {
+    "requirejs": {
+      "baseURL": "./",
+      "paths": {}
+    }
+  }
+}
