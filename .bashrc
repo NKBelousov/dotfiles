@@ -11,8 +11,12 @@ VISUAL=gvim
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 #}}}
+
 alias diff='colordiff'
 alias vi='vim'
+alias svim='sudo vim'
+alias ll='ls -al'
+alias grep='ack'
 
 #  Customize BASH PS1 prompt to show current GIT repository and branch.
 #  by Mike Stewart - http://MediaDoneRight.com

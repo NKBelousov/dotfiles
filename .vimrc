@@ -7,16 +7,12 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'JulesWang/css.vim'
-Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ap/vim-css-color'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'gcorne/vim-sass-lint'
-Plugin 'honza/vim-snippets'
-Plugin 'joonty/vim-phpqa'
-Plugin 'justinj/vim-react-snippets'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'mileszs/ack.vim'
@@ -79,11 +75,6 @@ let NERDTreeShowHidden=1
 let g:ctrlp_custom_ignore = 'vendor\|node_modules\|.git'
 let g:acp_enableAtStartup = 0
 
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsEditSplit="vertical"
-
 let g:user_emmet_leader_key=','
 
 set statusline+=%#warningmsg#
@@ -129,14 +120,14 @@ inoremap <Up> <NOP>
 inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
 inoremap <C-h> <C-o>h
 inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
 inoremap <C-l> <C-o>l
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 set pastetoggle=<F2>
 
