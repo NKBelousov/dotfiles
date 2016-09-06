@@ -5,33 +5,41 @@
 	statusHints = false
 	pushNonFastForward = false
 [alias]
+    ##### Logs & History
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)[%an]%Creset' --abbrev-commit --date=short
     lga = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)[%an]%Creset' --abbrev-commit --date=short --all
     whatadded = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)[%an]%Creset' --abbrev-commit --date=short --all --diff-filter=A --
+    filelog = log -u
+    ##### Branching
+    bc = checkout -b
+    bd = branch -D
+    bl = branch --all
+    ##### Staging
+    theirs = "!f() { git checkout --theirs $@ && git add $@ }; f"
+    ours = "!f() { git checkout --ours $@ && git add $@ }; f"
     undo = checkout -p
     unstage = reset HEAD --
-    filelog = log -u
-    mt = mergetool
-    #####
+    ##### Stashing
     sl = stash list
     sd = "!f() { git stash drop stash@{$1}; }; f"
     sp = "!f() { git stash pop stash@{$1}; }; f"
     ss = "!f() { git stash save -u $1; }; f"
     sv = "!f() { git stash show -p stash@{$1}; }; f"
     sa = "!f() { git stash apply stash@{$1}; }; f"
-    #####
+    ##### Cherry-picking
     cp = cherry-pick
     cpa = cherry-pick --abort
     cpc = cherry-pick --continue
-    #####
+    ##### Fetching
     fa = fetch --all --prune
     fu = fetch upstream
-    #####
+    ##### Merging
     m = merge
+    mt = mergetool
     ma = merge --abort
     mc = merge --continue
     ms = merge --skip
-    #####
+    ##### Rebasing
     rb = rebase
     rbi = rebase --interactive
     rba = rebase --abort
