@@ -8,6 +8,8 @@
     ##### Logs & History
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)[%an]%Creset' --abbrev-commit --date=short
     lga = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)[%an]%Creset' --abbrev-commit --date=short --all
+    lgs = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)[%an]%Creset' --abbrev-commit --date=short --stat
+    lgas = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)[%an]%Creset' --abbrev-commit --date=short --all --stat
     whatadded = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)[%an]%Creset' --abbrev-commit --date=short --all --diff-filter=A --
     filelog = log -u
     ##### Branching
