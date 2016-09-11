@@ -13,7 +13,9 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'gcorne/vim-sass-lint'
+Plugin 'jlanzarotta/bufexplorer'
 Plugin 'kien/ctrlp.vim'
+Plugin 'kshenoy/vim-signature'
 Plugin 'mattn/emmet-vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'mxw/vim-jsx'
@@ -110,8 +112,6 @@ nnoremap <leader>F :Ack!<space>
 nnoremap <leader>h :%s/
 nnoremap <leader>o :NERDTreeToggle<CR>
 nnoremap <leader><space> :noh<CR>
-nnoremap <leader>n :tabn<CR>
-nnoremap <leader>p :tabp<CR>
 nnoremap j gj
 nnoremap k gk
 nnoremap <leader>j <C-]>
@@ -119,10 +119,6 @@ nnoremap <leader>k <C-O>
 nnoremap <F4> :Ack! <cword><CR>
 nnoremap <F5> :redraw!<CR>
 nnoremap <F12> :!ctags -R --exclude=node_modules .<cr>
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
 inoremap <C-h> <C-o>h
 inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
