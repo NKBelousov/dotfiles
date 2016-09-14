@@ -4,38 +4,38 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'FelikZ/ctrlp-py-matcher'
-Plugin 'JulesWang/css.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'ap/vim-css-color'
-Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'gcorne/vim-sass-lint'
-Plugin 'jlanzarotta/bufexplorer'
-Plugin 'kien/ctrlp.vim'
-Plugin 'kshenoy/vim-signature'
-Plugin 'mattn/emmet-vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'mxw/vim-jsx'
-Plugin 'othree/html5.vim'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'othree/yajs.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plugin 'VundleVim/Vundle.vim' " Plugin Manager
+Plugin 'FelikZ/ctrlp-py-matcher' " Faster CtrlP matcher based on python
+Plugin 'JulesWang/css.vim' " Vim CSS syntax file
+Plugin 'Valloric/YouCompleteMe' " A code completion engine for vim
+Plugin 'ap/vim-css-color' " Color keyword highlighter
+Plugin 'bronson/vim-trailing-whitespace' " Highlights and removes trailing whitespaces
+Plugin 'christoomey/vim-tmux-navigator' " Seamless navigation between vim and tmux
+Plugin 'flazz/vim-colorschemes' " Colorscheme pack
+Plugin 'gcorne/vim-sass-lint' " sass-lint syntastic syntax checker
+Plugin 'jlanzarotta/bufexplorer' " Faster buffer swapping & exploring
+Plugin 'kien/ctrlp.vim' " Fuzzy search for files, buffers, mru, tags, etc...
+Plugin 'kshenoy/vim-signature' " Plugin to place, toggle and display marks
+Plugin 'mattn/emmet-vim' " Expanding abbreviations for html & xml
+Plugin 'mileszs/ack.vim' " Better project search
+Plugin 'mxw/vim-jsx' " Syntax highlighting and indenting for JSX
+Plugin 'othree/html5.vim' " HTML5 omnicomplete and syntax
+Plugin 'othree/javascript-libraries-syntax.vim' " Syntax for javascript libraries: jQuery, Underscore/lo-dash, Backbone, Angular, React, etc...
+Plugin 'othree/yajs.vim' " Javascript syntax file
+Plugin 'scrooloose/nerdcommenter' " Useful shortcuts for commentary management
+Plugin 'scrooloose/nerdtree' " File explorer
+Plugin 'scrooloose/syntastic' " Syntax checking hacks for vim
+Plugin 'tpope/vim-fugitive' " git wrapper
+Plugin 'tpope/vim-haml' " Haml, Sass, SCSS
+Plugin 'tpope/vim-repeat' " dot command for plugins
+Plugin 'tpope/vim-surround' " tags/brackets/quotes management made simple
+Plugin 'vim-airline/vim-airline' " Pretty status line
+Plugin 'vim-airline/vim-airline-themes' " Themes for vim-airline
 
 call vundle#end()
 
-filetype plugin on
-filetype plugin indent on
+filetype plugin on " enable loading plugin files
+filetype plugin indent on " enable loading indent files
 
 set autoread
 set wildmenu
