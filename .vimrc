@@ -37,38 +37,46 @@ call vundle#end()
 filetype plugin on " enable loading plugin files
 filetype plugin indent on " enable loading indent files
 
-set autoread
-set wildmenu
-set ruler
-set backspace=eol,start,indent
-set whichwrap+=<,>,h,l
+set wildmenu " command line completion
+set backspace=eol,start,indent " backspace working as intended
+set whichwrap+=<,>,h,l " move to next/previous line
 set lazyredraw
 
-set noerrorbells
-set novisualbell
-set t_vb=
-set tm=500
+set noerrorbells " no beeping
+set novisualbell " no flashes
+set t_vb= " never flash the screen
 
-set tabstop=4
-set shiftwidth=4
-set smarttab
-set expandtab
-set smartindent
-set autoindent
+set tabstop=4 " how many spaces to show instead of tab
+set shiftwidth=4 " how many spaces to use for >> and <<
+set smarttab " smart addition and deletion of tabs
+set expandtab " expand tabs to spaces
+set smartindent " automatically indent new line
 
-set gdefault
-set showmatch
-set hlsearch
-set incsearch
-set ignorecase
+set gdefault " automayically sets global flag for substitution
+set showmatch " show matching bracket
+set smartcase " smartcase for search patterns
+set hlsearch " highlight all matches
+set incsearch " show matches as I type
+" Damian Conway's Die Blinkënmatchen: highlight matches
+nnoremap <silent> n n:call HLNext(0.1)<cr>
+nnoremap <silent> N N:call HLNext(0.1)<cr>
+function! HLNext (blinktime)
+  let target_pat = '\c\%#'.@/
+  let ring = matchadd('ErrorMsg', target_pat, 101)
+  redraw
+  exec 'sleep ' . float2nr(a:blinktime * 1000) . 'm'
+  call matchdelete(ring)
+  redraw
+endfunction
 
-set ffs=unix,dos,mac
-set fencs=utf-8,cp1251,koi8-r,ucs-2,cp866
+set fileformats=unix,dos,mac
+set fileencodings=utf-8,cp1251,koi8-r,ucs-2,cp866
 
-set relativenumber
-set cursorline
-set showcmd
-set laststatus=2
+set relativenumber " show line numbers relative to current
+set cursorline " highlight current line
+set cursorcolumn " highlight current column
+set showcmd " show partial command in the last line of the screen
+set laststatus=2 " always show status line
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 set nobackup
@@ -133,8 +141,8 @@ set pastetoggle=<F2>
 syntax enable
 syntax sync minlines=256
 
-set t_Co=256
-set background=dark
+set t_Co=256 " 8 for xterm and screen, 256 for xterm-256color and screen-256color
+set background=light
 colorscheme badwolf
 
 autocmd VimEnter * AirlineTheme badwolf
