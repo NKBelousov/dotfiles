@@ -75,6 +75,7 @@ set fileencodings=utf-8,cp1251,koi8-r,ucs-2,cp866
 set relativenumber " show line numbers relative to current
 set cursorline " highlight current line
 set cursorcolumn " highlight current column
+set colorcolumn=80 " show vertical line over 80 character limit
 set showcmd " show partial command in the last line of the screen
 set laststatus=2 " always show status line
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
@@ -110,6 +111,7 @@ highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
 highlight link SyntasticStyleErrorSign SignColumn
 highlight link SyntasticStyleWarningSign SignColumn
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 
 let mapleader=" "
 nnoremap j gj
@@ -141,6 +143,7 @@ syntax sync minlines=256
 
 autocmd VimEnter * AirlineTheme badwolf
 autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufWritePre * :match OverLength /\%81v.\+/
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
