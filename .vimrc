@@ -147,11 +147,11 @@ set t_Co=256 " 8 for xterm and screen, 256 for xterm-256color and screen-256colo
 set background=light
 set t_ut= " disable background color erase so that colorschemes render properly
 " when inside tmux
-colorscheme badwolf
+colorscheme gruvbox
 syntax enable
 syntax sync minlines=256
 
-autocmd VimEnter * AirlineTheme badwolf
+autocmd VimEnter * AirlineTheme tomorrow
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd BufWritePre * :match OverLength /\%81v.\+/
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
