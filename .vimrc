@@ -7,6 +7,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim' " Plugin Manager
 Plugin 'FelikZ/ctrlp-py-matcher' " Faster CtrlP matcher based on python
 Plugin 'JulesWang/css.vim' " Vim CSS syntax file
+Plugin 'SirVer/ultisnips' " ultimate solution for snippets in vim
 Plugin 'Valloric/YouCompleteMe' " A code completion engine for vim
 Plugin 'ap/vim-css-color' " Color keyword highlighter
 Plugin 'bronson/vim-trailing-whitespace' " Highlights and removes trailing whitespaces
@@ -107,6 +108,11 @@ let g:syntastic_error_symbol = '❌'
 let g:syntastic_style_error_symbol = '⁉️'
 let g:syntastic_warning_symbol = '⚠️'
 let g:syntastic_style_warning_symbol = '💩'
+
+" Disable tab navigation in YCM (it conflicts with UltiSnips)
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
+
 
 highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
