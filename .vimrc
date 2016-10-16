@@ -16,6 +16,7 @@ Plugin 'gcorne/vim-sass-lint' " sass-lint syntastic syntax checker
 Plugin 'jlanzarotta/bufexplorer' " Faster buffer swapping & exploring
 Plugin 'kien/ctrlp.vim' " Fuzzy search for files, buffers, mru, tags, etc...
 Plugin 'kshenoy/vim-signature' " Plugin to place, toggle and display marks
+Plugin 'majutsushi/tagbar' " class outline viewer for Vim
 Plugin 'mattn/emmet-vim' " Expanding abbreviations for html & xml
 Plugin 'mileszs/ack.vim' " Better project search
 Plugin 'mxw/vim-jsx' " Syntax highlighting and indenting for JSX
@@ -124,6 +125,7 @@ nnoremap <leader>o :NERDTreeToggle<CR>
 nnoremap <leader><space> :noh<CR>
 nnoremap <leader>j <C-]>
 nnoremap <leader>k <C-O>
+nnoremap <F2> :TagbarToggle<CR>
 nnoremap <F3> vi{:sort<CR>
 nnoremap <F4> :Ack! <cword><CR>
 nnoremap <F5> :redraw!<CR>
@@ -137,11 +139,14 @@ set pastetoggle=<F2>
 
 set t_Co=256 " 8 for xterm and screen, 256 for xterm-256color and screen-256color
 set background=light
+set t_ut= " disable background color erase so that colorschemes render properly
+" when inside tmux
 colorscheme badwolf
 syntax enable
 syntax sync minlines=256
 
 autocmd VimEnter * AirlineTheme badwolf
+autocmd VimEnter * nested :TagbarOpen
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd BufWritePre * :match OverLength /\%81v.\+/
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
