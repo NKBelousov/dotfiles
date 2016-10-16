@@ -146,7 +146,6 @@ syntax enable
 syntax sync minlines=256
 
 autocmd VimEnter * AirlineTheme badwolf
-autocmd VimEnter * nested :TagbarOpen
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd BufWritePre * :match OverLength /\%81v.\+/
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
