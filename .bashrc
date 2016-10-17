@@ -3,6 +3,14 @@ TERM=xterm-256color
 EDITOR=vim
 VISUAL=gvim
 
+daily(){
+    sudo apt update && sudo apt upgrade;
+    pushd ~/Projects/dotfiles;
+    git pull origin master;
+    sh install.sh;
+    popd;
+}
+
 alias ls='ls --color=auto'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
