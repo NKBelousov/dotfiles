@@ -63,3 +63,27 @@ componentWillUnmount(){
 	$1
 }
 endsnippet
+
+snippet rcc "React::createClass()"
+const $1 = React.createClass({
+	render(){
+		return (
+			$2
+		);
+	};
+});
+endsnippet
+
+snippet req "NodeJS::require(name)"
+const $1 = require($2);
+endsnippet
+
+snippet => "(arg) => {}"
+($1) => {$2}
+endsnippet
+
+snippet Prom "ES6::Promise"
+new Promise((resolve, reject) => {
+	$1
+});
+endsnippet

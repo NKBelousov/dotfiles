@@ -112,6 +112,9 @@ let g:syntastic_style_warning_symbol = '💩'
 " Disable tab navigation in YCM (it conflicts with UltiSnips)
 let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 
 highlight link SyntasticErrorSign SignColumn
