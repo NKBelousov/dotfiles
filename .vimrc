@@ -126,6 +126,7 @@ highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 let mapleader=" "
 nnoremap j gj
 nnoremap k gk
+nnoremap Q @q
 nnoremap <leader>g :CtrlP<CR>
 nnoremap <leader>f /
 nnoremap <leader>F :Ack!<space>
@@ -147,17 +148,23 @@ map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR
 set pastetoggle=<F2>
 
 set t_Co=256 " 8 for xterm and screen, 256 for xterm-256color and screen-256color
-set background=light
+set background=dark
 set t_ut= " disable background color erase so that colorschemes render properly
 " when inside tmux
-colorscheme gruvbox
+colorscheme badwolf
 syntax enable
 syntax sync minlines=256
 
-autocmd VimEnter * AirlineTheme tomorrow
-autocmd BufWritePre * :%s/\s\+$//e
-autocmd BufWritePre * :match OverLength /\%81v.\+/
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+augroup prepare
+    autocmd VimEnter * AirlineTheme badwolf
+    autocmd BufWritePre * :%s/\s\+$//e
+    autocmd BufWritePre * :match OverLength /\%81v.\+/
+    autocmd FileType php,phtml setlocal omnifunc=phpcomplete#CompletePHP
+    autocmd FileType php,phtml setlocal tabstop=4 shiftwidth=4 expandtab
+    autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+    autocmd FileType javascript setlocal tabstop=4 shiftwidth=4 expandtab
+    autocmd FileType css,scss,less setlocal tabstop=2 shiftwidth=2 expandtab
+    autocmd FileType css,scss,less setlocal omnifunc=csscomplete#CompleteCSS
+    autocmd FileType html setlocal tabstop=2 shiftwidth=2 expandtab
+    autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
+augroup END
