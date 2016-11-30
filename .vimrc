@@ -14,17 +14,14 @@ Plugin 'bronson/vim-trailing-whitespace' " Highlights and removes trailing white
 Plugin 'christoomey/vim-tmux-navigator' " Seamless navigation between vim and tmux
 Plugin 'flazz/vim-colorschemes' " Colorscheme pack
 Plugin 'gcorne/vim-sass-lint' " sass-lint syntastic syntax checker
-Plugin 'jlanzarotta/bufexplorer' " Faster buffer swapping & exploring
 Plugin 'kien/ctrlp.vim' " Fuzzy search for files, buffers, mru, tags, etc...
 Plugin 'kshenoy/vim-signature' " Plugin to place, toggle and display marks
-Plugin 'majutsushi/tagbar' " class outline viewer for Vim
 Plugin 'mattn/emmet-vim' " Expanding abbreviations for html & xml
 Plugin 'mileszs/ack.vim' " Better project search
 Plugin 'mxw/vim-jsx' " Syntax highlighting and indenting for JSX
 Plugin 'othree/html5.vim' " HTML5 omnicomplete and syntax
 Plugin 'othree/javascript-libraries-syntax.vim' " Syntax for javascript libraries: jQuery, Underscore/lo-dash, Backbone, Angular, React, etc...
 Plugin 'othree/yajs.vim' " Javascript syntax file
-Plugin 'scrooloose/nerdcommenter' " Useful shortcuts for commentary management
 Plugin 'scrooloose/nerdtree' " File explorer
 Plugin 'scrooloose/syntastic' " Syntax checking hacks for vim
 Plugin 'tpope/vim-fugitive' " git wrapper
@@ -135,7 +132,6 @@ nnoremap <leader>o :NERDTreeToggle<CR>
 nnoremap <leader><space> :noh<CR>
 nnoremap <leader>j <C-]>
 nnoremap <leader>k <C-O>
-nnoremap <F2> :TagbarToggle<CR>
 nnoremap <F3> vi{:sort<CR>
 nnoremap <F4> :Ack! <cword><CR>
 nnoremap <F5> :redraw!<CR>
