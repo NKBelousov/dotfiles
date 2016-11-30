@@ -132,7 +132,7 @@ nnoremap <leader>o :NERDTreeToggle<CR>
 nnoremap <leader><space> :noh<CR>
 nnoremap <leader>j <C-]>
 nnoremap <leader>k <C-O>
-nnoremap <F3> vi{:sort<CR>
+nnoremap <F3> vi{:sort<CR>vi{==
 nnoremap <F4> :Ack! <cword><CR>
 nnoremap <F5> :redraw!<CR>
 nnoremap <F12> :!ctags -R --exclude=node_modules .<cr>
