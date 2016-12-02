@@ -17,6 +17,7 @@ Plugin 'gcorne/vim-sass-lint' " sass-lint syntastic syntax checker
 Plugin 'kien/ctrlp.vim' " Fuzzy search for files, buffers, mru, tags, etc...
 Plugin 'kshenoy/vim-signature' " Plugin to place, toggle and display marks
 Plugin 'mattn/emmet-vim' " Expanding abbreviations for html & xml
+Plugin 'mbbill/undotree' " Undotree management
 Plugin 'mileszs/ack.vim' " Better project search
 Plugin 'mxw/vim-jsx' " Syntax highlighting and indenting for JSX
 Plugin 'othree/html5.vim' " HTML5 omnicomplete and syntax
@@ -132,6 +133,7 @@ nnoremap <leader>o :NERDTreeToggle<CR>
 nnoremap <leader><space> :noh<CR>
 nnoremap <leader>j <C-]>
 nnoremap <leader>k <C-O>
+nnoremap <F2> :UndotreeToggle<CR>
 nnoremap <F3> vi{:sort<CR>vi{==
 nnoremap <F4> :Ack! <cword><CR>
 nnoremap <F5> :redraw!<CR>
