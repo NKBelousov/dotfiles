@@ -21,7 +21,7 @@ alias egrep='egrep --color=auto'
 alias diff='colordiff'
 alias vi='vim'
 alias svim='sudo vim'
-alias ll='ls -al'
+alias ll='ls -alh'
 alias grep='ack'
 
 alias gs='git status'
