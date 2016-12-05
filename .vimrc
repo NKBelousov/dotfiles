@@ -52,7 +52,10 @@ set smarttab " smart addition and deletion of tabs
 set expandtab " expand tabs to spaces
 set smartindent " automatically indent new line
 
-set gdefault " automayically sets global flag for substitution
+set foldmethod=indent " fold blocks based on indentation
+set nofoldenable " open folds by default
+
+set gdefault " automatically sets global flag for substitution
 set showmatch " show matching bracket
 set smartcase " smartcase for search patterns
 set hlsearch " highlight all matches
