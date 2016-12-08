@@ -13,7 +13,6 @@ Plugin 'ap/vim-css-color' " Color keyword highlighter
 Plugin 'bronson/vim-trailing-whitespace' " Highlights and removes trailing whitespaces
 Plugin 'christoomey/vim-tmux-navigator' " Seamless navigation between vim and tmux
 Plugin 'flazz/vim-colorschemes' " Colorscheme pack
-Plugin 'gcorne/vim-sass-lint' " sass-lint syntastic syntax checker
 Plugin 'kien/ctrlp.vim' " Fuzzy search for files, buffers, mru, tags, etc...
 Plugin 'kshenoy/vim-signature' " Plugin to place, toggle and display marks
 Plugin 'mattn/emmet-vim' " Expanding abbreviations for html & xml
