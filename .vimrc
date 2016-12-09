@@ -4,15 +4,15 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim' " Plugin Manager
 Plugin 'FelikZ/ctrlp-py-matcher' " Faster CtrlP matcher based on python
 Plugin 'JulesWang/css.vim' " Vim CSS syntax file
 Plugin 'SirVer/ultisnips' " ultimate solution for snippets in vim
 Plugin 'Valloric/YouCompleteMe' " A code completion engine for vim
+Plugin 'VundleVim/Vundle.vim' " Plugin Manager
 Plugin 'ap/vim-css-color' " Color keyword highlighter
 Plugin 'bronson/vim-trailing-whitespace' " Highlights and removes trailing whitespaces
 Plugin 'christoomey/vim-tmux-navigator' " Seamless navigation between vim and tmux
-Plugin 'flazz/vim-colorschemes' " Colorscheme pack
+Plugin 'joshdick/onedark.vim' " Atom Default Colorscheme
 Plugin 'kien/ctrlp.vim' " Fuzzy search for files, buffers, mru, tags, etc...
 Plugin 'kshenoy/vim-signature' " Plugin to place, toggle and display marks
 Plugin 'mattn/emmet-vim' " Expanding abbreviations for html & xml
@@ -29,7 +29,6 @@ Plugin 'tpope/vim-haml' " Haml, Sass, SCSS
 Plugin 'tpope/vim-repeat' " dot command for plugins
 Plugin 'tpope/vim-surround' " tags/brackets/quotes management made simple
 Plugin 'vim-airline/vim-airline' " Pretty status line
-Plugin 'vim-airline/vim-airline-themes' " Themes for vim-airline
 
 call vundle#end()
 
@@ -151,12 +150,12 @@ set t_Co=256 " 8 for xterm and screen, 256 for xterm-256color and screen-256colo
 set background=dark
 set t_ut= " disable background color erase so that colorschemes render properly
 " when inside tmux
-colorscheme badwolf
+colorscheme onedark
 syntax enable
 syntax sync minlines=256
 
 augroup prepare
-    autocmd VimEnter * AirlineTheme badwolf
+    autocmd VimEnter * AirlineTheme onedark
     autocmd BufWritePre * :%s/\s\+$//e
     autocmd BufWritePre * :match OverLength /\%81v.\+/
     autocmd FileType php,phtml setlocal omnifunc=phpcomplete#CompletePHP
