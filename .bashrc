@@ -4,7 +4,7 @@ EDITOR=vim
 VISUAL=gvim
 
 daily(){
-    sudo apt update && sudo apt upgrade;
+    sudo yes | sud apt update && sudo yes | sudo apt upgrade;
     pushd ~/Projects/dotfiles;
     git pull origin master;
     sh install.sh;
