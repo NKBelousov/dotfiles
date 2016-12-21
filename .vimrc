@@ -1,36 +1,40 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
 
-Plugin 'FelikZ/ctrlp-py-matcher' " Faster CtrlP matcher based on python
-Plugin 'JulesWang/css.vim' " Vim CSS syntax file
-Plugin 'SirVer/ultisnips' " ultimate solution for snippets in vim
-Plugin 'Valloric/YouCompleteMe' " A code completion engine for vim
-Plugin 'VundleVim/Vundle.vim' " Plugin Manager
-Plugin 'ap/vim-css-color' " Color keyword highlighter
-Plugin 'bronson/vim-trailing-whitespace' " Highlights and removes trailing whitespaces
-Plugin 'christoomey/vim-tmux-navigator' " Seamless navigation between vim and tmux
-Plugin 'joshdick/onedark.vim' " Atom Default Colorscheme
-Plugin 'kien/ctrlp.vim' " Fuzzy search for files, buffers, mru, tags, etc...
-Plugin 'kshenoy/vim-signature' " Plugin to place, toggle and display marks
-Plugin 'mattn/emmet-vim' " Expanding abbreviations for html & xml
-Plugin 'mbbill/undotree' " Undotree management
-Plugin 'mileszs/ack.vim' " Better project search
-Plugin 'mxw/vim-jsx' " Syntax highlighting and indenting for JSX
-Plugin 'othree/html5.vim' " HTML5 omnicomplete and syntax
-Plugin 'othree/javascript-libraries-syntax.vim' " Syntax for javascript libraries: jQuery, Underscore/lo-dash, Backbone, Angular, React, etc...
-Plugin 'othree/yajs.vim' " Javascript syntax file
-Plugin 'scrooloose/nerdtree' " File explorer
-Plugin 'scrooloose/syntastic' " Syntax checking hacks for vim
-Plugin 'tpope/vim-fugitive' " git wrapper
-Plugin 'tpope/vim-haml' " Haml, Sass, SCSS
-Plugin 'tpope/vim-repeat' " dot command for plugins
-Plugin 'tpope/vim-surround' " tags/brackets/quotes management made simple
-Plugin 'vim-airline/vim-airline' " Pretty status line
+call plug#begin('~/.vim/plugged')
 
-call vundle#end()
+Plug 'junegunn/vim-plug' " Plugin manager
+Plug 'FelikZ/ctrlp-py-matcher' " Faster CtrlP matcher based on python
+Plug 'JulesWang/css.vim' " Vim CSS syntax file
+Plug 'Valloric/YouCompleteMe', { 'do': 'cd ~/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/tern_runtime && npm install --production && cd ~/.vim/plugged/YouCompleteMe/ && ./install.py --all' } " A code completion engine for vim
+Plug 'ap/vim-css-color' " Color keyword highlighter
+Plug 'bronson/vim-trailing-whitespace' " Highlights and removes trailing whitespaces
+Plug 'christoomey/vim-tmux-navigator' " Seamless navigation between vim and tmux
+Plug 'joshdick/onedark.vim' " Atom Default Colorscheme
+Plug 'kien/ctrlp.vim' " Fuzzy search for files, buffers, mru, tags, etc...
+Plug 'kshenoy/vim-signature' " Plugin to place, toggle and display marks
+Plug 'mattn/emmet-vim' " Expanding abbreviations for html & xml
+Plug 'mbbill/undotree', { 'on': 'UndoTreeToggle' } " Undotree management
+Plug 'mileszs/ack.vim' " Better project search
+Plug 'mxw/vim-jsx' " Syntax highlighting and indenting for JSX
+Plug 'othree/html5.vim' " HTML5 omnicomplete and syntax
+Plug 'othree/javascript-libraries-syntax.vim' " Syntax for javascript libraries: jQuery, Underscore/lo-dash, Backbone, Angular, React, etc...
+Plug 'othree/yajs.vim' " Javascript syntax file
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " File Explorer
+Plug 'scrooloose/syntastic' " Syntax checking hacks for vim
+Plug 'tpope/vim-fugitive' " git wrapper
+Plug 'tpope/vim-haml' " Haml, Sass, SCSS
+Plug 'tpope/vim-repeat' " dot command for plugins
+Plug 'tpope/vim-surround' " tags/brackets/quotes management made simple
+Plug 'vim-airline/vim-airline' " Pretty status line
+
+call plug#end()
 
 filetype plugin on " enable loading plugin files
 filetype plugin indent on " enable loading indent files
@@ -108,13 +112,9 @@ let g:syntastic_style_error_symbol = '⁉️'
 let g:syntastic_warning_symbol = '⚠️'
 let g:syntastic_style_warning_symbol = '💩'
 
-" Disable tab navigation in YCM (it conflicts with UltiSnips)
+" Disable tab navigation in YCM
 let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
 
 highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
