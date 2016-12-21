@@ -4,9 +4,13 @@ EDITOR=vim
 VISUAL=gvim
 
 daily(){
-    sudo yes | sud apt update && sudo yes | sudo apt upgrade;
+    sudo apt-get --yes --force-yes update;
+    sudo apt-get --yes --force-yes upgrade;
+    sudo apt-get --yes --force-yes autoremove;
+    sudo apt-get --yes --force-yes autoclean;
     pushd ~/Projects/dotfiles;
-    git pull origin master;
+    git fetch --all --prune;
+    git reset --hard origin/master;
     sh install.sh;
     popd;
 }
