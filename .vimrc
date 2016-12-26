@@ -115,6 +115,8 @@ let g:syntastic_style_warning_symbol = '💩'
 " Disable tab navigation in YCM
 let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
+" YCM only supports python 2
+let g:ycm_server_python_interpreter = '/usr/bin/python2.7'
 
 highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
