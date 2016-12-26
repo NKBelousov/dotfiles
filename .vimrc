@@ -30,7 +30,6 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " File Explorer
 Plug 'scrooloose/syntastic' " Syntax checking hacks for vim
 Plug 'tpope/vim-fugitive' " git wrapper
 Plug 'tpope/vim-haml' " Haml, Sass, SCSS
-Plug 'tpope/vim-repeat' " dot command for plugins
 Plug 'tpope/vim-surround' " tags/brackets/quotes management made simple
 Plug 'vim-airline/vim-airline' " Pretty status line
 
@@ -91,8 +90,9 @@ set noswapfile
 set guioptions=
 
 let NERDTreeShowHidden=1
-let g:ctrlp_custom_ignore = 'vendor\|node_modules\|.git'
 let g:acp_enableAtStartup = 0
+let g:ctrlp_custom_ignore = 'vendor\|node_modules\|.git'
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -161,9 +161,7 @@ augroup prepare
     autocmd BufWritePre * :%s/\s\+$//e
     autocmd BufWritePre * :match OverLength /\%81v.\+/
     autocmd FileType php,phtml setlocal omnifunc=phpcomplete#CompletePHP
-    autocmd FileType php,phtml setlocal tabstop=4 shiftwidth=4 expandtab
     autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-    autocmd FileType javascript setlocal tabstop=4 shiftwidth=4 expandtab
     autocmd FileType css,scss,less setlocal tabstop=2 shiftwidth=2 expandtab
     autocmd FileType css,scss,less setlocal omnifunc=csscomplete#CompleteCSS
     autocmd FileType html setlocal tabstop=2 shiftwidth=2 expandtab

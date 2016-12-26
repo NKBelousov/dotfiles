@@ -1,7 +1,7 @@
 PATH=${PATH}:~/current/bin
 TERM=xterm-256color
 EDITOR=vim
-VISUAL=gvim
+VISUAL=$EDITOR
 
 daily(){
     sudo apt-get --yes --force-yes update;
@@ -27,11 +27,6 @@ alias vi='vim'
 alias svim='sudo vim'
 alias ll='ls -alh'
 alias grep='ack'
-
-alias gs='git status'
-alias gl='git lga'
-alias gf='git fa'
-alias gb='git branch -vv'
 
 # Custom prompt
 Color_Off="\[\033[0m\]"
