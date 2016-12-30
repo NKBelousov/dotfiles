@@ -27,11 +27,11 @@ Plug 'othree/html5.vim' " HTML5 omnicomplete and syntax
 Plug 'othree/javascript-libraries-syntax.vim' " Syntax for javascript libraries: jQuery, Underscore/lo-dash, Backbone, Angular, React, etc...
 Plug 'othree/yajs.vim' " Javascript syntax file
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " File Explorer
-Plug 'scrooloose/syntastic' " Syntax checking hacks for vim
 Plug 'tpope/vim-fugitive' " git wrapper
 Plug 'tpope/vim-haml' " Haml, Sass, SCSS
 Plug 'tpope/vim-surround' " tags/brackets/quotes management made simple
 Plug 'vim-airline/vim-airline' " Pretty status line
+Plug 'w0rp/ale' " Asynchronous Lint Engine
 
 call plug#end()
 
@@ -82,7 +82,6 @@ set cursorcolumn " highlight current column
 set colorcolumn=80 " show vertical line over 80 character limit
 set showcmd " show partial command in the last line of the screen
 set laststatus=2 " always show status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 set nobackup
 set noswapfile
@@ -94,34 +93,15 @@ let g:acp_enableAtStartup = 0
 let g:ctrlp_custom_ignore = 'vendor\|node_modules\|.git'
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_sass_checkers = ['sass_lint']
-let g:syntastic_scss_checkers = ['sass_lint']
-
-let g:syntastic_error_symbol = '❌'
-let g:syntastic_style_error_symbol = '⁉️'
-let g:syntastic_warning_symbol = '⚠️'
-let g:syntastic_style_warning_symbol = '💩'
-
+let g:ale_sign_column_always = 1
+let g:ale_sign_error = '⨉'
+let g:ale_sign_warning = '⚠'
 " Disable tab navigation in YCM
 let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
 " YCM only supports python 2
 let g:ycm_server_python_interpreter = '/usr/bin/python2.7'
 
-highlight link SyntasticErrorSign SignColumn
-highlight link SyntasticWarningSign SignColumn
-highlight link SyntasticStyleErrorSign SignColumn
-highlight link SyntasticStyleWarningSign SignColumn
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 
 let mapleader=" "
