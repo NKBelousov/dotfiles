@@ -20,7 +20,7 @@ Plug 'joshdick/onedark.vim' " Atom Default Colorscheme
 Plug 'kien/ctrlp.vim' " Fuzzy search for files, buffers, mru, tags, etc...
 Plug 'kshenoy/vim-signature' " Plugin to place, toggle and display marks
 Plug 'mattn/emmet-vim' " Expanding abbreviations for html & xml
-Plug 'mbbill/undotree', { 'on': 'UndoTreeToggle' } " Undotree management
+Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' } " Undotree management
 Plug 'mileszs/ack.vim' " Better project search
 Plug 'mxw/vim-jsx' " Syntax highlighting and indenting for JSX
 Plug 'othree/html5.vim' " HTML5 omnicomplete and syntax
