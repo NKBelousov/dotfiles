@@ -61,11 +61,12 @@
     changed = red
     untracked = yellow
 [diff]
-	renames = copies
 	mnemonicprefix = true
+	renames = copies
+    tool = vimdiff
 [merge]
-	tool = vimdiff[push]
 	default = tracking
+	tool = vimdiff[push]
 [rerere]
     enabled = 1
     autoupdate = 1
