@@ -47,6 +47,10 @@
     rba = rebase --abort
     rbc = rebase --continue
     rbs = rebase --skip
+    ##### Pushing
+    please = push --force-with-lease
+    pf = push --force
+    p = push
 [core]
     editor = vim
 	whitespace = trailing-space,space-before-tab
