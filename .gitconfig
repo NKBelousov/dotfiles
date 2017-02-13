@@ -70,7 +70,7 @@
     tool = vimdiff
 [merge]
 	default = tracking
-	tool = vimdiff[push]
+	tool = vimdiff
 [rerere]
     enabled = 1
     autoupdate = 1
