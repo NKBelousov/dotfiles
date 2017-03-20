@@ -18,7 +18,7 @@ set -g status-fg black
 set -g status-bg green
 set -g status-left ''
 set -g status-right-length 60
-set -g status-right '| #(whoami)@#(hostname) | %d/%m/%y %H:%M'
+set -g status-right "#(cat /sys/class/thermal/thermal_zone0/temp | awk \'{ print $1/1000 \" ℃ \"; }\') | #(whoami)@#(hostname) | %d/%m/%y %H:%M"
 #-----------
 # Clock mode
 #-----------
