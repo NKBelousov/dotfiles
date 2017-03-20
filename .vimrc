@@ -30,6 +30,7 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " File Explorer
 Plug 'tpope/vim-fugitive' " git wrapper
 Plug 'tpope/vim-haml' " Haml, Sass, SCSS
 Plug 'tpope/vim-surround' " tags/brackets/quotes management made simple
+Plug 'tweekmonster/startuptime.vim' " Track startup time in readable format
 Plug 'vim-airline/vim-airline' " Pretty status line
 Plug 'w0rp/ale' " Asynchronous Lint Engine
 
