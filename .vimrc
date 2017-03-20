@@ -105,28 +105,29 @@ let g:ycm_server_python_interpreter = '/usr/bin/python2.7'
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 
-let mapleader=" "
-nnoremap j gj
-nnoremap k gk
-nnoremap Q @q
-nnoremap <leader>g :CtrlP<CR>
-nnoremap <leader>f /
-nnoremap <leader>F :Ack!<space>
-nnoremap <leader>h :%s/
-nnoremap <leader>o :NERDTreeToggle<CR>
-nnoremap <leader><space> :noh<CR>
-nnoremap <leader>j <C-]>
-nnoremap <leader>k <C-O>
-nnoremap <F2> :UndotreeToggle<CR>
-nnoremap <F3> vi{:sort<CR>vi{==
-nnoremap <F4> :Ack! <cword><CR>
-nnoremap <F5> :redraw!<CR>
-nnoremap <F12> :!ctags -R --exclude=node_modules .<cr>
+let mapleader=","
 inoremap <C-h> <C-o>h
 inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
 inoremap <C-l> <C-o>l
 map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+nnoremap <F12> :!ctags -R --exclude=node_modules .<cr>
+nnoremap <F2> :UndotreeToggle<CR>
+nnoremap <F3> vi{:sort<CR>vi{==
+nnoremap <F4> :Ack! <cword><CR>
+nnoremap <F5> :redraw!<CR>
+nnoremap <leader><space> :noh<CR>
+nnoremap <leader>F :Ack!<space>
+nnoremap <leader>f /
+nnoremap <leader>g :CtrlP<CR>
+nnoremap <leader>h :%s/
+nnoremap <leader>j <C-]>
+nnoremap <leader>k <C-O>
+nnoremap <leader>o :NERDTreeToggle<CR>
+nnoremap Q @q
+nnoremap j gj
+nnoremap k gk
+nnoremap zz :w<CR>:bd<CR>
 set pastetoggle=<F2>
 
 set t_Co=256 " 8 for xterm and screen, 256 for xterm-256color and screen-256color
