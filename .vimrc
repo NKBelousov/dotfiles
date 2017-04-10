@@ -113,7 +113,7 @@ inoremap <C-l> <C-o>l
 map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 nnoremap <F12> :!ctags -R --exclude=node_modules .<cr>
 nnoremap <F2> :UndotreeToggle<CR>
-nnoremap <F3> vi{:sort<CR>vi{==
+nnoremap <F3> vi{=vi{:sort<CR>
 nnoremap <F4> :Ack! <cword><CR>
 nnoremap <F5> :redraw!<CR>
 nnoremap <leader><space> :noh<CR>
