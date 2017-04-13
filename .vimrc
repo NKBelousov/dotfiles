@@ -11,7 +11,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/vim-plug' " Plugin manager
 Plug 'FelikZ/ctrlp-py-matcher' " Faster CtrlP matcher based on python
-Plug 'JulesWang/css.vim' " Vim CSS syntax file
 Plug 'Valloric/YouCompleteMe', { 'do': 'cd ~/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/tern_runtime && npm install --production && cd ~/.vim/plugged/YouCompleteMe/ && ./install.py --all' } " A code completion engine for vim
 Plug 'ap/vim-css-color' " Color keyword highlighter
 Plug 'bronson/vim-trailing-whitespace' " Highlights and removes trailing whitespaces
@@ -23,12 +22,9 @@ Plug 'mattn/emmet-vim' " Expanding abbreviations for html & xml
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' } " Undotree management
 Plug 'mileszs/ack.vim' " Better project search
 Plug 'mxw/vim-jsx' " Syntax highlighting and indenting for JSX
-Plug 'othree/html5.vim' " HTML5 omnicomplete and syntax
-Plug 'othree/javascript-libraries-syntax.vim' " Syntax for javascript libraries: jQuery, Underscore/lo-dash, Backbone, Angular, React, etc...
-Plug 'othree/yajs.vim' " Javascript syntax file
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " File Explorer
+Plug 'sheerun/vim-polyglot' " Syntax pack
 Plug 'tpope/vim-fugitive' " git wrapper
-Plug 'tpope/vim-haml' " Haml, Sass, SCSS
 Plug 'tpope/vim-surround' " tags/brackets/quotes management made simple
 Plug 'tweekmonster/startuptime.vim' " Track startup time in readable format
 Plug 'vim-airline/vim-airline' " Pretty status line
