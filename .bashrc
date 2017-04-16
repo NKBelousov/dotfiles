@@ -3,6 +3,8 @@ TERM=xterm-256color
 EDITOR=vim
 VISUAL=$EDITOR
 
+source ./bash_git
+
 daily(){
     sudo apt-get --yes --force-yes update;
     sudo apt-get --yes --force-yes upgrade;
