@@ -14,6 +14,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': 'cd ~/.vim/plugged/YouCompleteMe/third_pa
 Plug 'ap/vim-css-color' " Color keyword highlighter
 Plug 'bronson/vim-trailing-whitespace' " Highlights and removes trailing whitespaces
 Plug 'christoomey/vim-tmux-navigator' " Seamless navigation between vim and tmux
+Plug 'easymotion/vim-easymotion' " Fast file navigation
 Plug 'joshdick/onedark.vim' " Atom Default Colorscheme
 Plug 'junegunn/vim-plug' " Plugin manager
 Plug 'kien/ctrlp.vim' " Fuzzy search for files, buffers, mru, tags, etc...
