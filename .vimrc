@@ -31,6 +31,7 @@ Plug 'tpope/vim-surround' " tags/brackets/quotes management made simple
 Plug 'tweekmonster/startuptime.vim' " Track startup time in readable format
 Plug 'vim-airline/vim-airline' " Pretty status line
 Plug 'w0rp/ale' " Asynchronous Lint Engine
+Plug 'zoeesilcock/vim-caniuse' " Use word under cursor for caniuse.com search
 
 call plug#end()
 
