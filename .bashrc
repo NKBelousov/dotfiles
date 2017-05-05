@@ -2,6 +2,7 @@ PATH=${PATH}:~/current/bin
 TERM=xterm-256color
 EDITOR=vim
 VISUAL=$EDITOR
+SESSION=`basename $PWD`
 
 daily(){
     sudo apt-get --yes --force-yes update;
@@ -13,6 +14,20 @@ daily(){
     git reset --hard origin/master;
     sh install.sh;
     popd;
+}
+
+dev(){
+    tmux new-session -d -s $SESSION
+    tmux rename-window -t $SESSION:1 vim
+    tmux split-window -h
+    tmux select-pane -t 0
+    tmux resize-pane -R 50
+    tmux select-pane -t 1
+    tmux split-window -v
+    tmux select-pane -t 1
+    tmux clock-mode
+    tmux select-pane -t 0
+    tmux attach -t $SESSION
 }
 
 alias ls='ls --color=auto'
