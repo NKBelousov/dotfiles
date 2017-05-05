@@ -10,6 +10,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'FelikZ/ctrlp-py-matcher' " Faster CtrlP matcher based on python
+Plug 'SirVer/ultisnips' " Ultimate solution for snippets in vim
 Plug 'Valloric/YouCompleteMe', { 'do': 'cd ~/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/tern_runtime && npm install --production && cd ~/.vim/plugged/YouCompleteMe/ && ./install.py --all' } " A code completion engine for vim
 Plug 'ap/vim-css-color' " Color keyword highlighter
 Plug 'bronson/vim-trailing-whitespace' " Highlights and removes trailing whitespaces
@@ -101,6 +102,10 @@ let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
 " YCM only supports python 2
 let g:ycm_server_python_interpreter = '/usr/bin/python2.7'
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 
