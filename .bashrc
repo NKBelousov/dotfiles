@@ -30,6 +30,13 @@ dev(){
     tmux attach -t $SESSION
 }
 
+GIT="/etc/bash_completion.d/git-prompt"
+
+if [ -e $GIT ];
+then
+    source $GIT
+fi
+
 alias ls='ls --color=auto'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
