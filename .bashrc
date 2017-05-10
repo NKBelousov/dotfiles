@@ -5,15 +5,25 @@ VISUAL=$EDITOR
 SESSION=`basename $PWD`
 
 daily(){
+    cd ~/Projects/dotfiles;
+    git fetch --all --prune && git reset --hard origin/master;
+    find . -maxdepth 1 -type f | xargs -L 1 -I {} cp {} ~/{};
+    mkdir -p ~/.vim/UltiSnips/ && cp -r ./UltiSnips/ ~/.vim/;
+    vim +PlugInstall +PlugClean +PlugUpdate +PlugUpgrade +qall;
+    cd -;
+    . ~/.bashrc;
+    local essential=(
+        "tmux"
+        "ack-grep"
+        "git"
+        "htop"
+        "vim"
+    )
+    sudo apt-get install ${essential[@]} --yes --force-yes;
     sudo apt-get --yes --force-yes update;
     sudo apt-get --yes --force-yes upgrade;
     sudo apt-get --yes --force-yes autoremove;
     sudo apt-get --yes --force-yes autoclean;
-    pushd ~/Projects/dotfiles;
-    git fetch --all --prune;
-    git reset --hard origin/master;
-    sh install.sh;
-    popd;
 }
 
 dev(){
