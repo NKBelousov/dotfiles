@@ -13,10 +13,10 @@ daily(){
     cd -;
     . ~/.bashrc;
     local essential=(
-        "tmux"
         "ack-grep"
         "git"
         "htop"
+        "tmux"
         "vim"
     )
     sudo apt-get install ${essential[@]} --yes --force-yes;

@@ -1,8 +1,6 @@
 snippet ren "React::render()"
 render(){
-    return (
-        $1
-    );
+    return $1;
 },
 endsnippet
 
@@ -42,7 +40,7 @@ endsnippet
 
 snippet scu "React::shouldComponentUpdate(object nextProps, object nextState)"
 shouldComponentUpdate(nextProps, nextState){
-    $1
+    return $1
 },
 endsnippet
 
@@ -67,10 +65,8 @@ endsnippet
 snippet rcc "React::createClass()"
 const $1 = React.createClass({
     render(){
-        return (
-            $2
-        );
-    };
+        return $2;
+    },
 });
 endsnippet
 
@@ -86,4 +82,8 @@ snippet Prom "ES6::Promise"
 new Promise((resolve, reject) => {
     $1
 });
+endsnippet
+
+snippet me "module.exports = "
+module.exports = $1;
 endsnippet
