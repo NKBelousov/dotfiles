@@ -143,13 +143,14 @@ syntax enable
 syntax sync minlines=256
 
 augroup prepare
-    autocmd VimEnter * AirlineTheme onedark
     autocmd BufWritePre * :%s/\s\+$//e
     autocmd BufWritePre * :match OverLength /\%81v.\+/
-    autocmd FileType php,phtml setlocal omnifunc=phpcomplete#CompletePHP
-    autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-    autocmd FileType css,scss,less setlocal tabstop=2 shiftwidth=2 expandtab
+    autocmd BufWritePre * :retab<CR>
     autocmd FileType css,scss,less setlocal omnifunc=csscomplete#CompleteCSS
-    autocmd FileType html setlocal tabstop=2 shiftwidth=2 expandtab
+    autocmd FileType css,scss,less setlocal tabstop=2 shiftwidth=2 expandtab
     autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType html setlocal tabstop=2 shiftwidth=2 expandtab
+    autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+    autocmd FileType php,phtml setlocal omnifunc=phpcomplete#CompletePHP
+    autocmd VimEnter * AirlineTheme onedark
 augroup END
