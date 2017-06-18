@@ -9,7 +9,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'FelikZ/ctrlp-py-matcher' " Faster CtrlP matcher based on python
 Plug 'SirVer/ultisnips' " Ultimate solution for snippets in vim
 Plug 'Valloric/YouCompleteMe', { 'do': 'cd ~/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/tern_runtime && npm install --production && cd ~/.vim/plugged/YouCompleteMe/ && ./install.py --all' } " A code completion engine for vim
 Plug 'ap/vim-css-color' " Color keyword highlighter
@@ -17,8 +16,9 @@ Plug 'bronson/vim-trailing-whitespace' " Highlights and removes trailing whitesp
 Plug 'christoomey/vim-tmux-navigator' " Seamless navigation between vim and tmux
 Plug 'easymotion/vim-easymotion' " Fast file navigation
 Plug 'joshdick/onedark.vim' " Atom Default Colorscheme
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-plug' " Plugin manager
-Plug 'kien/ctrlp.vim' " Fuzzy search for files, buffers, mru, tags, etc...
 Plug 'kshenoy/vim-signature' " Plugin to place, toggle and display marks
 Plug 'mattn/emmet-vim' " Expanding abbreviations for html & xml
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' } " Undotree management
@@ -123,7 +123,7 @@ nnoremap <F5> :redraw!<CR>
 nnoremap <leader><space> :noh<CR>
 nnoremap <leader>F :Ack!<space>
 nnoremap <leader>f /
-nnoremap <leader>g :CtrlP<CR>
+nnoremap <leader>g :FZF<CR>
 nnoremap <leader>h :%s/
 nnoremap <leader>j <C-]>
 nnoremap <leader>k <C-O>
