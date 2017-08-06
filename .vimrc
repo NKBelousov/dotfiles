@@ -90,6 +90,7 @@ set noswapfile
 
 set guioptions=
 
+let g:jsx_ext_required = 0 " allow jsx in .js files
 let NERDTreeShowHidden=1
 let g:acp_enableAtStartup = 0
 let g:ctrlp_custom_ignore = 'vendor\|node_modules\|.git'
