@@ -18,6 +18,7 @@ Plug 'easymotion/vim-easymotion' " Fast file navigation
 Plug 'joshdick/onedark.vim' " Atom Default Colorscheme
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/gv.vim' " A git commit browser
 Plug 'junegunn/vim-plug' " Plugin manager
 Plug 'kshenoy/vim-signature' " Plugin to place, toggle and display marks
 Plug 'mattn/emmet-vim' " Expanding abbreviations for html & xml
