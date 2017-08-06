@@ -1,81 +1,74 @@
-snippet ren "React::render()"
-render(){
-    return $1;
-},
-endsnippet
-
-snippet gis "React::getInitialState()"
-getInitialState(){
-    return {
-        $1
-    };
-},
-endsnippet
-
-snippet gdp "React::getDefaultProps()"
-getDefaultProps(){
-    return {
-        $1
-    };
-},
-endsnippet
-
-snippet cwm "React::componentWillMount()"
-componentWillMount(){
-    $1
-},
-endsnippet
-
-snippet cdm "React::componentDidMount()"
-componentDidMount(){
-    $1
-},
-endsnippet
-
-snippet cwrp "React::componentWillReceiveProps(object nextProps)"
-componentWillReceiveProps(nextProps){
-    $1
-},
-endsnippet
-
-snippet scu "React::shouldComponentUpdate(object nextProps, object nextState)"
-shouldComponentUpdate(nextProps, nextState){
-    return $1
-},
-endsnippet
-
-snippet cwu "React::componentWillUpdate(object nextProps, object nextState)"
-componentWillUpdate(nextProps, nextState){
-    $1
-},
-endsnippet
-
-snippet cdu "React::componentDidUpdate(object prevProps, object prevState)"
-componentDidUpdate(prevProps, prevState){
-    $1
-},
-endsnippet
-
-snippet cwun "React::componentWillUnmount()"
-componentWillUnmount(){
-    $1
-},
-endsnippet
-
-snippet rcc "React::createClass()"
-const $1 = React.createClass({
+snippet class "class Foo extends React.Component"
+class $1 extends React.Component {
     render(){
         return $2;
-    },
-});
+    }
+};
 endsnippet
 
-snippet req "NodeJS::require(name)"
-const $1 = require($2);
+snippet con "constructor(props)"
+constructor(props){
+    super(props);
+
+    this.state = {
+        $1;
+    };
+}
 endsnippet
 
-snippet => "(arg) => {}"
-($1) => {$2}
+
+snippet propTypes "Foo.propTypes"
+$1.propTypes = {
+    $2
+};
+endsnippet
+
+snippet defaultProps "Foo.defaultProps"
+$1.defaultProps = {
+    $2
+};
+endsnippet
+
+snippet cwm "componentWillMount()"
+componentWillMount(){
+    $1
+}
+endsnippet
+
+snippet cdm "componentDidMount()"
+componentDidMount(){
+    $1
+}
+endsnippet
+
+snippet cwrp "componentWillReceiveProps(object nextProps)"
+componentWillReceiveProps(nextProps){
+    $1
+}
+endsnippet
+
+snippet scu "shouldComponentUpdate(object nextProps, object nextState)"
+shouldComponentUpdate(nextProps, nextState){
+    return $1
+}
+endsnippet
+
+snippet cwu "componentWillUpdate(object nextProps, object nextState)"
+componentWillUpdate(nextProps, nextState){
+    $1
+}
+endsnippet
+
+snippet cdu "componentDidUpdate(object prevProps, object prevState)"
+componentDidUpdate(prevProps, prevState){
+    $1
+}
+endsnippet
+
+snippet cwun "componentWillUnmount()"
+componentWillUnmount(){
+    $1
+}
 endsnippet
 
 snippet Prom "ES6::Promise"
