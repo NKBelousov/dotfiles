@@ -109,6 +109,13 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
+" Change html attributes in jsx files
+let g:user_emmet_settings = {
+\  'javascript.jsx' : {
+\      'extends' : 'jsx',
+\  },
+\}
+
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 
 inoremap <C-h> <C-o>h
