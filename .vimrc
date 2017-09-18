@@ -14,26 +14,18 @@ Plug 'Valloric/YouCompleteMe', { 'do': 'cd ~/.vim/plugged/YouCompleteMe/third_pa
 Plug 'ap/vim-css-color' " Color keyword highlighter
 Plug 'bronson/vim-trailing-whitespace' " Highlights and removes trailing whitespaces
 Plug 'christoomey/vim-tmux-navigator' " Seamless navigation between vim and tmux
-Plug 'easymotion/vim-easymotion' " Fast file navigation
 Plug 'joshdick/onedark.vim' " Atom Default Colorscheme
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/gv.vim' " A git commit browser
 Plug 'junegunn/vim-plug' " Plugin manager
-Plug 'kshenoy/vim-signature' " Plugin to place, toggle and display marks
 Plug 'mattn/emmet-vim' " Expanding abbreviations for html & xml
-Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' } " Undotree management
 Plug 'mileszs/ack.vim' " Better project search
-Plug 'morhetz/gruvbox' " Gruvbox colorscheme
 Plug 'mxw/vim-jsx' " Syntax highlighting and indenting for JSX
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " File Explorer
 Plug 'sheerun/vim-polyglot' " Syntax pack
-Plug 'tpope/vim-fugitive' " git wrapper
-Plug 'tpope/vim-surround' " tags/brackets/quotes management made simple
 Plug 'tweekmonster/startuptime.vim' " Track startup time in readable format
 Plug 'vim-airline/vim-airline' " Pretty status line
 Plug 'w0rp/ale' " Asynchronous Lint Engine
-Plug 'zoeesilcock/vim-caniuse' " Use word under cursor for caniuse.com search
 
 call plug#end()
 
