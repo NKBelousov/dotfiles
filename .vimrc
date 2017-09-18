@@ -52,6 +52,7 @@ set nofoldenable " open folds by default
 
 set gdefault " automatically sets global flag for substitution
 set showmatch " show matching bracket
+set ignorecase " ignorecase when all entered characters are lowercase
 set smartcase " smartcase for search patterns
 set hlsearch " highlight all matches
 set incsearch " show matches as I type
