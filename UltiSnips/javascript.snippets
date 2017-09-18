@@ -1,8 +1,14 @@
 snippet class "class Foo extends React.Component"
 class $1 extends React.Component {
-    render(){
-        return $2;
-    }
+	render(){
+		return $2;
+	}
+}
+
+$1.propTypes = {
+};
+
+$1.defaultProps = {
 };
 endsnippet
 
@@ -11,7 +17,7 @@ constructor(props){
     super(props);
 
     this.state = {
-        $1;
+        $1,
     };
 }
 endsnippet
@@ -69,6 +75,18 @@ snippet cwun "componentWillUnmount()"
 componentWillUnmount(){
     $1
 }
+endsnippet
+
+snippet bm "React: Bind method to this"
+this.$1 = this.$1.bind(this);
+endsnippet
+
+snippet gp "React: Get property by name"
+this.props.$1
+endsnippet
+
+snippet gs "React: Get state property by name"
+this.state.$1
 endsnippet
 
 snippet Prom "ES6::Promise"
