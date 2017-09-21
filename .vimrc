@@ -26,6 +26,7 @@ Plug 'sheerun/vim-polyglot' " Syntax pack
 Plug 'tweekmonster/startuptime.vim' " Track startup time in readable format
 Plug 'vim-airline/vim-airline' " Pretty status line
 Plug 'w0rp/ale' " Asynchronous Lint Engine
+Plug 'xtal8/traces.vim' " Highlight patterns and ranges for ex commands
 
 call plug#end()
 
