@@ -57,17 +57,6 @@ set ignorecase " ignorecase when all entered characters are lowercase
 set smartcase " smartcase for search patterns
 set hlsearch " highlight all matches
 set incsearch " show matches as I type
-" Damian Conway's Die Blinkënmatchen: highlight matches
-nnoremap <silent> n n:call HLNext(0.1)<cr>
-nnoremap <silent> N N:call HLNext(0.1)<cr>
-function! HLNext (blinktime)
-  let target_pat = '\c\%#'.@/
-  let ring = matchadd('ErrorMsg', target_pat, 101)
-  redraw
-  exec 'sleep ' . float2nr(a:blinktime * 1000) . 'm'
-  call matchdelete(ring)
-  redraw
-endfunction
 
 set fileformats=unix,dos,mac
 set fileencodings=utf-8,cp1251,koi8-r,ucs-2,cp866
