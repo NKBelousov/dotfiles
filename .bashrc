@@ -56,7 +56,7 @@ alias egrep='egrep --color=auto'
 
 alias diff='colordiff'
 alias vi='vim'
-alias svim='sudo vim'
+alias svim='sudo -e'
 alias ll='ls -alh'
 alias grep='ack'
 
