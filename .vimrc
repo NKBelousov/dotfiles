@@ -20,7 +20,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-plug' " Plugin manager
 Plug 'mattn/emmet-vim' " Expanding abbreviations for html & xml
 Plug 'mileszs/ack.vim' " Better project search
-Plug 'mxw/vim-jsx' " Syntax highlighting and indenting for JSX
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " File Explorer
 Plug 'sheerun/vim-polyglot' " Syntax pack
 Plug 'tweekmonster/startuptime.vim' " Track startup time in readable format
@@ -101,12 +100,7 @@ let g:user_emmet_settings = {
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 
-inoremap <C-h> <C-o>h
-inoremap <C-j> <C-o>j
-inoremap <C-k> <C-o>k
-inoremap <C-l> <C-o>l
 let mapleader=","
-map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 nnoremap <F12> :!ctags -R --exclude=node_modules .<cr>
 nnoremap <F2> :UndotreeToggle<CR>
 nnoremap <F3> vi{=vi{:sort<CR>
@@ -123,7 +117,6 @@ nnoremap <leader>o :NERDTreeToggle<CR>
 nnoremap Q @q
 nnoremap j gj
 nnoremap k gk
-nnoremap zz :w<CR>:bd<CR>
 set pastetoggle=<F2>
 
 set t_Co=256 " 8 for xterm and screen, 256 for xterm-256color and screen-256color
