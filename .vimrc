@@ -19,7 +19,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-plug' " Plugin manager
 Plug 'mattn/emmet-vim' " Expanding abbreviations for html & xml
-Plug 'mileszs/ack.vim' " Better project search
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " File Explorer
 Plug 'sheerun/vim-polyglot' " Syntax pack
 Plug 'tweekmonster/startuptime.vim' " Track startup time in readable format
@@ -72,11 +71,18 @@ set noswapfile
 
 set guioptions=
 
+if executable('rg')
+    set grepprg=rg\ --vimgrep
+    set grepformat=%f:%l:%c:%m
+    command! -bang -nargs=* Find
+        \ call fzf#vim#grep('rg --column --line-number --no-heading --color=always '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
+else
+    echo "ripgrep is not installed"
+endif
+
 let g:jsx_ext_required = 0 " allow jsx in .js files
 let NERDTreeShowHidden=1
 let g:acp_enableAtStartup = 0
-let g:ctrlp_custom_ignore = 'vendor\|node_modules\|.git'
-let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '⨉'
@@ -104,13 +110,13 @@ let mapleader=","
 nnoremap <F12> :!ctags -R --exclude=node_modules .<cr>
 nnoremap <F2> :UndotreeToggle<CR>
 nnoremap <F3> vi{=vi{:sort<CR>
-nnoremap <F4> :Ack! <cword><CR>
+nnoremap <F4> :Find <c-r>=expand("<cword>")<CR><CR>
 nnoremap <F5> :redraw!<CR>
 nnoremap <leader><space> :noh<CR>
-nnoremap <leader>F :Ack!<space>
+nnoremap <leader>F :Find<space>
 nnoremap <leader>f /
-nnoremap <leader>g :FZF<CR>
-nnoremap <leader>h :%s/
+nnoremap <leader>g :Files<CR>
+nnoremap <leader>h :%s/<c-r>=expand("<cword>")<CR>/
 nnoremap <leader>j <C-]>
 nnoremap <leader>k <C-O>
 nnoremap <leader>o :NERDTreeToggle<CR>

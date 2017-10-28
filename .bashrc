@@ -88,3 +88,12 @@ else \
   # @2 - Prompt when not in GIT repo
   echo "'$Yellow$PathShort$Color_Off'\$ "; \
 fi)'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# --files: List files that would be searched but do not search
+# --no-ignore: Do not respect .gitignore, etc...
+# --hidden: Search hidden files and folders
+# --follow: Follow symlinks
+# --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
