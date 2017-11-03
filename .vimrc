@@ -39,6 +39,7 @@ set lazyredraw
 set noerrorbells " no beeping
 set novisualbell " no flashes
 set t_vb= " never flash the screen
+set timeoutlen=1000 ttimeoutlen=0 " remove esc delay
 
 set tabstop=4 " how many spaces to show instead of tab
 set shiftwidth=4 " how many spaces to use for >> and <<
