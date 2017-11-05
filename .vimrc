@@ -116,7 +116,7 @@ nnoremap <F5> :redraw!<CR>
 nnoremap <leader><space> :noh<CR>
 nnoremap <leader>F :Find<space>
 nnoremap <leader>f /
-nnoremap <leader>g :Files<CR>
+nnoremap <leader>g :GFiles<CR>
 nnoremap <leader>h :%s/<c-r>=expand("<cword>")<CR>/
 nnoremap <leader>j <C-]>
 nnoremap <leader>k <C-O>
