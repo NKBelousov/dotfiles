@@ -1,4 +1,3 @@
-set nocompatible
 filetype off
 
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -28,13 +27,11 @@ Plug 'xtal8/traces.vim' " Highlight patterns and ranges for ex commands
 
 call plug#end()
 
-filetype plugin on " enable loading plugin files
-filetype plugin indent on " enable loading indent files
+filetype plugin indent on " enable loading indent files and plugins
 
 set wildmenu " command line completion
 set backspace=eol,start,indent " backspace working as intended
 set whichwrap+=<,>,h,l " move to next/previous line
-set lazyredraw
 
 set noerrorbells " no beeping
 set novisualbell " no flashes
@@ -46,9 +43,6 @@ set shiftwidth=4 " how many spaces to use for >> and <<
 set smarttab " smart addition and deletion of tabs
 set expandtab " expand tabs to spaces
 set smartindent " automatically indent new line
-
-set foldmethod=indent " fold blocks based on indentation
-set nofoldenable " open folds by default
 
 set gdefault " automatically sets global flag for substitution
 set showmatch " show matching bracket
@@ -112,7 +106,6 @@ nnoremap <F12> :!ctags -R --exclude=node_modules .<cr>
 nnoremap <F2> :UndotreeToggle<CR>
 nnoremap <F3> vi{=vi{:sort<CR>
 nnoremap <F4> :Find <c-r>=expand("<cword>")<CR><CR>
-nnoremap <F5> :redraw!<CR>
 nnoremap <leader><space> :noh<CR>
 nnoremap <leader>F :Find<space>
 nnoremap <leader>f /
@@ -139,9 +132,9 @@ augroup prepare
     autocmd BufWritePre * :match OverLength /\%81v.\+/
     autocmd BufWritePre * :retab<CR>
     autocmd FileType css,scss,less setlocal omnifunc=csscomplete#CompleteCSS
-    autocmd FileType css,scss,less setlocal tabstop=2 shiftwidth=2 expandtab
+    autocmd FileType css,scss,less setlocal  shiftwidth=2 expandtab
     autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
-    autocmd FileType html setlocal tabstop=2 shiftwidth=2 expandtab
+    autocmd FileType html setlocal  shiftwidth=2 expandtab
     autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
     autocmd FileType php,phtml setlocal omnifunc=phpcomplete#CompletePHP
     autocmd VimEnter * AirlineTheme onedark
