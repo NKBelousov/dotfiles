@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'SirVer/ultisnips' " Ultimate solution for snippets in vim
 Plug 'Valloric/YouCompleteMe', { 'do': 'cd ~/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/tern_runtime && npm install --production && cd ~/.vim/plugged/YouCompleteMe/ && ./install.py --all' } " A code completion engine for vim
+Plug 'andymass/vim-matchup' " matchit replacement and more
 Plug 'ap/vim-css-color' " Color keyword highlighter
 Plug 'bronson/vim-trailing-whitespace' " Highlights and removes trailing whitespaces
 Plug 'christoomey/vim-tmux-navigator' " Seamless navigation between vim and tmux
