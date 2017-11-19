@@ -47,6 +47,8 @@ set smarttab " smart addition and deletion of tabs
 set expandtab " expand tabs to spaces
 set smartindent " automatically indent new line
 
+set foldmethod=indent
+
 set gdefault " automatically sets global flag for substitution
 set showmatch " show matching bracket
 set ignorecase " ignorecase when all entered characters are lowercase
