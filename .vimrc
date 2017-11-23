@@ -8,8 +8,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'Shougo/unite.vim' " Unite and create user interfaces
-Plug 'Shougo/vimfiler.vim' " Powerful file explorer implemented by Vim script
 Plug 'SirVer/ultisnips' " Ultimate solution for snippets in vim
 Plug 'Valloric/YouCompleteMe', { 'do': 'cd ~/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/tern_runtime && npm install --production && cd ~/.vim/plugged/YouCompleteMe/ && ./install.py --all' } " A code completion engine for vim
 Plug 'andymass/vim-matchup' " matchit replacement and more
@@ -22,6 +20,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-plug' " Plugin manager
 Plug 'mattn/emmet-vim' " Expanding abbreviations for html & xml
 Plug 'metakirby5/codi.vim' " The interactive scratchpad for hackers
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " File Explorer
 Plug 'sheerun/vim-polyglot' " Syntax pack
 Plug 'tweekmonster/startuptime.vim' " Track startup time in readable format
 Plug 'vim-airline/vim-airline' " Pretty status line
@@ -81,6 +80,7 @@ else
 endif
 
 let g:jsx_ext_required = 0 " allow jsx in .js files
+let NERDTreeShowHidden=1
 let g:acp_enableAtStartup = 0
 
 let g:ale_sign_column_always = 1
@@ -117,7 +117,7 @@ nnoremap <leader>g :GFiles<CR>
 nnoremap <leader>h :%s/<c-r>=expand("<cword>")<CR>/
 nnoremap <leader>j <C-]>
 nnoremap <leader>k <C-O>
-nnoremap <leader>o :VimFiler<CR>
+nnoremap <leader>o :NERDTreeToggle<CR>
 nnoremap Q @q
 nnoremap j gj
 nnoremap k gk
