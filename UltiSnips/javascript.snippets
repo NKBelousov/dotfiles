@@ -98,3 +98,13 @@ endsnippet
 snippet me "module.exports = "
 module.exports = $1;
 endsnippet
+
+snippet webpack "Webpack: Config template"
+module.exports = {
+	entry: "$1",
+	output: {
+		path: __dirname + "/dist",
+		filename: "$2",
+	},
+};
+endsnippet
