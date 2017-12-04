@@ -13,7 +13,6 @@ daily(){
     cd -;
     . ~/.bashrc;
     local essential=(
-        "ack-grep"
         "git"
         "htop"
         "tmux"
@@ -24,20 +23,6 @@ daily(){
     sudo apt-get --yes --force-yes upgrade;
     sudo apt-get --yes --force-yes autoremove;
     sudo apt-get --yes --force-yes autoclean;
-}
-
-dev(){
-    tmux new-session -d -s $SESSION
-    tmux rename-window -t $SESSION:1 vim
-    tmux split-window -h
-    tmux select-pane -t 0
-    tmux resize-pane -R 50
-    tmux select-pane -t 1
-    tmux split-window -v
-    tmux select-pane -t 1
-    tmux clock-mode
-    tmux select-pane -t 0
-    tmux attach -t $SESSION
 }
 
 GIT="/etc/bash_completion.d/git-prompt"
@@ -58,7 +43,6 @@ alias diff='colordiff'
 alias vi='vim'
 alias svim='sudo -e'
 alias ll='ls -alh'
-alias grep='ack'
 
 export THEME=$HOME/.bash/themes/agnoster-bash/agnoster.bash
 if [[ -f $THEME ]]; then
