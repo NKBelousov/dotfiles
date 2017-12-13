@@ -1,13 +1,14 @@
 filetype off
 
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall | source $MYVIMRC
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'Chiel92/vim-autoformat' " Provide easy code formatting in Vim by integrating existing code formatters.
 Plug 'SirVer/ultisnips' " Ultimate solution for snippets in vim
 Plug 'Valloric/YouCompleteMe', { 'do': 'cd ~/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/tern_runtime && npm install --production && cd ~/.vim/plugged/YouCompleteMe/ && ./install.py --all' } " A code completion engine for vim
 Plug 'andymass/vim-matchup' " matchit replacement and more
@@ -74,7 +75,7 @@ if executable('rg')
     set grepprg=rg\ --vimgrep
     set grepformat=%f:%l:%c:%m
     command! -bang -nargs=* Find
-        \ call fzf#vim#grep('rg --column --line-number --no-heading --color=always '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
+                \ call fzf#vim#grep('rg --column --line-number --no-heading --color=always '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
 else
     echo "ripgrep is not installed"
 endif
@@ -98,17 +99,17 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " Change html attributes in jsx files
 let g:user_emmet_settings = {
-\  'javascript.jsx' : {
-\      'extends' : 'jsx',
-\  },
-\}
+            \  'javascript.jsx' : {
+            \      'extends' : 'jsx',
+            \  },
+            \}
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 
 let mapleader=","
 nnoremap <F12> :!ctags -R --exclude=node_modules .<cr>
 nnoremap <F2> :UndotreeToggle<CR>
-nnoremap <F3> vi{=vi{:sort<CR>
+nnoremap <F3> :Autoformat<CR>
 nnoremap <F4> :Find <c-r>=expand("<cword>")<CR><CR>
 nnoremap <leader><space> :noh<CR>
 nnoremap <leader>F :Find<space>
@@ -134,11 +135,10 @@ syntax sync minlines=256
 augroup prepare
     autocmd BufWritePre * :%s/\s\+$//e
     autocmd BufWritePre * :match OverLength /\%81v.\+/
-    autocmd BufWritePre * :retab<CR>
-    autocmd FileType css,scss,less setlocal omnifunc=csscomplete#CompleteCSS
     autocmd FileType css,scss,less setlocal  shiftwidth=2 expandtab
-    autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType css,scss,less setlocal omnifunc=csscomplete#CompleteCSS
     autocmd FileType html setlocal  shiftwidth=2 expandtab
+    autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
     autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
     autocmd FileType php,phtml setlocal omnifunc=phpcomplete#CompletePHP
     autocmd VimEnter * AirlineTheme onedark
