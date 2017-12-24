@@ -41,8 +41,8 @@ set novisualbell " no flashes
 set t_vb= " never flash the screen
 set timeoutlen=1000 ttimeoutlen=0 " remove esc delay
 
-set tabstop=4 " how many spaces to show instead of tab
-set shiftwidth=4 " how many spaces to use for >> and <<
+set tabstop=2 " how many spaces to show instead of tab
+set shiftwidth=2 " how many spaces to use for >> and <<
 set smarttab " smart addition and deletion of tabs
 set expandtab " expand tabs to spaces
 set smartindent " automatically indent new line
