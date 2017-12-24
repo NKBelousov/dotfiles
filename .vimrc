@@ -8,7 +8,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'Chiel92/vim-autoformat' " Provide easy code formatting in Vim by integrating existing code formatters.
 Plug 'SirVer/ultisnips' " Ultimate solution for snippets in vim
 Plug 'Valloric/YouCompleteMe', { 'do': 'cd ~/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/tern_runtime && npm install --production && cd ~/.vim/plugged/YouCompleteMe/ && ./install.py --all' } " A code completion engine for vim
 Plug 'andymass/vim-matchup' " matchit replacement and more
@@ -21,6 +20,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-plug' " Plugin manager
 Plug 'mattn/emmet-vim' " Expanding abbreviations for html & xml
 Plug 'metakirby5/codi.vim' " The interactive scratchpad for hackers
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' } " A vim plugin wrapper for prettier
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " File Explorer
 Plug 'sheerun/vim-polyglot' " Syntax pack
 Plug 'tweekmonster/startuptime.vim' " Track startup time in readable format
@@ -103,13 +103,15 @@ let g:user_emmet_settings = {
             \      'extends' : 'jsx',
             \  },
             \}
+let g:prettier#exec_cmd_async = 1
+let g:prettier#autoformat = 0
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 
 let mapleader=","
 nnoremap <F12> :!ctags -R --exclude=node_modules .<cr>
 nnoremap <F2> :UndotreeToggle<CR>
-nnoremap <F3> :Autoformat<CR>
+nnoremap <F3> :PrettierAsync<CR>
 nnoremap <F4> :Find <c-r>=expand("<cword>")<CR><CR>
 nnoremap <leader><space> :noh<CR>
 nnoremap <leader>F :Find<space>
