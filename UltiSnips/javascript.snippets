@@ -1,79 +1,72 @@
 snippet class "class Foo extends React.Component"
-class $1 extends React.Component {
-	render(){
-		return $2;
-	}
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+
+class $1 extends Component {
+  static get propTypes(){
+	return {};
+  }
+  static get defaultProps(){
+    return {};
+  }
+  render(){
+    return $2;
+  }
 }
 
-$1.propTypes = {
-};
-
-$1.defaultProps = {
-};
+export default $1;
 endsnippet
 
 snippet con "constructor(props)"
 constructor(props){
-    super(props);
+  super(props);
 
-    this.state = {
-        $1
-    };
+  this.state = {
+    $1
+  };
 }
 endsnippet
 
 
-snippet propTypes "Foo.propTypes"
-$1.propTypes = {
-    $2
-};
-endsnippet
-
-snippet defaultProps "Foo.defaultProps"
-$1.defaultProps = {
-    $2
-};
-endsnippet
-
 snippet cwm "componentWillMount()"
 componentWillMount(){
-    $1
+  $1
 }
 endsnippet
 
 snippet cdm "componentDidMount()"
 componentDidMount(){
-    $1
+  $1
 }
 endsnippet
 
 snippet cwrp "componentWillReceiveProps(object nextProps)"
 componentWillReceiveProps(nextProps){
-    $1
+  $1
 }
 endsnippet
 
 snippet scu "shouldComponentUpdate(object nextProps, object nextState)"
 shouldComponentUpdate(nextProps, nextState){
-    return $1
+  return $1
 }
 endsnippet
 
 snippet cwu "componentWillUpdate(object nextProps, object nextState)"
 componentWillUpdate(nextProps, nextState){
-    $1
+  $1
 }
 endsnippet
 
 snippet cdu "componentDidUpdate(object prevProps, object prevState)"
 componentDidUpdate(prevProps, prevState){
-    $1
+  $1
 }
 endsnippet
 
 snippet cwun "componentWillUnmount()"
 componentWillUnmount(){
-    $1
+  $1
 }
 endsnippet
 
@@ -91,7 +84,7 @@ endsnippet
 
 snippet Prom "ES6::Promise"
 new Promise((resolve, reject) => {
-    $1
+  $1
 });
 endsnippet
 
@@ -101,10 +94,10 @@ endsnippet
 
 snippet webpack "Webpack: Config template"
 module.exports = {
-	entry: "$1",
-	output: {
-		path: __dirname + "/dist",
-		filename: "$2",
-	},
+  entry: "$1",
+  output: {
+	path: __dirname + "/dist",
+	filename: "$2",
+  },
 };
 endsnippet
