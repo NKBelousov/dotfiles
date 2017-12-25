@@ -1,9 +1,9 @@
 filetype off
 
 if empty(glob('~/.vim/autoload/plug.vim'))
-    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall | source $MYVIMRC
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
 call plug#begin('~/.vim/plugged')
@@ -72,12 +72,12 @@ set noswapfile
 set guioptions=
 
 if executable('rg')
-    set grepprg=rg\ --vimgrep
-    set grepformat=%f:%l:%c:%m
-    command! -bang -nargs=* Find
-                \ call fzf#vim#grep('rg --column --line-number --no-heading --color=always '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
+  set grepprg=rg\ --vimgrep
+  set grepformat=%f:%l:%c:%m
+  command! -bang -nargs=* Find
+    \ call fzf#vim#grep('rg --column --line-number --no-heading --color=always '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
 else
-    echo "ripgrep is not installed"
+  echo "ripgrep is not installed"
 endif
 
 let g:jsx_ext_required = 0 " allow jsx in .js files
@@ -99,10 +99,10 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " Change html attributes in jsx files
 let g:user_emmet_settings = {
-            \  'javascript.jsx' : {
-            \      'extends' : 'jsx',
-            \  },
-            \}
+  \  'javascript.jsx' : {
+  \      'extends' : 'jsx',
+  \  },
+  \}
 let g:prettier#exec_cmd_async = 1
 let g:prettier#autoformat = 0
 
@@ -135,13 +135,11 @@ syntax enable
 syntax sync minlines=256
 
 augroup prepare
-    autocmd BufWritePre * :%s/\s\+$//e
-    autocmd BufWritePre * :match OverLength /\%81v.\+/
-    autocmd FileType css,scss,less setlocal  shiftwidth=2 expandtab
-    autocmd FileType css,scss,less setlocal omnifunc=csscomplete#CompleteCSS
-    autocmd FileType html setlocal  shiftwidth=2 expandtab
-    autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
-    autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-    autocmd FileType php,phtml setlocal omnifunc=phpcomplete#CompletePHP
-    autocmd VimEnter * AirlineTheme onedark
+  autocmd BufWritePre * :%s/\s\+$//e
+  autocmd BufWritePre * :match OverLength /\%81v.\+/
+  autocmd FileType css,scss,less setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType php,phtml setlocal omnifunc=phpcomplete#CompletePHP
+  autocmd VimEnter * AirlineTheme onedark
 augroup END
