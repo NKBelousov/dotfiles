@@ -104,7 +104,6 @@ let g:user_emmet_settings = {
   \  },
   \}
 let g:prettier#exec_cmd_async = 1
-let g:prettier#autoformat = 0
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 
@@ -137,6 +136,7 @@ syntax sync minlines=256
 augroup prepare
   autocmd BufWritePre * :%s/\s\+$//e
   autocmd BufWritePre * :match OverLength /\%81v.\+/
+  autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md PrettierAsync
   autocmd FileType css,scss,less setlocal omnifunc=csscomplete#CompleteCSS
   autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
   autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
