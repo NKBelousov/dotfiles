@@ -9,7 +9,6 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'SirVer/ultisnips' " Ultimate solution for snippets in vim
-Plug 'Valloric/YouCompleteMe', { 'do': 'cd ~/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/tern_runtime && npm install --production && cd ~/.vim/plugged/YouCompleteMe/ && ./install.py --all' } " A code completion engine for vim
 Plug 'andymass/vim-matchup' " matchit replacement and more
 Plug 'ap/vim-css-color' " Color keyword highlighter
 Plug 'bronson/vim-trailing-whitespace' " Highlights and removes trailing whitespaces
@@ -18,6 +17,7 @@ Plug 'joshdick/onedark.vim' " Atom Default Colorscheme
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-plug' " Plugin manager
+Plug 'maralla/completor.vim', { 'do': 'make js' } " Async completion framework made ease
 Plug 'mattn/emmet-vim' " Expanding abbreviations for html & xml
 Plug 'metakirby5/codi.vim' " The interactive scratchpad for hackers
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' } " A vim plugin wrapper for prettier
