@@ -12,6 +12,10 @@
   lgas = "!f() { git lga --stat $@; }; f"
   whatadded = "!f() { git lga --abbrev-commit --date=short --diff-filter=A -- }; f"
   filelog = log -u
+  ##### Adding
+  ap = add --patch
+  ai = add --interactive
+  aa = add --all
   ##### Branching
   bc = checkout -b
   bd = branch -D
