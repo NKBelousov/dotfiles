@@ -112,6 +112,7 @@ nnoremap <F12> :!ctags -R --exclude=node_modules .<cr>
 nnoremap <F2> :UndotreeToggle<CR>
 nnoremap <F3> :PrettierAsync<CR>
 nnoremap <F4> :Find <c-r>=expand("<cword>")<CR><CR>
+nnoremap <F9> :Sass<CR>
 nnoremap <leader><space> :noh<CR>
 nnoremap <leader>F :Find<space>
 nnoremap <leader>f /
