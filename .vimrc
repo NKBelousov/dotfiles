@@ -87,11 +87,6 @@ let g:acp_enableAtStartup = 0
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '⨉'
 let g:ale_sign_warning = '⚠'
-" Disable tab navigation in YCM
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
-" YCM only supports python 2
-let g:ycm_server_python_interpreter = '/usr/bin/python2.7'
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
