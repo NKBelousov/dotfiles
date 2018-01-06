@@ -17,6 +17,7 @@ Plug 'joshdick/onedark.vim' " Atom Default Colorscheme
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-plug' " Plugin manager
+Plug 'manasthakur/vim-commentor' " Toggling commends became easier!
 Plug 'maralla/completor.vim', { 'do': 'make js' } " Async completion framework made ease
 Plug 'mattn/emmet-vim' " Expanding abbreviations for html & xml
 Plug 'metakirby5/codi.vim' " The interactive scratchpad for hackers
@@ -119,6 +120,9 @@ nnoremap <leader>o :NERDTreeToggle<CR>
 nnoremap Q @q
 nnoremap j gj
 nnoremap k gk
+nmap <leader>c <Plug>Commentor
+xmap <leader>c <Plug>Commentor
+nmap <leader>cc <Plug>CommentorLine
 set pastetoggle=<F2>
 
 set t_Co=256 " 8 for xterm and screen, 256 for xterm-256color and screen-256color
