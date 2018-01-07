@@ -104,6 +104,7 @@ let g:prettier#exec_cmd_async = 1
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 
 let mapleader=","
+set pastetoggle=<F2>
 nnoremap <F12> :!ctags -R --exclude=node_modules .<cr>
 nnoremap <F2> :UndotreeToggle<CR>
 nnoremap <F3> :PrettierAsync<CR>
@@ -123,7 +124,12 @@ nnoremap k gk
 nmap <leader>c <Plug>Commentor
 xmap <leader>c <Plug>Commentor
 nmap <leader>cc <Plug>CommentorLine
-set pastetoggle=<F2>
+nnoremap / /\v
+vnoremap / /\v
+cnoremap %s/ %smagic/
+cnoremap >s/ >smagic/
+nnoremap :g/ :g/\v
+nnoremap :g// :g//
 
 set t_Co=256 " 8 for xterm and screen, 256 for xterm-256color and screen-256color
 set background=dark
