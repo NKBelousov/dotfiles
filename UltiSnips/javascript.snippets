@@ -1,5 +1,5 @@
 snippet class "class Foo extends React.Component"
-import React, {Component} from 'react';
+import {Component} from 'react';
 import PropTypes from 'prop-types';
 
 class $1 extends Component {
@@ -96,8 +96,8 @@ snippet webpack "Webpack: Config template"
 module.exports = {
   entry: "$1",
   output: {
-	path: __dirname + "/dist",
-	filename: "$2",
+	  path: __dirname + "/dist",
+	  filename: "$2",
   },
 };
 endsnippet
