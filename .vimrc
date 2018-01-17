@@ -21,6 +21,7 @@ Plug 'manasthakur/vim-commentor' " Toggling commends became easier!
 Plug 'maralla/completor.vim', { 'do': 'make js' } " Async completion framework made ease
 Plug 'mattn/emmet-vim' " Expanding abbreviations for html & xml
 Plug 'metakirby5/codi.vim' " The interactive scratchpad for hackers
+Plug 'morhetz/gruvbox' " Retro groove colorscheme for Vim
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' } " A vim plugin wrapper for prettier
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " File Explorer
 Plug 'sheerun/vim-polyglot' " Syntax pack
@@ -132,12 +133,19 @@ nnoremap :g/ :g/\v
 nnoremap :g// :g//
 
 set t_Co=256 " 8 for xterm and screen, 256 for xterm-256color and screen-256color
-set background=dark
 set t_ut= " disable background color erase so that colorschemes render properly
 " when inside tmux
-colorscheme onedark
 syntax enable
 syntax sync minlines=256
+
+function Theme(theme,background)
+  execute 'colorscheme '.a:theme
+  execute 'set background='.a:background
+  execute 'AirlineTheme '.a:theme
+endfunction
+
+com -nargs=0 Dark :call Theme("onedark","dark")
+com -nargs=0 Light :call Theme("gruvbox","light")
 
 function Sass() range
   if executable('node-sass')
@@ -149,6 +157,7 @@ endfunction
 com -range=% -nargs=0 Sass :<line1>,<line2>call Sass()
 
 augroup prepare
+  autocmd VimEnter * Dark
   autocmd BufWritePre * :%s/\s\+$//e
   autocmd BufWritePre * :match OverLength /\%81v.\+/
   autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md PrettierAsync
@@ -156,5 +165,4 @@ augroup prepare
   autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
   autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType php,phtml setlocal omnifunc=phpcomplete#CompletePHP
-  autocmd VimEnter * AirlineTheme onedark
 augroup END
