@@ -1,17 +1,12 @@
-filetype plugin indent on " enable loading indent files and plugins
-
 set wildmenu " command line completion
 set backspace=eol,start,indent " backspace working as intended
 set whichwrap+=<,>,h,l " move to next/previous line
 
-set noerrorbells " no beeping
-set novisualbell " no flashes
-set t_vb= " never flash the screen
 set timeoutlen=1000 ttimeoutlen=0 " remove esc delay
 
-set tabstop=2 " how many spaces to show instead of tab
 set shiftwidth=2 " how many spaces to use for >> and <<
-set smarttab " smart addition and deletion of tabs
+set softtabstop=2 " how many spaces to use when performing editing operations,
+" like inserting <TAB> or using <BS>
 set expandtab " expand tabs to spaces
 set smartindent " automatically indent new line
 
@@ -24,7 +19,7 @@ set smartcase " smartcase for search patterns
 set hlsearch " highlight all matches
 set incsearch " show matches as I type
 
-set fileformats=unix,dos,mac
+set fileformats=unix,dos
 set fileencodings=utf-8,cp1251,koi8-r,ucs-2,cp866
 
 set relativenumber " show line numbers relative to current
@@ -38,7 +33,6 @@ set nobackup
 set noswapfile
 
 set guioptions=
-set t_Co=256 " 8 for xterm and screen, 256 for xterm-256color and screen-256color
 set t_ut= " disable background color erase so that colorschemes render properly
 " when inside tmux
 syntax enable
