@@ -9,6 +9,7 @@ daily(){
   git fetch --all --prune && git reset --hard origin/master;
   find . -maxdepth 1 -type f | xargs -L 1 -I {} cp {} ~/{};
   mkdir -p ~/.vim/UltiSnips/ && cp -r ./UltiSnips/ ~/.vim/;
+  cd .vim && find . -maxdepth 1 -type f | xargs -L 1 -I {} cp {} ~/.vim/{};
   vim +PlugInstall +PlugClean +PlugUpdate +PlugUpgrade +qall;
   cd -;
   . ~/.bashrc;
