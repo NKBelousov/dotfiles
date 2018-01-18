@@ -19,9 +19,3 @@ nnoremap k gk
 nmap <leader>c <Plug>Commentor
 xmap <leader>c <Plug>Commentor
 nmap <leader>cc <Plug>CommentorLine
-nnoremap / /\v
-vnoremap / /\v
-cnoremap %s/ %smagic/
-cnoremap >s/ >smagic/
-nnoremap :g/ :g/\v
-nnoremap :g// :g//
