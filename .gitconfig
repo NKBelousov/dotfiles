@@ -10,8 +10,6 @@
   lga = "!f() { git lg --all $@; }; f"
   lgs = "!f() { git lg --stat $@; }; f"
   lgas = "!f() { git lga --stat $@; }; f"
-  whatadded = "!f() { git lga --abbrev-commit --date=short --diff-filter=A -- }; f"
-  filelog = log -u
   ##### Adding
   ap = add --patch
   ai = add --interactive
@@ -55,6 +53,10 @@
   please = push --force-with-lease
   pf = push --force
   p = push
+  #### Utility
+  aliases = "!f() { git config -l | grep alias | cut -c 7-; }; f"
+  files = show -p --pretty="" --name-only
+  rm-rr-cache = "!f() { rm -Rf ./.git/rr-cache/; }; f"
 [core]
   editor = vim
   whitespace = trailing-space,space-before-tab
