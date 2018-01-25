@@ -33,14 +33,6 @@ then
   source $GIT
 fi
 
-alias ls='ls --color=auto'
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-
-alias diff='colordiff'
 alias vi='vim'
 alias svim='sudo -e'
 alias ll='ls -alh'
