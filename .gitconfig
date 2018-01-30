@@ -35,7 +35,7 @@
   cpa = cherry-pick --abort
   cpc = cherry-pick --continue
   ##### Fetching
-  fa = fetch --all --prune
+  fa = fetch --all --prune --tags
   fu = fetch upstream
   ##### Merging
   m = merge
