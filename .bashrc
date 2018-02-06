@@ -7,7 +7,7 @@ SESSION=`basename $PWD`
 daily(){
   cd ~/Projects/dotfiles;
   git fetch --all --prune && git reset --hard origin/master;
-  find . -maxdepth 1 | xargs -L 1 -I {} cp -R {} ~/{};
+  find . -type f -not -regex "./.git.*" | xargs -L 1 -I {} sh -c "mkdir -p \`dirname ~/{}\`; cp {} ~/{};";
   vim +PlugInstall +PlugClean +PlugUpdate +PlugUpgrade +qall;
   cd -;
   . ~/.bashrc;
