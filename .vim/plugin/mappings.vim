@@ -16,6 +16,8 @@ nnoremap <leader>o :NERDTreeToggle<CR>
 nnoremap Q @q
 nnoremap j gj
 nnoremap k gk
+nnoremap <leader>" :sp<CR><C-W>J
+nnoremap <leader>% :vsp<CR><C-W>L
 nmap <leader>c <Plug>Commentor
 xmap <leader>c <Plug>Commentor
 nmap <leader>cc <Plug>CommentorLine
