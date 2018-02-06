@@ -7,9 +7,7 @@ SESSION=`basename $PWD`
 daily(){
   cd ~/Projects/dotfiles;
   git fetch --all --prune && git reset --hard origin/master;
-  find . -maxdepth 1 -type f | xargs -L 1 -I {} cp {} ~/{};
-  mkdir -p ~/.vim/UltiSnips/ && cp -r ./UltiSnips/ ~/.vim/;
-  find ./.vim/ -maxdepth 1 -type f | xargs -L 1 -I {} cp {} ~/.vim/{};
+  find . -maxdepth 1 | xargs -L 1 -I {} cp -R {} ~/{};
   vim +PlugInstall +PlugClean +PlugUpdate +PlugUpgrade +qall;
   cd -;
   . ~/.bashrc;
