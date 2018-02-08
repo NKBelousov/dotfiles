@@ -25,6 +25,7 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' } " A vim plugin wrapper fo
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " File Explorer
 Plug 'sheerun/vim-polyglot' " Syntax pack
 Plug 'tpope/vim-fugitive' " a Git wrapper so awesome, it should be illegal
+Plug 'tpope/vim-surround' " quoting/parenthesizing made simple
 Plug 'tweekmonster/startuptime.vim' " Track startup time in readable format
 Plug 'vim-airline/vim-airline' " Pretty status line
 Plug 'w0rp/ale' " Asynchronous Lint Engine
