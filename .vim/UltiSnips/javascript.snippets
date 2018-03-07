@@ -1,14 +1,8 @@
-snippet class "class Foo extends React.Component"
-import {Component} from 'react';
+snippet class "class Foo extends Component"
 import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 
 class $1 extends Component {
-  static get propTypes(){
-    return {};
-  }
-  static get defaultProps(){
-    return {};
-  }
   render(){
     return $2;
   }
@@ -17,7 +11,23 @@ class $1 extends Component {
 export default $1;
 endsnippet
 
-snippet con "constructor(props)"
+snippet propTypes "React::propTypes"
+static get propTypes(){
+  return {
+    $1
+  };
+}
+endsnippet
+
+snippet defaultProps "React::defaultProps"
+static get defaultProps(){
+  return {
+    $1
+  };
+}
+endsnippet
+
+snippet con "React::constructor(props)"
 constructor(props){
   super(props);
 
@@ -28,57 +38,57 @@ constructor(props){
 endsnippet
 
 
-snippet cwm "componentWillMount()"
+snippet cwm "React::componentWillMount()"
 componentWillMount(){
   $1
 }
 endsnippet
 
-snippet cdm "componentDidMount()"
+snippet cdm "React::componentDidMount()"
 componentDidMount(){
   $1
 }
 endsnippet
 
-snippet cwrp "componentWillReceiveProps(object nextProps)"
+snippet cwrp "React::componentWillReceiveProps(object nextProps)"
 componentWillReceiveProps(nextProps){
   $1
 }
 endsnippet
 
-snippet scu "shouldComponentUpdate(object nextProps, object nextState)"
+snippet scu "React::shouldComponentUpdate(object nextProps, object nextState)"
 shouldComponentUpdate(nextProps, nextState){
   return $1
 }
 endsnippet
 
-snippet cwu "componentWillUpdate(object nextProps, object nextState)"
+snippet cwu "React::componentWillUpdate(object nextProps, object nextState)"
 componentWillUpdate(nextProps, nextState){
   $1
 }
 endsnippet
 
-snippet cdu "componentDidUpdate(object prevProps, object prevState)"
+snippet cdu "React::componentDidUpdate(object prevProps, object prevState)"
 componentDidUpdate(prevProps, prevState){
   $1
 }
 endsnippet
 
-snippet cwun "componentWillUnmount()"
+snippet cwun "React::componentWillUnmount()"
 componentWillUnmount(){
   $1
 }
 endsnippet
 
-snippet bm "React: Bind method to this"
+snippet bm "React::Bind method to this"
 this.$1 = this.$1.bind(this);
 endsnippet
 
-snippet gp "React: Get property by name"
+snippet gp "React::Get property by name"
 this.props.$1
 endsnippet
 
-snippet gs "React: Get state property by name"
+snippet gs "React::Get state property by name"
 this.state.$1
 endsnippet
 
