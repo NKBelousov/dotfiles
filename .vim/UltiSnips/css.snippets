@@ -88,3 +88,15 @@ min-height: $3;
 min-width: $1;
 width: $1;
 endsnippet
+
+snippet clearfix "clearfix"
+$1 {
+  overflow: auto;
+}
+
+$1::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+endsnippet

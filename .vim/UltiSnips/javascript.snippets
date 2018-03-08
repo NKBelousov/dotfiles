@@ -80,6 +80,12 @@ componentWillUnmount(){
 }
 endsnippet
 
+snippet cdc "React::componentDidCatch(error, info)"
+componentDidCatch(error, info){
+  $1
+}
+endsnippet
+
 snippet bm "React::Bind method to this"
 this.$1 = this.$1.bind(this);
 endsnippet
@@ -90,6 +96,122 @@ endsnippet
 
 snippet gs "React::Get state property by name"
 this.state.$1
+endsnippet
+
+snippet pta "PropTypes.array"
+PropTypes.array,
+endsnippet
+
+snippet ptar "PropTypes.array.isRequired"
+PropTypes.array.isRequired,
+endsnippet
+
+snippet ptao "PropTypes.arrayOf()"
+PropTypes.arrayOf($1),
+endsnippet
+
+snippet ptaor "PropTypes.arrayOf().isRequired"
+PropTypes.arrayOf($1).isRequired,
+endsnippet
+
+snippet ptb "PropTypes.bool"
+PropTypes.bool,
+endsnippet
+
+snippet ptbr "PropTypes.bool.isRequired"
+PropTypes.bool.isRequired,
+endsnippet
+
+snippet ptf "PropTypes.func"
+PropTypes.func,
+endsnippet
+
+snippet ptfr "PropTypes.func.isRequired"
+PropTypes.func.isRequired,
+endsnippet
+
+snippet ptn "PropTypes.number"
+PropTypes.number,
+endsnippet
+
+snippet ptnr "PropTypes.number.isRequired"
+PropTypes.number.isRequired,
+endsnippet
+
+snippet pto "PropTypes.object"
+PropTypes.object,
+endsnippet
+
+snippet ptor "PropTypes.object.isRequired"
+PropTypes.object.isRequired,
+endsnippet
+
+snippet ptoo "PropTypes.objectOf()"
+PropTypes.objectOf($1),
+endsnippet
+
+snippet ptoor "PropTypes.objectOf().isRequired"
+PropTypes.objectOf($1).isRequired,
+endsnippet
+
+snippet ptsh "PropTypes.shape({})"
+PropTypes.shape({
+  $1
+}),
+endsnippet
+
+snippet ptshr "PropTypes.shape({}).isRequired"
+PropTypes.shape({
+  $1
+}).isRequired,
+endsnippet
+
+snippet pts "PropTypes.string"
+PropTypes.string,
+endsnippet
+
+snippet ptsr "PropTypes.string.isRequired"
+PropTypes.string.isRequired,
+endsnippet
+
+snippet ptnd "PropTypes.node"
+PropTypes.node,
+endsnippet
+
+snippet ptndr "PropTypes.node.isRequired"
+PropTypes.node.isRequired,
+endsnippet
+
+snippet ptel "PropTypes.element"
+PropTypes.element,
+endsnippet
+
+snippet ptelr "PropTypes.element.isRequired"
+PropTypes.element.isRequired,
+endsnippet
+
+snippet pti "PropTypes.instanceOf"
+PropTypes.instanceOf($1),
+endsnippet
+
+snippet ptir "PropTypes.instanceOf.isRequired"
+PropTypes.instanceOf($1).isRequired,
+endsnippet
+
+snippet ptof "PropTypes.oneOf([])"
+PropTypes.oneOf([$1]),
+endsnippet
+
+snippet ptofr "PropTypes.oneOf([]).isRequired"
+PropTypes.oneOf([$1]).isRequired,
+endsnippet
+
+snippet ptoft "PropTypes.oneOfType([])"
+PropTypes.oneOfType([$1]),
+endsnippet
+
+snippet ptoftr "PropTypes.oneOfType([]).isRequired"
+PropTypes.oneOfType([$1]).isRequired,
 endsnippet
 
 snippet Prom "ES6::Promise"
@@ -114,6 +236,14 @@ endsnippet
 
 snippet imp "import ES6 module"
 import $1 from "$2";
+endsnippet
+
+snippet ex "export"
+export $1;
+endsnippet
+
+snippet exd "export default"
+export default $1;
 endsnippet
 
 snippet l "let foo = bar;"
