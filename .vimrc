@@ -19,7 +19,6 @@ Plug 'kshenoy/vim-signature' " Plugin to toggle, display and navigate marks
 Plug 'manasthakur/vim-commentor' " Toggling commends became easier!
 Plug 'maralla/completor.vim', { 'do': 'make js' } " Async completion framework made ease
 Plug 'mattn/emmet-vim' " Expanding abbreviations for html & xml
-Plug 'metakirby5/codi.vim' " The interactive scratchpad for hackers
 Plug 'morhetz/gruvbox' " Retro groove colorscheme for Vim
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' } " A vim plugin wrapper for prettier
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " File Explorer
