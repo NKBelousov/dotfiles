@@ -1,20 +1,28 @@
-snippet class "class Foo extends Component"
+snippet class "class Foo"
+class ${1:name} {
+  ${2:declaration}
+}
+
+export default ${3:$1};
+endsnippet
+
+snippet component "class Foo extends Component"
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-class $1 extends Component {
+class ${1:name} extends Component {
   render(){
-    return $2;
+    return ${2:node};
   }
 }
 
-export default $1;
+export default ${3:$1};
 endsnippet
 
 snippet propTypes "React::propTypes"
 static get propTypes(){
   return {
-    $1
+    ${1:object}
   };
 }
 endsnippet
@@ -22,7 +30,7 @@ endsnippet
 snippet defaultProps "React::defaultProps"
 static get defaultProps(){
   return {
-    $1
+    ${1:object}
   };
 }
 endsnippet
@@ -32,7 +40,7 @@ constructor(props){
   super(props);
 
   this.state = {
-    $1
+    ${1:object}
   };
 }
 endsnippet
@@ -40,49 +48,49 @@ endsnippet
 
 snippet cwm "React::componentWillMount()"
 componentWillMount(){
-  $1
+  ${1:expressions}
 }
 endsnippet
 
 snippet cdm "React::componentDidMount()"
 componentDidMount(){
-  $1
+  ${1:expressions}
 }
 endsnippet
 
 snippet cwrp "React::componentWillReceiveProps(object nextProps)"
 componentWillReceiveProps(nextProps){
-  $1
+  ${1:expressions}
 }
 endsnippet
 
 snippet scu "React::shouldComponentUpdate(object nextProps, object nextState)"
 shouldComponentUpdate(nextProps, nextState){
-  return $1
+  return ${1:expression}
 }
 endsnippet
 
 snippet cwu "React::componentWillUpdate(object nextProps, object nextState)"
 componentWillUpdate(nextProps, nextState){
-  $1
+  ${1:expressions}
 }
 endsnippet
 
 snippet cdu "React::componentDidUpdate(object prevProps, object prevState)"
 componentDidUpdate(prevProps, prevState){
-  $1
+  ${1:expressions}
 }
 endsnippet
 
 snippet cwun "React::componentWillUnmount()"
 componentWillUnmount(){
-  $1
+  ${1:expressions}
 }
 endsnippet
 
 snippet cdc "React::componentDidCatch(error, info)"
 componentDidCatch(error, info){
-  $1
+  ${1:expressions}
 }
 endsnippet
 
@@ -91,11 +99,11 @@ this.$1 = this.$1.bind(this);
 endsnippet
 
 snippet gp "React::Get property by name"
-this.props.$1
+this.props.${1:key}
 endsnippet
 
 snippet gs "React::Get state property by name"
-this.state.$1
+this.state.${1:key}
 endsnippet
 
 snippet pta "PropTypes.array"
@@ -107,11 +115,11 @@ PropTypes.array.isRequired,
 endsnippet
 
 snippet ptao "PropTypes.arrayOf()"
-PropTypes.arrayOf($1),
+PropTypes.arrayOf(${1:propType}),
 endsnippet
 
 snippet ptaor "PropTypes.arrayOf().isRequired"
-PropTypes.arrayOf($1).isRequired,
+PropTypes.arrayOf(${1:propType}).isRequired,
 endsnippet
 
 snippet ptb "PropTypes.bool"
@@ -147,22 +155,22 @@ PropTypes.object.isRequired,
 endsnippet
 
 snippet ptoo "PropTypes.objectOf()"
-PropTypes.objectOf($1),
+PropTypes.objectOf(${1:propType}),
 endsnippet
 
 snippet ptoor "PropTypes.objectOf().isRequired"
-PropTypes.objectOf($1).isRequired,
+PropTypes.objectOf(${1:propType}).isRequired,
 endsnippet
 
 snippet ptsh "PropTypes.shape({})"
 PropTypes.shape({
-  $1
+  ${1:object}
 }),
 endsnippet
 
 snippet ptshr "PropTypes.shape({}).isRequired"
 PropTypes.shape({
-  $1
+  ${1:object}
 }).isRequired,
 endsnippet
 
@@ -191,77 +199,77 @@ PropTypes.element.isRequired,
 endsnippet
 
 snippet pti "PropTypes.instanceOf"
-PropTypes.instanceOf($1),
+PropTypes.instanceOf(${1:class}),
 endsnippet
 
 snippet ptir "PropTypes.instanceOf.isRequired"
-PropTypes.instanceOf($1).isRequired,
+PropTypes.instanceOf(${1:class}).isRequired,
 endsnippet
 
 snippet ptof "PropTypes.oneOf([])"
-PropTypes.oneOf([$1]),
+PropTypes.oneOf([${1:array}]),
 endsnippet
 
 snippet ptofr "PropTypes.oneOf([]).isRequired"
-PropTypes.oneOf([$1]).isRequired,
+PropTypes.oneOf([${1:array}]).isRequired,
 endsnippet
 
 snippet ptoft "PropTypes.oneOfType([])"
-PropTypes.oneOfType([$1]),
+PropTypes.oneOfType([${1:array}]),
 endsnippet
 
 snippet ptoftr "PropTypes.oneOfType([]).isRequired"
-PropTypes.oneOfType([$1]).isRequired,
+PropTypes.oneOfType([${1:array}]).isRequired,
 endsnippet
 
 snippet Prom "ES6::Promise"
 new Promise((resolve, reject) => {
-  $1
+  ${1:expressions}
 });
 endsnippet
 
 snippet me "module.exports = "
-module.exports = $1;
+module.exports = ${1:expression};
 endsnippet
 
 snippet webpack "Webpack: Config template"
 module.exports = {
-  entry: "$1",
+  entry: "${1:input}",
   output: {
     path: __dirname + "/dist",
-    filename: "$2",
+    filename: "${2:output}",
   },
 };
 endsnippet
 
 snippet imp "import ES6 module"
-import $1 from "$2";
+import ${1:name} from "${2:from}";
 endsnippet
 
 snippet ex "export"
-export $1;
+export ${1:expression};
 endsnippet
 
 snippet exd "export default"
-export default $1;
+export default ${1:expression};
 endsnippet
 
 snippet l "let foo = bar;"
-let $1 = $2;
+let ${1:name} = ${2:value};
 endsnippet
 
 snippet c "const foo = bar;"
-const $1 = $2;
+const ${1:name} = ${2:value};
 endsnippet
 
 snippet => "Arrow function"
-$1 => {
-  $2
+${1:params} => {
+  ${2:expressions}
 }
 endsnippet
 
 snippet iife "Immediately-invoked function expression"
-void $1($2){
-  $3
+void ${1:name}(${2:params}){
+  ${3:expressions}
 }
 endsnippet
