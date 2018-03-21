@@ -1,6 +1,6 @@
 snippet cl "Class declaration"
-$1 {
-  $2
+${1:name} {
+  ${2:declarations}
 }
 endsnippet
 
@@ -21,17 +21,17 @@ position: static;
 endsnippet
 
 snippet med "Media query"
-@media($1: $2){
-  $3
+@media(${1:key}: ${2:value}){
+  ${3:declarations}
 }
 endsnippet
 
 snippet pad "Padding"
-padding: $1;
+padding: ${1:value};
 endsnippet
 
 snippet mar "Margin"
-margin: $1;
+margin: ${1:value};
 endsnippet
 
 snippet bl "display: block;"
@@ -55,21 +55,21 @@ display: inline-flex;
 endsnippet
 
 snippet bef ":before pseudo-element"
-$1:before {
+${1:selector}:before {
   content: '';
-  $2
+  ${2:declarations}
 }
 endsnippet
 
 snippet aft ":after pseudo-element"
-$1:after {
+${1:selector}:after {
   content: '';
-  $2
+  ${2:declarations}
 }
 endsnippet
 
 snippet square "Square object"
-$1: $2;
+${1:size}: ${2:value};
 height: $1;
 max-height: $1;
 max-width: $1;
@@ -79,8 +79,8 @@ width: $1;
 endsnippet
 
 snippet rect "Rectangle object"
-$1: $2;
-$3: $4;
+${1:width}: ${2:value};
+${3:height}: ${4:value};
 height: $3;
 max-height: $3;
 max-width: $1;
@@ -90,7 +90,7 @@ width: $1;
 endsnippet
 
 snippet clearfix "clearfix"
-$1 {
+${1:selector} {
   overflow: auto;
 }
 
