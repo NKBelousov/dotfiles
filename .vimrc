@@ -16,6 +16,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-plug' " Plugin manager
 Plug 'kshenoy/vim-signature' " Plugin to toggle, display and navigate marks 
+Plug 'ludovicchabant/vim-gutentags' " A Vim plugin that manages your tag files
+Plug 'majutsushi/tagbar' " Vim plugin that displays tags in a window, ordered by scope
 Plug 'manasthakur/vim-commentor' " Toggling commends became easier!
 Plug 'maralla/completor.vim', { 'do': 'make js' } " Async completion framework made ease
 Plug 'mattn/emmet-vim' " Expanding abbreviations for html & xml
