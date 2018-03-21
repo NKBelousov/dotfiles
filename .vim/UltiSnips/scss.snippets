@@ -1,19 +1,19 @@
 extends scss, css
 
 snippet imp "@import"
-@import "$1";
+@import "${1:path}";
 endsnippet
 
 snippet inc "@include"
-@include "$1";
+@include "${1:path}";
 endsnippet
 
 snippet ext "@extend"
-@extend $1;
+@extend ${1:selector};
 endsnippet
 
 snippet mix "@mixin"
-@mixin $1($2){
-  $3
+@mixin ${1:name}(${2:params}){
+  ${3:declarations}
 }
 endsnippet
