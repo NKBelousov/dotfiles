@@ -17,6 +17,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-plug' " Plugin manager
 Plug 'kshenoy/vim-signature' " Plugin to toggle, display and navigate marks 
 Plug 'ludovicchabant/vim-gutentags' " A Vim plugin that manages your tag files
+Plug 'machakann/vim-sandwich' " The set of operator and textobject plugins to search/select/edit sandwiched textobjects.
 Plug 'majutsushi/tagbar' " Vim plugin that displays tags in a window, ordered by scope
 Plug 'manasthakur/vim-commentor' " Toggling commends became easier!
 Plug 'maralla/completor.vim', { 'do': 'make js' } " Async completion framework made ease
@@ -26,7 +27,6 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' } " A vim plugin wrapper fo
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " File Explorer
 Plug 'sheerun/vim-polyglot' " Syntax pack
 Plug 'tpope/vim-fugitive' " a Git wrapper so awesome, it should be illegal
-Plug 'tpope/vim-surround' " quoting/parenthesizing made simple
 Plug 'tweekmonster/startuptime.vim' " Track startup time in readable format
 Plug 'vim-airline/vim-airline' " Pretty status line
 Plug 'w0rp/ale' " Asynchronous Lint Engine
