@@ -11,6 +11,7 @@ Plug 'andymass/vim-matchup' " matchit replacement and more
 Plug 'ap/vim-css-color' " Color keyword highlighter
 Plug 'bronson/vim-trailing-whitespace' " Highlights and removes trailing whitespaces
 Plug 'christoomey/vim-tmux-navigator' " Seamless navigation between vim and tmux
+Plug 'davidhalter/jedi-vim' " Using the jedi autocompletion library for VIM.
 Plug 'joshdick/onedark.vim' " Atom Default Colorscheme
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
