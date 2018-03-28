@@ -14,14 +14,20 @@ daily(){
   local essential=(
   "git"
   "htop"
+  "python-pip"
+  "python3-pip"
+  "snapd"
   "tmux"
   "vim"
   )
-  sudo apt-get install ${essential[@]} --yes --force-yes;
-  sudo apt-get --yes --force-yes update;
   sudo apt-get --yes --force-yes upgrade;
-  sudo apt-get --yes --force-yes autoremove;
+  sudo apt-get --yes --force-yes update;
   sudo apt-get --yes --force-yes autoclean;
+  sudo apt-get --yes --force-yes autoremove;
+  sudo apt-get install ${essential[@]} --yes --force-yes;
+  pip install flake8;
+  pip install jedi;
+  sudo snap install rg;
 }
 
 GIT="/etc/bash_completion.d/git-prompt"
