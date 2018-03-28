@@ -25,6 +25,7 @@ Plug 'maralla/completor.vim', { 'do': 'make js' } " Async completion framework m
 Plug 'mattn/emmet-vim' " Expanding abbreviations for html & xml
 Plug 'morhetz/gruvbox' " Retro groove colorscheme for Vim
 Plug 'nvie/vim-flake8' " Flake8 plugin for Vim
+Plug 'othree/csscomplete.vim' " Update the bult-in CSS complete function to latest CSS standard.
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' } " A vim plugin wrapper for prettier
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " File Explorer
 Plug 'sheerun/vim-polyglot' " Syntax pack
