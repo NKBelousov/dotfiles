@@ -13,6 +13,7 @@ daily(){
   . ~/.bashrc;
   local essential=(
   "curl"
+  "exuberant-ctags"
   "fonts-powerline"
   "git"
   "htop"
