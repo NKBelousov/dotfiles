@@ -12,8 +12,11 @@ daily(){
   cd -;
   . ~/.bashrc;
   local essential=(
+  "curl"
+  "fonts-powerline"
   "git"
   "htop"
+  "keepassx"
   "python-pip"
   "python3-pip"
   "snapd"
