@@ -12,6 +12,7 @@ daily(){
   cd -;
   . ~/.bashrc;
   local essential=(
+  "composer"
   "curl"
   "exuberant-ctags"
   "fonts-powerline"
