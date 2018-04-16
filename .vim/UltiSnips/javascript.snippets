@@ -269,7 +269,7 @@ ${1:params} => {
 endsnippet
 
 snippet iife "Immediately-invoked function expression"
-void ${1:name}(${2:params}){
+void function ${1:name}(${2:signature}){
   ${3:expressions}
-}
+}(${4:params})
 endsnippet
