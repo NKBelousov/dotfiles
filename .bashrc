@@ -4,6 +4,13 @@ EDITOR=vim
 VISUAL=$EDITOR
 SESSION=`basename $PWD`
 
+export HISTFILESIZE=20000
+export HISTSIZE=10000
+shopt -s histappend
+shopt -s cmdhist
+HISTCONTROL=ignoredups
+export HISTIGNORE="&:ls:[bf]g:exit"
+
 daily(){
   cd ~/Projects/dotfiles;
   git fetch --all --prune && git reset --hard origin/master;
