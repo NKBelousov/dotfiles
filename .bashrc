@@ -26,11 +26,13 @@ daily(){
   "git"
   "htop"
   "keepassx"
+  "numix-gtk-theme"
   "python-pip"
   "python3-pip"
   "snapd"
   "tmux"
   "vim"
+  "xfce4"
   )
   sudo apt-get --yes --force-yes upgrade;
   sudo apt-get --yes --force-yes update;
