@@ -26,6 +26,7 @@ daily(){
   "git"
   "htop"
   "keepassx"
+  "menulibre"
   "numix-gtk-theme"
   "python-pip"
   "python3-pip"
