@@ -58,7 +58,7 @@
   cfd = clean -fd
   files = show -p --pretty="" --name-only
   rm-rr-cache = "!f() { rm -Rf ./.git/rr-cache/; }; f"
-  wip = commit -am "wip"
+  wip = commit -am "wip" --no-verify
 [core]
   editor = vim
   whitespace = trailing-space,space-before-tab
