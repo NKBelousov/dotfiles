@@ -44,6 +44,7 @@ daily(){
   pip install jedi;
   sudo snap install rg;
   nvm-check;
+  nvm install --lts;
 }
 
 nvm-check(){
