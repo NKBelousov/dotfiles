@@ -1,15 +1,23 @@
 snippet class "class Foo" i
-class ${1:name} {
-  ${2:declaration}
-}
-
-export default ${3:$1};
-endsnippet
-
-snippet classe "class Foo extends Bar" i
-class ${1:name} extends ${2:prototype} {
+class ${1:name} extends ${2:Prototype} {
   ${3:declaration}
 }
+
+export default ${4:$1};
+endsnippet
+
+snippet singleton "Singleton" i
+class ${1:name} extends ${2:Object}{
+  constructor(){
+    if ($1.instance === void 0){
+      $1.instance = this;
+    }
+    return $1.instance;
+  }
+}
+
+const instance = new $1();
+export default instance;
 endsnippet
 
 snippet component "class Foo extends Component" i
