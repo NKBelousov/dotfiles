@@ -7,7 +7,7 @@ export default ${4:$1};
 endsnippet
 
 snippet singleton "Singleton" i
-class ${1:name} extends ${2:Object}{
+class ${1:name} extends ${2:Object} {
   constructor(){
     if ($1.instance === void 0){
       $1.instance = this;
@@ -288,6 +288,40 @@ snippet => "Arrow function" i
 ${1:params} => {
   ${2:expressions}
 }
+endsnippet
+
+snippet tc "try/catch" i
+try {
+  ${1:try}
+} catch(e){
+  ${2:catch}
+}
+endsnippet
+
+snippet sw "switch" i
+switch(${1:expression}){
+  ${2:handlers}
+}
+endsnippet
+
+snippet swc "switch::case" i
+case ${1:n}:
+  ${2:handler};
+  break;
+endsnippet
+
+snippet swd "switch::default" i
+default:
+  ${1:handler}
+  break;
+endsnippet
+
+snippet js "JSON.stringify" i
+JSON.stringify(${1:value})
+endsnippet
+
+snippet jp "JSON.parse"
+JSON.parse(${1:string})
 endsnippet
 
 snippet iife "Immediately-invoked function expression" i
