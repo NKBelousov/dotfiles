@@ -6,6 +6,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'MattesGroeger/vim-bookmarks' " Vim bookmark plugin
 Plug 'Quramy/tsuquyomi' " A Vim plugin for TypeScript
 Plug 'SirVer/ultisnips' " Ultimate solution for snippets in vim
 Plug 'andymass/vim-matchup' " matchit replacement and more
