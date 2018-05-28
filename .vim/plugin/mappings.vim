@@ -15,6 +15,20 @@ nnoremap j gj
 nnoremap k gk
 nnoremap <leader>" :sp<CR><C-W>J
 nnoremap <leader>% :vsp<CR><C-W>L
+
+" Commentor
 nmap <leader>c <Plug>Commentor
 xmap <leader>c <Plug>Commentor
 nmap <leader>cc <Plug>CommentorLine
+
+" Bookmarks
+nmap <Leader>bt <Plug>BookmarkToggle
+nmap <Leader>ba <Plug>BookmarkAnnotate
+nmap <Leader>bl <Plug>BookmarkShowAll
+nmap <Leader>bn <Plug>BookmarkNext
+nmap <Leader>bp <Plug>BookmarkPrev
+nmap <Leader>bc <Plug>BookmarkClear
+nmap <Leader>bca <Plug>BookmarkClearAll
+nmap <Leader>bmu <Plug>BookmarkMoveUp
+nmap <Leader>bmd <Plug>BookmarkMoveDown
+nmap <Leader>bml <Plug>BookmarkMoveToLine
