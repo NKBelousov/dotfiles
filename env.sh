@@ -9,7 +9,6 @@ export HISTCONTROL=ignoredups
 export HISTFILESIZE=20000
 export HISTIGNORE="&:ls:[bf]g:exit"
 export HISTSIZE=10000
-export NPM_CONFIG_PREFIX=~/.npm-global
 export NVM_DIR="$HOME/.nvm"
 export PATH=$PATH:$HOME/bin:$HOME/.local/bin:~/current/bin
 export SESSION=`basename $PWD`
