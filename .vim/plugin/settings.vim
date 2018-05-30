@@ -52,8 +52,8 @@ let NERDTreeShowHidden=1
 let g:acp_enableAtStartup = 0
 
 let g:ale_sign_column_always = 1
-let g:ale_sign_error = 'E'
-let g:ale_sign_warning = 'W'
+let g:ale_sign_error = '⚑'
+let g:ale_sign_warning = '⚐'
 let g:ale_completion_enabled = 1
 
 let g:UltiSnipsExpandTrigger="<tab>"
