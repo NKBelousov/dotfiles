@@ -52,13 +52,20 @@ let NERDTreeShowHidden=1
 let g:acp_enableAtStartup = 0
 
 let g:ale_sign_column_always = 1
-let g:ale_sign_error = '⚑'
-let g:ale_sign_warning = '⚐'
+let g:ale_sign_error = 'E'
+let g:ale_sign_warning = 'W'
 let g:ale_completion_enabled = 1
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+let g:bookmark_annotation_sign = '☰'
+let g:bookmark_auto_close = 1
+let g:bookmark_auto_save = 1
+let g:bookmark_show_toggle_warning = 0
+let g:bookmark_show_warning = 0
+let g:bookmark_sign = '☰'
 
 let g:completor_css_omni_trigger = '([\w-]+|@[\w-]*|[\w-]+:\s*[\w-]*)$'
 let g:completor_scss_omni_trigger = '([\w-]+|@[\w-]*|[\w-]+:\s*[\w-]*)$'
