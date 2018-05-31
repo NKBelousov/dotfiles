@@ -31,11 +31,11 @@ daily(){
   "vim"
   "xfce4"
   )
-  sudo apt-get --yes --force-yes upgrade;
-  sudo apt-get --yes --force-yes update;
-  sudo apt-get --yes --force-yes autoclean;
-  sudo apt-get --yes --force-yes autoremove;
-  sudo apt-get install ${essential[@]} --yes --force-yes;
+  sudo apt update --yes --force-yes;
+  sudo apt full-upgrade --yes --force-yes;
+  sudo apt autoremove --yes --force-yes;
+  sudo apt autoclean --yes --force-yes;
+  sudo apt install ${essential[@]};
   pip install flake8;
   pip install jedi;
   sudo snap install rg;
