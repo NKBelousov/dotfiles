@@ -36,8 +36,11 @@ daily(){
   sudo apt autoremove --yes --force-yes;
   sudo apt autoclean --yes --force-yes;
   sudo apt install ${essential[@]};
-  pip install flake8;
-  pip install jedi;
+  local pip=(
+  "flake8"
+  "jedi"
+  )
+  pip install ${pip[@]};
   sudo snap install rg;
   nvm-check;
   nvm install --lts;
