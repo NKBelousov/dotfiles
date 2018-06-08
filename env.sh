@@ -1,7 +1,7 @@
 #!/bin/sh
 
 export DEFAULT_USER=`whoami`
-export DOTFILES_PATH="~/Projects/dotfiles/"
+export DOTFILES_PATH=$HOME/Projects/dotfiles/
 export EDITOR=vim
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 export GIT_COMPLETION="/etc/bash_completion.d/git-prompt"
