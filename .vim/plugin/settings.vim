@@ -71,12 +71,9 @@ let g:completor_css_omni_trigger = '([\w-]+|@[\w-]*|[\w-]+:\s*[\w-]*)$'
 let g:completor_scss_omni_trigger = '([\w-]+|@[\w-]*|[\w-]+:\s*[\w-]*)$'
 
 let g:definitive_definitions = {
-  \ 'javascript': '\<\(\(const\|let\|var\)\s\+%1\>\|\(function\s\+\)\=%1\s*(.*)\s*{\|class\s\+%1\s*{\)',
-  \ 'javascript.jsx': '\<\(\(const\|let\|var\)\s\+%1\>\|\(function\s\+\)\=%1\s*(.*)\s*{\|class\s\+%1\s*{\)',
+  \ 'javascript': '\<\(\(class\|const\|let\|var\)\s\+%1\>\|\(function\s\+\)\=%1\s*(.*)\s*{\|class\s\+%1\s*{\)',
+  \ 'javascript.jsx': '\<\(\(class\|const\|let\|var\)\s\+%1\>\|\(function\s\+\)\=%1\s*(.*)\s*{\|class\s\+%1\s*{\)',
   \}
-let g:definitive_jump_to_first_match = 0
-let g:definitive_open_quickfix = 2
-
 
 " Change html attributes in jsx files
 let g:user_emmet_settings = {
