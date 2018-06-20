@@ -1,4 +1,5 @@
 let mapleader=","
+nnoremap <F2> :FindDefinition<CR>
 nnoremap <F3> :PrettierAsync<CR>
 nnoremap <F4> :Find <c-r>=expand("<cword>")<CR><CR>
 nnoremap <F9> :Sass<CR>

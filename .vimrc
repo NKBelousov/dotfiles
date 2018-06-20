@@ -25,6 +25,7 @@ Plug 'majutsushi/tagbar' " Vim plugin that displays tags in a window, ordered by
 Plug 'manasthakur/vim-commentor' " Toggling commends became easier!
 Plug 'maralla/completor.vim', { 'do': 'make js' } " Async completion framework made ease
 Plug 'mattn/emmet-vim' " Expanding abbreviations for html & xml
+Plug 'misterbuckley/vim-definitive' " Vim plugin for finding variable/class/function definitions, without relying on tags
 Plug 'morhetz/gruvbox' " Retro groove colorscheme for Vim
 Plug 'nvie/vim-flake8' " Flake8 plugin for Vim
 Plug 'othree/csscomplete.vim' " Update the bult-in CSS complete function to latest CSS standard.
