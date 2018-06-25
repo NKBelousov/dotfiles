@@ -72,7 +72,9 @@ let g:completor_scss_omni_trigger = '([\w-]+|@[\w-]*|[\w-]+:\s*[\w-]*)$'
 
 let g:definitive_definitions = {
   \ 'javascript': '\<\(\(class\|const\|let\|var\)\s\+%1\>\|\(function\s\+\)\=%1\s*(.*)\s*{\|class\s\+%1\s*{\)',
-  \ 'javascript.jsx': '\<\(\(class\|const\|let\|var\)\s\+%1\>\|\(function\s\+\)\=%1\s*(.*)\s*{\|class\s\+%1\s*{\)',
+  \ 'javascript.jsx': {
+  \   'extends': 'javascript',
+  \ },
   \}
 
 " Change html attributes in jsx files
