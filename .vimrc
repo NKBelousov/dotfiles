@@ -10,6 +10,7 @@ Plug 'Quramy/tsuquyomi' " A Vim plugin for TypeScript
 Plug 'SirVer/ultisnips' " Ultimate solution for snippets in vim
 Plug 'ap/vim-css-color' " Color keyword highlighter
 Plug 'christoomey/vim-tmux-navigator' " Seamless navigation between vim and tmux
+Plug 'heavenshell/vim-jsdoc' " Generate JSDoc to your JavaScript code.
 Plug 'itchyny/lightline.vim' " A light and configurable statusline/tabline plugin for Vim
 Plug 'joshdick/onedark.vim' " A dark Vim/Neovim color scheme inspired by Atom's One Dark syntax theme.
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
