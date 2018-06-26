@@ -47,8 +47,14 @@ else
   echo "ripgrep is not installed"
 endif
 
+set background=dark
+colorscheme onedark
+let g:lightline = {
+  \ 'colorscheme': 'one',
+  \}
+
 let g:jsx_ext_required = 0 " allow jsx in .js files
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden = 1
 let g:acp_enableAtStartup = 0
 
 let g:ale_sign_column_always = 1
@@ -59,13 +65,6 @@ let g:ale_completion_enabled = 1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
-let g:bookmark_annotation_sign = '☰'
-let g:bookmark_auto_close = 1
-let g:bookmark_auto_save = 1
-let g:bookmark_show_toggle_warning = 0
-let g:bookmark_show_warning = 0
-let g:bookmark_sign = '☰'
 
 let g:completor_css_omni_trigger = '([\w-]+|@[\w-]*|[\w-]+:\s*[\w-]*)$'
 let g:completor_scss_omni_trigger = '([\w-]+|@[\w-]*|[\w-]+:\s*[\w-]*)$'
