@@ -29,6 +29,7 @@ set colorcolumn=80 " show vertical line over 80 character limit
 set showcmd " show partial command in the last line of the screen
 set laststatus=2 " always show status line
 
+set clipboard^=unnamed,unnamedplus
 set nobackup
 set noswapfile
 
