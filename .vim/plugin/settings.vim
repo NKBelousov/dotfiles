@@ -32,6 +32,8 @@ set laststatus=2 " always show status line
 set clipboard^=unnamed,unnamedplus
 set nobackup
 set noswapfile
+set undodir=~/.vim/undodir " persistent edit history across file closure
+set undofile
 
 set guioptions=
 set t_ut= " disable background color erase so that colorschemes render properly
