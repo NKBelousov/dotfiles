@@ -55,6 +55,7 @@
   please = push --force-with-lease
   #### Utility
   aliases = "!f() { git config -l | grep alias | cut -c 7-; }; f"
+  by-commit-count = "!f() { git shortlog -sn; }; f"
   cfd = clean -fd
   files = show -p --pretty="" --name-only
   rm-rr-cache = "!f() { rm -Rf ./.git/rr-cache/; }; f"
