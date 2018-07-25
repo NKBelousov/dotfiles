@@ -33,6 +33,19 @@ class ${1:name} extends Component {
 export default ${3:$1};
 endsnippet
 
+snippet purecomponent "class Foo extends PureComponent" i
+import PropTypes from "prop-types";
+import React, { PureComponent } from "react";
+
+class ${1:name} extends PureComponent {
+  render(){
+    return ${2:node};
+  }
+}
+
+export default ${3:$1};
+endsnippet
+
 snippet propTypes "React::propTypes" i
 static get propTypes(){
   return {
