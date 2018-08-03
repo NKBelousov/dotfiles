@@ -26,6 +26,7 @@ daily(){
   "numix-gtk-theme"
   "python-pip"
   "python3-pip"
+  "ranger"
   "snapd"
   "tmux"
   "vim"
