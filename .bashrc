@@ -29,6 +29,7 @@ daily(){
   "ranger"
   "snapd"
   "tmux"
+  "tree"
   "vim"
   "xfce4"
   )
