@@ -15,6 +15,7 @@ export HISTIGNORE="&:ls:[bf]g:exit"
 export HISTSIZE=10000
 export NVM_DIR="$HOME/.nvm"
 export PATH=$PATH:$HOME/bin:$HOME/.local/bin:~/current/bin
+export PROJECT_DIR=$HOME/Projects/
 export SESSION=`basename $PWD`
 export TERM=xterm-256color
 export THEME=$HOME/.bash/themes/agnoster-bash/agnoster.bash
