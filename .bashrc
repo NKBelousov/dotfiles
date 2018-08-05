@@ -73,6 +73,19 @@ nvm-update(){
   cd -;
 }
 
+git-fetch-all(){
+  local current=$(pwd);
+  cd "$PROJECT_DIR";
+  for dir in $(find . -name ".git")
+  do cd ${dir%/*}
+      echo "Fetching $PWD"
+      git fa
+      echo ""
+      cd - > /dev/null
+  done
+  cd "$current";
+}
+
 if [ -e $GIT_COMPLETION ]; then
   source $GIT_COMPLETION;
 fi
