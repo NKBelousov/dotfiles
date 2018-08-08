@@ -57,6 +57,20 @@ nvm-check(){
   fi
 }
 
+deploy(){
+  DESTINATION=$1
+  if [[ -n $1 ]]; then
+    echo "Deploying to $1...";
+    DATE=`date '+%Y-%m-%d %H:%M:%S'`
+    HEAD=`git rev-parse HEAD`
+    rsync -a --stats --progress ./ $1
+    echo "Date: $DATE    Commit: $HEAD    User: $(git config user.name)" >> "$1/.history"
+    return 0
+  fi
+  echo "Specify the destination point"
+  return 1
+}
+
 nvm-install(){
   rm -Rf "$NVM_DIR";
   git clone https://github.com/creationix/nvm.git "$NVM_DIR";
