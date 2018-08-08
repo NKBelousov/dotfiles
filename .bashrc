@@ -3,9 +3,10 @@ source ~/env.sh;
 shopt -s histappend
 shopt -s cmdhist
 
-alias vi='vim'
-alias svim='sudo -e'
+alias bye="sudo shutdown -h now"
 alias ll='ls -alh'
+alias svim='sudo -e'
+alias vi='vim'
 
 daily(){
   cd ${DOTFILES_PATH};
