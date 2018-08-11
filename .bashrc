@@ -4,9 +4,10 @@ shopt -s histappend
 shopt -s cmdhist
 
 alias bye="sudo shutdown -h now"
-alias ll='ls -alh'
-alias svim='sudo -e'
-alias vi='vim'
+alias ll="ls -alh"
+alias resource="source ~/.bashrc"
+alias svim="sudo -e"
+alias vi="vim"
 
 daily(){
   cd ${DOTFILES_PATH};
