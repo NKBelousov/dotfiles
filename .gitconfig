@@ -59,6 +59,7 @@
   by-loc-count = "!f() { git ls-files | while read f; do git blame -w -M -C -C --line-porcelain "$f" | grep -I '^author '; done | sort -f | uniq -ic | sort -n; }; f" 
   cfd = clean -fd
   files = show -p --pretty="" --name-only
+  mostly-changed = "!f() { git log --name-only --pretty=\"\" | sort | uniq -c | sort -rg; };  f"
   rm-rr-cache = "!f() { rm -Rf ./.git/rr-cache/; }; f"
   wip = "!f() { git add . && git commit -m "wip" --no-verify; }; f"
 [core]
