@@ -48,6 +48,7 @@ daily(){
   sudo snap install rg;
   nvm-check;
   nvm install --lts;
+  cat ~/.config/dconf/palette | dconf load /org/gnome/terminal/ | dconf update;
 }
 
 nvm-check(){
