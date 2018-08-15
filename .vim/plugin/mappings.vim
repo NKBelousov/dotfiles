@@ -9,6 +9,8 @@ nnoremap <leader>g :GFiles<CR>
 nnoremap <leader>G :Files<CR>
 nnoremap <leader>h :s/<c-r>=expand("<cword>")<CR>/
 nnoremap <leader>H :%s/<c-r>=expand("<cword>")<CR>/
+nnoremap <leader>i :ImportCostSingle<CR>
+nnoremap <leader>I :ImportCost<CR>
 nnoremap <leader>o :NERDTreeToggle<CR>
 nnoremap j gj
 nnoremap k gk
