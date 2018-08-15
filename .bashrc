@@ -30,6 +30,7 @@ daily(){
   "python3-pip"
   "ranger"
   "snapd"
+  "task"
   "tmux"
   "tree"
   "vim"
