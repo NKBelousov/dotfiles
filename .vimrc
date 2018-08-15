@@ -30,6 +30,7 @@ Plug 'tpope/vim-fugitive' " a Git wrapper so awesome, it should be illegal
 Plug 'tweekmonster/startuptime.vim' " Track startup time in readable format
 Plug 'w0rp/ale' " Asynchronous Lint Engine
 Plug 'xtal8/traces.vim' " Highlight patterns and ranges for ex commands
+Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' } " Display the import size of the JavaScript packages in Vim!
 
 call plug#end()
 
