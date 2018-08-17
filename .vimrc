@@ -27,6 +27,7 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' } " A vim plugin wrapper fo
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " File Explorer
 Plug 'sheerun/vim-polyglot' " Syntax pack
 Plug 'stephpy/vim-php-cs-fixer' " Integrate php-cs-fixer
+Plug 'tpope/vim-abolish' " abolish.vim: easily search for, substitute, and abbreviate multiple variants of a word
 Plug 'tpope/vim-fugitive' " a Git wrapper so awesome, it should be illegal
 Plug 'tweekmonster/startuptime.vim' " Track startup time in readable format
 Plug 'w0rp/ale' " Asynchronous Lint Engine
