@@ -91,4 +91,6 @@ let g:user_emmet_settings = {
 let g:prettier#exec_cmd_async = 1
 let g:prettier#quickfix_enabled=0 " Disables quick-fix to auto open when files have errors
 
+let g:import_cost_split_pos = 'right'
+
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
