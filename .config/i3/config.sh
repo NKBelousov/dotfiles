@@ -10,5 +10,5 @@ do
   else
     LG='EN'
   fi
-  echo "$line | $LG" || exit 1
+  echo "$line | $LG " || exit 1
 done
