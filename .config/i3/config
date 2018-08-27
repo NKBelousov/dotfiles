@@ -130,8 +130,7 @@ bindsym $mod+plus exec --no-startup-id /usr/bin/amixer -D pulse sset Master 5%+
 bindsym $mod+minus exec --no-startup-id /usr/bin/amixer -D pulse sset Master 5%-
 bindsym $mod+0 exec --no-startup-id /usr/bin/amixer -D pulse sset Master 1+ toggle
 
-exec "setxkbmap -layout us,ru"
-exec "setxkbmap -option 'grp:alt_shift_toggle'"
+exec_always "setxkbmap -layout us,ru -option 'grp:alt_shift_toggle'"
 
 # THEME
 
