@@ -12,6 +12,12 @@ do
     LG='EN'
   fi
   # Get current volume
-  VOLUME=$(amixer -D pulse get Master | grep 'Left:' | awk -F'[][]' '{ print $2 }')
-  echo "$line | ♪: $VOLUME | $LG " || exit 1
+  VOLUME_STATE=`amixer -D pulse get Master | egrep 'Playback.*?\[o' | egrep -o '\[o.+\]' | head -1`
+  if [[ $VOLUME_STATE == '[on]' ]]; then
+    VOLUME_LEVEL=$(amixer -D pulse get Master | grep 'Left:' | awk -F'[][]' '{ print $2 }')
+    VOLUME="♪: $VOLUME_LEVEL"
+  else
+    VOLUME="♪:  ⃠"
+  fi
+  echo "$line | $VOLUME | $LG " || exit 1
 done
