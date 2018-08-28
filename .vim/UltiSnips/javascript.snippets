@@ -1,4 +1,4 @@
-snippet class "class Foo" i
+snippet class "class Foo"
 class ${1:name} extends ${2:Prototype} {
   ${3:declaration}
 }
@@ -6,7 +6,7 @@ class ${1:name} extends ${2:Prototype} {
 export default ${4:$1};
 endsnippet
 
-snippet singleton "Singleton" i
+snippet singleton "Singleton"
 class ${1:name} extends ${2:Object} {
   constructor(){
     if ($1.instance === void 0){
@@ -20,7 +20,7 @@ const instance = new $1();
 export default instance;
 endsnippet
 
-snippet component "class Foo extends Component" i
+snippet component "class Foo extends Component"
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
@@ -33,7 +33,7 @@ class ${1:name} extends Component {
 export default ${3:$1};
 endsnippet
 
-snippet purecomponent "class Foo extends PureComponent" i
+snippet purecomponent "class Foo extends PureComponent"
 import PropTypes from "prop-types";
 import React, { PureComponent } from "react";
 
@@ -46,7 +46,7 @@ class ${1:name} extends PureComponent {
 export default ${3:$1};
 endsnippet
 
-snippet propTypes "React::propTypes" i
+snippet propTypes "React::propTypes"
 static get propTypes(){
   return {
     ${1:object}
@@ -54,7 +54,7 @@ static get propTypes(){
 }
 endsnippet
 
-snippet defaultProps "React::defaultProps" i
+snippet defaultProps "React::defaultProps"
 static get defaultProps(){
   return {
     ${1:object}
@@ -62,7 +62,7 @@ static get defaultProps(){
 }
 endsnippet
 
-snippet con "React::constructor(props)" i
+snippet con "React::constructor(props)"
 constructor(props){
   super(props);
 
@@ -73,55 +73,55 @@ constructor(props){
 endsnippet
 
 
-snippet cwm "React::componentWillMount()" i
+snippet cwm "React::componentWillMount()"
 componentWillMount(){
   ${1:expressions}
 }
 endsnippet
 
-snippet cdm "React::componentDidMount()" i
+snippet cdm "React::componentDidMount()"
 componentDidMount(){
   ${1:expressions}
 }
 endsnippet
 
-snippet cwrp "React::componentWillReceiveProps(object nextProps)" i
+snippet cwrp "React::componentWillReceiveProps(object nextProps)"
 componentWillReceiveProps(nextProps){
   ${1:expressions}
 }
 endsnippet
 
-snippet scu "React::shouldComponentUpdate(object nextProps, object nextState)" i
+snippet scu "React::shouldComponentUpdate(object nextProps, object nextState)"
 shouldComponentUpdate(nextProps, nextState){
   return ${1:expression}
 }
 endsnippet
 
-snippet cwu "React::componentWillUpdate(object nextProps, object nextState)" i
+snippet cwu "React::componentWillUpdate(object nextProps, object nextState)"
 componentWillUpdate(nextProps, nextState){
   ${1:expressions}
 }
 endsnippet
 
-snippet cdu "React::componentDidUpdate(object prevProps, object prevState)" i
+snippet cdu "React::componentDidUpdate(object prevProps, object prevState)"
 componentDidUpdate(prevProps, prevState){
   ${1:expressions}
 }
 endsnippet
 
-snippet cwun "React::componentWillUnmount()" i
+snippet cwun "React::componentWillUnmount()"
 componentWillUnmount(){
   ${1:expressions}
 }
 endsnippet
 
-snippet cdc "React::componentDidCatch(error, info)" i
+snippet cdc "React::componentDidCatch(error, info)"
 componentDidCatch(error, info){
   ${1:expressions}
 }
 endsnippet
 
-snippet gds "React::getDerivedStateFromProps(nextProps, prevState)" i
+snippet gds "React::getDerivedStateFromProps(nextProps, prevState)"
 static getDerivedStateFromProps(nextProps, prevState){
   return {
     ${1:nextState}
@@ -129,149 +129,149 @@ static getDerivedStateFromProps(nextProps, prevState){
 }
 endsnippet
 
-snippet bm "React::Bind method to this" i
+snippet bm "React::Bind method to this"
 this.$1 = this.$1.bind(this);
 endsnippet
 
-snippet gp "React::Get property by name" i
+snippet gp "React::Get property by name"
 this.props.${1:key}
 endsnippet
 
-snippet gs "React::Get state property by name" i
+snippet gs "React::Get state property by name"
 this.state.${1:key}
 endsnippet
 
-snippet ref "React::Ref" i
+snippet ref "React::Ref"
 ref={${1:name} => { this.$1 = $1; }}
 endsnippet
 
-snippet pta "PropTypes.array" i
+snippet pta "PropTypes.array"
 PropTypes.array,
 endsnippet
 
-snippet ptar "PropTypes.array.isRequired" i
+snippet ptar "PropTypes.array.isRequired"
 PropTypes.array.isRequired,
 endsnippet
 
-snippet ptao "PropTypes.arrayOf()" i
+snippet ptao "PropTypes.arrayOf()"
 PropTypes.arrayOf(${1:propType}),
 endsnippet
 
-snippet ptaor "PropTypes.arrayOf().isRequired" i
+snippet ptaor "PropTypes.arrayOf().isRequired"
 PropTypes.arrayOf(${1:propType}).isRequired,
 endsnippet
 
-snippet ptb "PropTypes.bool" i
+snippet ptb "PropTypes.bool"
 PropTypes.bool,
 endsnippet
 
-snippet ptbr "PropTypes.bool.isRequired" i
+snippet ptbr "PropTypes.bool.isRequired"
 PropTypes.bool.isRequired,
 endsnippet
 
-snippet ptf "PropTypes.func" i
+snippet ptf "PropTypes.func"
 PropTypes.func,
 endsnippet
 
-snippet ptfr "PropTypes.func.isRequired" i
+snippet ptfr "PropTypes.func.isRequired"
 PropTypes.func.isRequired,
 endsnippet
 
-snippet ptn "PropTypes.number" i
+snippet ptn "PropTypes.number"
 PropTypes.number,
 endsnippet
 
-snippet ptnr "PropTypes.number.isRequired" i
+snippet ptnr "PropTypes.number.isRequired"
 PropTypes.number.isRequired,
 endsnippet
 
-snippet pto "PropTypes.object" i
+snippet pto "PropTypes.object"
 PropTypes.object,
 endsnippet
 
-snippet ptor "PropTypes.object.isRequired" i
+snippet ptor "PropTypes.object.isRequired"
 PropTypes.object.isRequired,
 endsnippet
 
-snippet ptoo "PropTypes.objectOf()" i
+snippet ptoo "PropTypes.objectOf()"
 PropTypes.objectOf(${1:propType}),
 endsnippet
 
-snippet ptoor "PropTypes.objectOf().isRequired" i
+snippet ptoor "PropTypes.objectOf().isRequired"
 PropTypes.objectOf(${1:propType}).isRequired,
 endsnippet
 
-snippet ptsh "PropTypes.shape({})" i
+snippet ptsh "PropTypes.shape({})"
 PropTypes.shape({
   ${1:object}
 }),
 endsnippet
 
-snippet ptshr "PropTypes.shape({}).isRequired" i
+snippet ptshr "PropTypes.shape({}).isRequired"
 PropTypes.shape({
   ${1:object}
 }).isRequired,
 endsnippet
 
-snippet pts "PropTypes.string" i
+snippet pts "PropTypes.string"
 PropTypes.string,
 endsnippet
 
-snippet ptsr "PropTypes.string.isRequired" i
+snippet ptsr "PropTypes.string.isRequired"
 PropTypes.string.isRequired,
 endsnippet
 
-snippet ptnd "PropTypes.node" i
+snippet ptnd "PropTypes.node"
 PropTypes.node,
 endsnippet
 
-snippet ptndr "PropTypes.node.isRequired" i
+snippet ptndr "PropTypes.node.isRequired"
 PropTypes.node.isRequired,
 endsnippet
 
-snippet ptel "PropTypes.element" i
+snippet ptel "PropTypes.element"
 PropTypes.element,
 endsnippet
 
-snippet ptelr "PropTypes.element.isRequired" i
+snippet ptelr "PropTypes.element.isRequired"
 PropTypes.element.isRequired,
 endsnippet
 
-snippet pti "PropTypes.instanceOf" i
+snippet pti "PropTypes.instanceOf"
 PropTypes.instanceOf(${1:class}),
 endsnippet
 
-snippet ptir "PropTypes.instanceOf.isRequired" i
+snippet ptir "PropTypes.instanceOf.isRequired"
 PropTypes.instanceOf(${1:class}).isRequired,
 endsnippet
 
-snippet ptof "PropTypes.oneOf([])" i
+snippet ptof "PropTypes.oneOf([])"
 PropTypes.oneOf([${1:array}]),
 endsnippet
 
-snippet ptofr "PropTypes.oneOf([]).isRequired" i
+snippet ptofr "PropTypes.oneOf([]).isRequired"
 PropTypes.oneOf([${1:array}]).isRequired,
 endsnippet
 
-snippet ptoft "PropTypes.oneOfType([])" i
+snippet ptoft "PropTypes.oneOfType([])"
 PropTypes.oneOfType([${1:array}]),
 endsnippet
 
-snippet ptoftr "PropTypes.oneOfType([]).isRequired" i
+snippet ptoftr "PropTypes.oneOfType([]).isRequired"
 PropTypes.oneOfType([${1:array}]).isRequired,
 endsnippet
 
-snippet Prom "ES6::Promise" i
+snippet Prom "ES6::Promise"
 new Promise((resolve, reject) => {
   ${1:expressions}
 });
 endsnippet
 
-snippet me "module.exports = " i
+snippet me "module.exports = "
 module.exports = ${1:expression};
 endsnippet
 
-snippet webpack "Webpack: Config template" i
+snippet webpack "Webpack: Config template"
 module.exports = {
   entry: "${1:input}",
   output: {
@@ -281,15 +281,15 @@ module.exports = {
 };
 endsnippet
 
-snippet imp "import ES6 module" i
+snippet imp "import ES6 module"
 import ${1:name} from "${2:from}";
 endsnippet
 
-snippet ex "export" i
+snippet ex "export"
 export ${1:expression};
 endsnippet
 
-snippet exd "export default" i
+snippet exd "export default"
 export default ${1:expression};
 endsnippet
 
@@ -301,13 +301,13 @@ snippet c "const foo = bar;"
 const ${1:name} = ${2:value};
 endsnippet
 
-snippet => "Arrow function" i
+snippet => "Arrow function"
 ${1:params} => {
   ${2:expressions}
 }
 endsnippet
 
-snippet tc "try/catch" i
+snippet tc "try/catch"
 try {
   ${1:try}
 } catch(e){
@@ -315,25 +315,25 @@ try {
 }
 endsnippet
 
-snippet sw "switch" i
+snippet sw "switch"
 switch(${1:expression}){
   ${2:handlers}
 }
 endsnippet
 
-snippet swc "switch::case" i
+snippet swc "switch::case"
 case ${1:n}:
   ${2:handler};
   break;
 endsnippet
 
-snippet swd "switch::default" i
+snippet swd "switch::default"
 default:
   ${1:handler}
   break;
 endsnippet
 
-snippet js "JSON.stringify" i
+snippet js "JSON.stringify"
 JSON.stringify(${1:value})
 endsnippet
 
@@ -341,13 +341,13 @@ snippet jp "JSON.parse"
 JSON.parse(${1:string})
 endsnippet
 
-snippet iife "Immediately-invoked function expression" i
+snippet iife "Immediately-invoked function expression"
 void function ${1:name}(${2:signature}){
   ${3:expressions}
 }(${4:params})
 endsnippet
 
-snippet action "Redux: Action template" i
+snippet action "Redux: Action template"
 const ${1:name} = "$1";
 const $1 = "$1_FAILURE";
 const $1 = "$1_SUCCESS";
