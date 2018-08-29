@@ -48,7 +48,7 @@ daily(){
   "mps-youtube"
   "youtube-dl"
   )
-  pip install ${pip[@]};
+  pip install --user ${pip[@]};
   sudo snap install rg;
   nvm-check;
   nvm install --lts;
