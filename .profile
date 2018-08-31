@@ -1,4 +1,4 @@
-source ~/env.sh;
+source ~/.bash/env.sh;
 
 if [ -n "$BASH_VERSION" ]; then
   if [ -f "$HOME/.bashrc" ]; then

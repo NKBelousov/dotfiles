@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 alias bye="shutdown -h now"
 alias ll="ls -alh"
