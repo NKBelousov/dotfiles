@@ -15,6 +15,7 @@ export HISTFILESIZE=20000
 export HISTIGNORE="&:ls:[bf]g:exit"
 export HISTSIZE=10000
 export NVM_DIR="$HOME/.nvm"
+export NVM_SH="$NVM_DIR/nvm.sh"
 export PATH=$PATH:$HOME/bin:$HOME/.local/bin:~/current/bin
 export PROJECT_DIR=$HOME/Projects/
 export SESSION=`basename $PWD`

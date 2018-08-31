@@ -12,6 +12,6 @@ if [[ -e $FZF_BASH ]]; then
   source $FZF_BASH;
 fi
 
-if [[ -e "$NVM_DIR/nvm.sh" ]]; then
-  source "$NVM_DIR/nvm.sh";
+if [[ -e "$NVM_SH" ]]; then
+  source "$NVM_SH";
 fi
