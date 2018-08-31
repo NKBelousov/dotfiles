@@ -1,8 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 
 export DEFAULT_USER=`whoami`
 export DOTFILES_PATH=$HOME/Projects/dotfiles/
 export EDITOR=vim
+export FZF_BASH='~/.fzf.bash'
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 export GIT_AUTHOR_EMAIL=belousovnikita92@gmail.com
 export GIT_AUTHOR_NAME="NKBelousov"
