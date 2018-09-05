@@ -23,3 +23,21 @@ endsnippet
 snippet ext "extends"
 extends ${1:Parent}
 endsnippet
+
+snippet a:make:model "artisan make:model"
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class ${1:name} extends Model
+{
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = "${2:tableName}";
+}
+endsnippet
