@@ -22,6 +22,7 @@ daily(){
   "ranger"
   "snapd"
   "task"
+  "thunar"
   "tmux"
   "tree"
   "vim"
