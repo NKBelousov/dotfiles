@@ -1,0 +1,10 @@
+{
+    "editor.formatOnSave": true,
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.cursorBlinking": "blink",
+    "editor.autoIndent": true,
+    "editor.tabSize": 2,
+    "window.zoomLevel": 0,
+    "window.menuBarVisibility": "hidden",
+}
