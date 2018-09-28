@@ -25,7 +25,7 @@ daily(){
   "python3-pip"
   "ranger"
   "snapd"
-  "task"
+  "taskwarrior"
   "thunar"
   "tmux"
   "tree"
