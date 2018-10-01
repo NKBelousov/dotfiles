@@ -107,6 +107,8 @@ bar {
   }
 }
 
+for_window [class="^.*"] border pixel 6
+
 # Property Name         Border  BG      Text    Indicator Child Border
 client.focused          $base05 $base0D $base00 $base0D $base0D
 client.focused_inactive $base01 $base01 $base05 $base03 $base01
