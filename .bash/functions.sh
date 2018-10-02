@@ -47,6 +47,14 @@ daily(){
   sudo snap install rg;
   nvm-check;
   nvm install --lts;
+  local npm_packages=(
+  "create-react-app"
+  "create-react-library"
+  "diff-so-fancy"
+  "np"
+  "tldr"
+  )
+  npm i -G ${npm_packages[@]};
   cat ~/.config/dconf/palette | dconf load /org/gnome/terminal/ | dconf update;
 }
 
