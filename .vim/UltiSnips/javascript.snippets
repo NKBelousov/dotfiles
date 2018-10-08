@@ -282,6 +282,10 @@ module.exports = {
 endsnippet
 
 snippet imp "import ES6 module"
+import { ${1:what} } from "${2:from};
+endsnippet
+
+snippet impd "import ES6 module"
 import ${1:name} from "${2:from}";
 endsnippet
 
@@ -363,6 +367,24 @@ endsnippet
 
 snippet ce "console.error(foo)"
 console.error(${1:foo});
+endsnippet
+
+snippet th "then" i
+then(${1:params} => {
+  ${2:statements}
+})${3:then}
+endsnippet
+
+snippet ca "catch" i
+catch(${1:params} => {
+  ${2:statemenets}
+})${3:then}
+endsnippet
+
+snippet fi "finally" i
+finally(() => {
+  ${1:statements}
+});
 endsnippet
 
 snippet d "debugger"
