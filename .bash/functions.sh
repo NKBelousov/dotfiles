@@ -12,6 +12,7 @@ daily(){
   cd -;
   \. ~/.bashrc;
   local essential=(
+  "acpi"
   "composer"
   "curl"
   "exuberant-ctags"

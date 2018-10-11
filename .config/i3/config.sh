@@ -11,6 +11,8 @@ do
   else
     LG='EN'
   fi
+  # Get battery status
+  BATTERY=`acpi`
   # Get current volume
   VOLUME_STATE=`amixer -D pulse get Master | egrep 'Playback.*?\[o' | egrep -o '\[o.+\]' | head -1`
   if [[ $VOLUME_STATE == '[on]' ]]; then
@@ -19,5 +21,5 @@ do
   else
     VOLUME="♪:  ⃠"
   fi
-  echo "$line | $VOLUME | $LG " || exit 1
+  echo "$line | $BATTERY | $VOLUME | $LG " || exit 1
 done
