@@ -2,6 +2,7 @@ let mapleader=","
 nnoremap <F2> :FindDefinition<CR>
 nnoremap <F3> :PrettierAsync<CR>
 nnoremap <F4> :Find <c-r>=expand("<cword>")<CR><CR>
+nnoremap <F6> :call StickyCursor()<CR>
 nnoremap <leader>" :sp<CR><C-W>J
 nnoremap <leader>% :vsp<CR><C-W>L
 nnoremap <leader><space> :noh<CR>

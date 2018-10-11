@@ -7,3 +7,10 @@ function Sass() range
 endfunction
 com -range=% -nargs=0 Sass :<line1>,<line2>call Sass()
 
+function! StickyCursor()
+    if &scrolloff
+        set scrolloff=0
+    else
+        set scrolloff=9999
+    endif
+endfunction
