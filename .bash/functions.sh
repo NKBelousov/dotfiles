@@ -5,11 +5,10 @@ daily(){
     echo "DOTFILES_PATH environment variable is not set."
     return 1
   fi
+  ssh-add;
   cd ${DOTFILES_PATH};
   git fetch --all --prune && git reset --hard origin/master;
   find . -type f -not -regex "./.git.*" | xargs -L 1 -I {} sh -c "mkdir -p \`dirname ~/{}\`; cp {} ~/{};";
-  vim +PlugInstall +PlugClean +PlugUpdate +PlugUpgrade +qall;
-  cd -;
   \. ~/.bashrc;
   local essential=(
   "acpi"
@@ -57,6 +56,8 @@ daily(){
   )
   npm i -g ${npm_packages[@]};
   cat ~/.config/dconf/palette | dconf load /org/gnome/terminal/ | dconf update;
+  vim +PlugInstall +PlugClean +PlugUpdate +PlugUpgrade +qall;
+  cd -;
 }
 
 pomodoro(){
