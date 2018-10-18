@@ -9,6 +9,7 @@ daily(){
   cd ${DOTFILES_PATH};
   git fetch --all --prune && git reset --hard origin/master;
   find . -type f -not -regex "./.git.*" | xargs -L 1 -I {} sh -c "mkdir -p \`dirname ~/{}\`; cp {} ~/{};";
+  cd -;
   \. ~/.bashrc;
   local essential=(
   "acpi"
@@ -57,7 +58,6 @@ daily(){
   npm i -g ${npm_packages[@]};
   cat ~/.config/dconf/palette | dconf load /org/gnome/terminal/ | dconf update;
   vim +PlugInstall +PlugClean +PlugUpdate +PlugUpgrade +qall;
-  cd -;
 }
 
 pomodoro(){
