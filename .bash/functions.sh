@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ~/.bash/pomodoro.sh;
+
 daily(){
   if [[ -z "$DOTFILES_PATH" ]]; then
     echo "DOTFILES_PATH environment variable is not set."
@@ -58,30 +60,6 @@ daily(){
   npm i -g ${npm_packages[@]};
   cat ~/.config/dconf/palette | dconf load /org/gnome/terminal/ | dconf update;
   vim +PlugInstall +PlugClean +PlugUpdate +PlugUpgrade +qall;
-}
-
-pomodoro(){
-  if [[ -z $1 ]]; then
-    echo "Specify duration"
-    return 1
-  fi
-  if [[ -z $2 ]]; then
-    echo "Specify message"
-    return 1
-  fi
-  sleep $1 && notify-send $2 &>/dev/null &disown;
-}
-
-pomodoro-work(){
-  pomodoro 1500 "Start working!"
-}
-
-pomodoro-short(){
-  pomodoro 300 "Short break"
-}
-
-pomodoro-long(){
-  pomodoro 3600 "Long break"
 }
 
 nvm-check(){
