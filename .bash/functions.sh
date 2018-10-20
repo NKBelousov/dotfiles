@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source ~/.bash/nvm.sh;
 source ~/.bash/pomodoro.sh;
 
 daily(){
@@ -62,14 +63,6 @@ daily(){
   vim +PlugInstall +PlugClean +PlugUpdate +PlugUpgrade +qall;
 }
 
-nvm-check(){
-  if ! [ -x "$(command -v nvm)" ]; then
-    nvm-install
-  else
-    nvm-update
-  fi
-}
-
 deploy(){
   DESTINATION=$1
   if [[ -n $1 ]]; then
@@ -82,23 +75,6 @@ deploy(){
   fi
   echo "Specify the destination point"
   return 1
-}
-
-nvm-install(){
-  rm -Rf "$NVM_DIR";
-  git clone https://github.com/creationix/nvm.git "$NVM_DIR";
-  cd "$NVM_DIR";
-  git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`;
-  \. "$NVM_SH";
-  cd -;
-}
-
-nvm-update(){
-  cd "$NVM_DIR";
-  git fetch --tags origin;
-  git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`;
-  \. "$NVM_SH";
-  cd -;
 }
 
 git-fetch-all(){
