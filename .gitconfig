@@ -56,6 +56,7 @@
   please = push --force-with-lease
   ##### Utility
   aliases = "!f() { git config -l | grep alias | cut -c 7-; }; f"
+  amend = "!f() { git add . && git commit --amend --no-edit --no-verify; }; f"
   by-commit-count = "!f() { git shortlog -sn; }; f"
   by-loc-count = "!f() { git ls-files | while read f; do git blame -w -M -C -C --line-porcelain "$f" | grep -I '^author '; done | sort -f | uniq -ic | sort -n; }; f" 
   cfd = clean -fd
