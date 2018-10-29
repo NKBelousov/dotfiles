@@ -27,6 +27,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+b exec google-chrome
 bindsym $mod+n exec google-chrome --incognito
 bindsym $mod+d exec dmenu_run -nb '$base00' -sf '$base00' -sb '$base0D' -nf '$base0D'
+bindsym $mod+Shift+z exec i3lock
 
 # Window navigation
 bindsym $mod+h focus left
