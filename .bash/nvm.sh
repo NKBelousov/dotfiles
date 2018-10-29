@@ -1,10 +1,10 @@
 #!/bin/bash
 
 nvm-check(){
-  if ! [ -x "$(command -v nvm)" ]; then
-    nvm-install
+  if command -v "nvm" > /dev/null 2>&1; then
+    nvm-update;
   else
-    nvm-update
+    nvm-install;
   fi
 }
 
