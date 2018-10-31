@@ -12,4 +12,15 @@ git-rebase-exec(){
   git rebase --interactive $FROM -x "$@";
 }
 
-
+git-fetch-all(){
+  local current=$(pwd);
+  cd "$PROJECT_DIR";
+  for dir in $(find . -name ".git")
+  do cd ${dir%/*}
+      echo "Fetching $PWD"
+      git fa
+      echo ""
+      cd - > /dev/null
+  done
+  cd "$current";
+}
