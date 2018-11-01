@@ -1,12 +1,10 @@
 #!/bin/bash
 
 pomodoro(){
-  if [[ -z $1 ]]; then
-    echo "Specify duration"
-    return 1
-  fi
-  if [[ -z $2 ]]; then
-    echo "Specify message"
+  if [ $# -ne 2 ]; then
+    echo "pomodoro usage: duration message"
+    echo "    duration            number of seconds to wait"
+    echo "    message             message to display"
     return 1
   fi
   sleep $1 && notify-send $2 &>/dev/null &disown;
