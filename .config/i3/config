@@ -23,12 +23,13 @@ floating_modifier $mod
 
 # Application shortcuts
 bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Shift+o exec shutdown -h now
 bindsym $mod+Shift+q kill
-bindsym $mod+b exec google-chrome
-bindsym $mod+n exec google-chrome --incognito
-bindsym $mod+d exec dmenu_run -nb '$base00' -sf '$base00' -sb '$base0D' -nf '$base0D'
-bindsym $mod+Shift+z exec i3lock
 bindsym $mod+Shift+x exec kill -9 -1
+bindsym $mod+Shift+z exec i3lock
+bindsym $mod+b exec google-chrome
+bindsym $mod+d exec dmenu_run -nb '$base00' -sf '$base00' -sb '$base0D' -nf '$base0D'
+bindsym $mod+n exec google-chrome --incognito
 
 # Window navigation
 bindsym $mod+h focus left
