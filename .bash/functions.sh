@@ -61,17 +61,3 @@ daily(){
   cat ~/.config/dconf/palette | dconf load /org/gnome/terminal/ | dconf update;
   vim +PlugInstall +PlugClean +PlugUpdate +PlugUpgrade +qall;
 }
-
-deploy(){
-  DESTINATION=$1
-  if [[ -n $1 ]]; then
-    echo "Deploying to $1...";
-    echo "Date: $DATE    Commit: $HEAD    User: $(git config user.name)" >> ".history"
-    DATE=`date '+%Y-%m-%d %H:%M:%S'`
-    HEAD=`git rev-parse HEAD`
-    rsync -a --stats --progress ./ $1
-    return 0
-  fi
-  echo "Specify the destination point"
-  return 1
-}
