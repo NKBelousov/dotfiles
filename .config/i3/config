@@ -18,7 +18,7 @@ set $base0E #c678dd
 set $base0F #be5046
 
 set $mod Mod4
-font pango:monospace 14
+font pango:monospace 18
 floating_modifier $mod
 
 # Application shortcuts
