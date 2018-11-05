@@ -28,7 +28,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Shift+x exec kill -9 -1
 bindsym $mod+Shift+z exec i3lock
 bindsym $mod+b exec google-chrome
-bindsym $mod+d exec dmenu_run -nb '$base00' -sf '$base00' -sb '$base0D' -nf '$base0D'
+bindsym $mod+d exec dmenu_run -nb '$base00' -sf '$base00' -sb '$base0D' -nf '$base0D' -fn pango-24
 bindsym $mod+n exec google-chrome --incognito
 
 # Window navigation
