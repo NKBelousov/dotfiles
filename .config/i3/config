@@ -102,8 +102,8 @@ bar {
 
   colors {
     background $base00
-    separator  $base01
-    statusline $base04
+    separator  $base0D
+    statusline $base0D
 
 #   State               Border  BG      Text
     focused_workspace   $base0D $base0D $base00
