@@ -52,6 +52,7 @@
   rbc = rebase --continue
   rbi = rebase --interactive
   rbs = rebase --skip
+  rbx = "!/bin/bash -c \"source ~/.bashrc && git-rebase-exec\""
   ##### Pushing
   p = push
   pf = push --force
