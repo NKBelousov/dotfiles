@@ -36,6 +36,7 @@
   cpc = cherry-pick --continue
   ##### Fetching
   fa = fetch --all --prune --tags
+  fap = "!/bin/bash -c \"source ~/.bashrc && git-fetch-all-projects\""
   fu = fetch upstream
   ##### Merging
   m = merge

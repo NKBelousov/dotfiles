@@ -24,10 +24,11 @@ git-merge-delete(){
   return 0;
 }
 
-git-fetch-all(){
-  local current=$(pwd);
+git-fetch-all-projects(){
+  local CURRENT=$(pwd);
   cd "$PROJECT_DIR";
-  for dir in $(find . -name ".git")
+  local PROJECTS=$(find . -maxdepth 2 -name ".git")
+  for dir in $PROJECTS
   do cd ${dir%/*}
       echo "Fetching $PWD"
       git fa
