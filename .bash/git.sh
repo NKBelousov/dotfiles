@@ -12,6 +12,18 @@ git-rebase-exec(){
   git rebase --interactive $FROM -x "$@";
 }
 
+git-merge-delete(){
+  if [ $# -ne 1 ]; then
+    echo "git-merge-delete usage: branch-name"
+    echo "    branch-name           branch to merge in and delete"
+    return 1
+  fi
+  BRANCHNAME="$1";
+  git merge $BRANCHNAME;
+  git bd $BRANCHNAME;
+  return 0;
+}
+
 git-fetch-all(){
   local current=$(pwd);
   cd "$PROJECT_DIR";

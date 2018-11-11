@@ -41,6 +41,7 @@
   m = merge
   ma = merge --abort
   mc = merge --continue
+  md = "!/bin/bash -c \"source ~/.bashrc && git-merge-delete\""
   ms = merge --skip
   mt = mergetool
   ##### Rebasing
