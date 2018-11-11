@@ -24,6 +24,18 @@ git-merge-delete(){
   return 0;
 }
 
+git-cherry-pick-delete(){
+  if [ $# -ne 1 ]; then
+    echo "git cpd usage: branch-name"
+    echo "    branch-name           branch to cherry-pick and delete"
+    return 1
+  fi
+  COMMITHASH="$1";
+  git cp $COMMITHASH;
+  git bd $COMMITHASH;
+  return 0;
+}
+
 git-fetch-all-projects(){
   local CURRENT=$(pwd);
   cd "$PROJECT_DIR";
