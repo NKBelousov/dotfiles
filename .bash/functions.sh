@@ -33,7 +33,6 @@ daily(){
   "thunar"
   "tree"
   "vim"
-  "xfce4"
   )
   sudo apt update --yes --force-yes;
   sudo apt full-upgrade --yes --force-yes;
