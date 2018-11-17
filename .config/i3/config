@@ -56,14 +56,14 @@ bindsym $mod+u split vertical
 bindsym $mod+i split horizontal
 
 # Workspace navigation
-bindsym $mod+1 workspace SM
-bindsym $mod+2 workspace DEVELOPMENT
-bindsym $mod+3 workspace STUFF
+bindsym $mod+1 workspace 1: SM
+bindsym $mod+2 workspace 2: DEVELOPMENT
+bindsym $mod+3 workspace 3: STUFF
 
 # Workspace management
-bindsym $mod+Shift+1 move container to workspace SM
-bindsym $mod+Shift+2 move container to workspace DEVELOPMENT
-bindsym $mod+Shift+3 move container to workspace STUFF
+bindsym $mod+Shift+1 move container to workspace 1: SM
+bindsym $mod+Shift+2 move container to workspace 2: DEVELOPMENT
+bindsym $mod+Shift+3 move container to workspace 3: STUFF
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
