@@ -1,10 +1,21 @@
 #!/bin/bash
 
+describe-usage(){
+  if [ $# -lt 2 ]; then
+    echo "Invalid describe-usage invokation"
+    return 1
+  fi
+  ITEM="$1"
+  MESSAGE="$@"
+  echo "    $ITEM                    $MESSAGE"
+  return 0
+}
+
 git-rebase-exec(){
   if [ $# -lt 2 ]; then
     echo "git rbx usage: commit command-to-execute"
-    echo "    commit                rebase starting point"
-    echo "    command               command to execute on each commit" 
+    describe-usage "commit" "rebase starting point"
+    describe-usage "command" "command to execute on each commit"
     return 1
   fi
   FROM="$1"
@@ -15,7 +26,7 @@ git-rebase-exec(){
 git-merge-delete(){
   if [ $# -ne 1 ]; then
     echo "git md usage: branch-name"
-    echo "    branch-name           branch to merge in and delete"
+    describe-usage "branch-name" "branch to merge in and delete"
     return 1
   fi
   BRANCHNAME="$1";
@@ -27,7 +38,7 @@ git-merge-delete(){
 git-cherry-pick-delete(){
   if [ $# -ne 1 ]; then
     echo "git cpd usage: branch-name"
-    echo "    branch-name           branch to cherry-pick and delete"
+    describe-usage "branch-name" "branch to cherry-pick and delete"
     return 1
   fi
   COMMITHASH="$1";
