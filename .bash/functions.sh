@@ -48,7 +48,6 @@ daily(){
   pip install --user ${pip[@]};
   sudo snap install rg;
   nvm-check;
-  nvm install --lts;
   local npm_packages=(
   "create-react-app"
   "create-react-library"
