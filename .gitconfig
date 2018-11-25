@@ -34,7 +34,7 @@
   cp = cherry-pick
   cpa = cherry-pick --abort
   cpc = cherry-pick --continue
-  cpd = "!/bin/bash -c \"source ~/.bashrc && git-cherry-pick-delete\""
+  cpd = "!/bin/bash -c \"source ~/.bashrc && git-cherry-pick-delete $@\""
   ##### Fetching
   fa = fetch --all --prune --tags
   fap = "!/bin/bash -c \"source ~/.bashrc && git-fetch-all-projects\""
@@ -43,7 +43,7 @@
   m = merge
   ma = merge --abort
   mc = merge --continue
-  md = "!/bin/bash -c \"source ~/.bashrc && git-merge-delete\""
+  md = "!/bin/bash -c \"source ~/.bashrc && git-merge-delete $@\""
   ms = merge --skip
   mt = mergetool
   ##### Rebasing
