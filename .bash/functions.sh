@@ -31,6 +31,7 @@ daily(){
   "snapd"
   "taskwarrior"
   "thunar"
+  "tmux"
   "tree"
   "vim"
   "xfce4"
