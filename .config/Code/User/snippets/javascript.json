@@ -1,0 +1,352 @@
+{
+  "class": {
+    "prefix": "class",
+    "body": "class ${1:name} extends ${2:Prototype} {\n  ${3:declaration}\n}\n\nexport default ${4:$1};",
+    "description": "class Foo"
+  },
+  "singleton": {
+    "prefix": "singleton",
+    "body": "class ${1:name} extends ${2:Object} {\n  constructor(){\n    if ($1.instance === void 0){\n      $1.instance = this;\n    }\n    return $1.instance;\n  }\n}\n\nconst instance = new $1();\nexport default instance;",
+    "description": "Singleton"
+  },
+  "component": {
+    "prefix": "component",
+    "body": "import PropTypes from 'prop-types';\nimport React, {Component} from 'react';\n\nclass ${1:name} extends Component {\n  render(){\n    return ${2:node};\n  }\n}\n\nexport default ${3:$1};",
+    "description": "class Foo extends Component"
+  },
+  "purecomponent": {
+    "prefix": "purecomponent",
+    "body": "import PropTypes from \"prop-types\";\nimport React, { PureComponent } from \"react\";\n\nclass ${1:name} extends PureComponent {\n  render(){\n    return ${2:node};\n  }\n}\n\nexport default ${3:$1};",
+    "description": "class Foo extends PureComponent"
+  },
+  "propTypes": {
+    "prefix": "propTypes",
+    "body": "static get propTypes(){\n  return {\n    ${1:object}\n  };\n}",
+    "description": "React::propTypes"
+  },
+  "defaultProps": {
+    "prefix": "defaultProps",
+    "body": "static get defaultProps(){\n  return {\n    ${1:object}\n  };\n}",
+    "description": "React::defaultProps"
+  },
+  "con": {
+    "prefix": "con",
+    "body": "constructor(props){\n  super(props);\n\n  this.state = {\n    ${1:object}\n  };\n}",
+    "description": "React::constructor(props)"
+  },
+  "cwm": {
+    "prefix": "cwm",
+    "body": "componentWillMount(){\n  ${1:expressions}\n}",
+    "description": "React::componentWillMount()"
+  },
+  "cdm": {
+    "prefix": "cdm",
+    "body": "componentDidMount(){\n  ${1:expressions}\n}",
+    "description": "React::componentDidMount()"
+  },
+  "cwrp": {
+    "prefix": "cwrp",
+    "body": "componentWillReceiveProps(nextProps){\n  ${1:expressions}\n}",
+    "description": "React::componentWillReceiveProps(object nextProps)"
+  },
+  "scu": {
+    "prefix": "scu",
+    "body": "shouldComponentUpdate(nextProps, nextState){\n  return ${1:expression}\n}",
+    "description": "React::shouldComponentUpdate(object nextProps, object nextState)"
+  },
+  "cwu": {
+    "prefix": "cwu",
+    "body": "componentWillUpdate(nextProps, nextState){\n  ${1:expressions}\n}",
+    "description": "React::componentWillUpdate(object nextProps, object nextState)"
+  },
+  "cdu": {
+    "prefix": "cdu",
+    "body": "componentDidUpdate(prevProps, prevState){\n  ${1:expressions}\n}",
+    "description": "React::componentDidUpdate(object prevProps, object prevState)"
+  },
+  "cwun": {
+    "prefix": "cwun",
+    "body": "componentWillUnmount(){\n  ${1:expressions}\n}",
+    "description": "React::componentWillUnmount()"
+  },
+  "cdc": {
+    "prefix": "cdc",
+    "body": "componentDidCatch(error, info){\n  ${1:expressions}\n}",
+    "description": "React::componentDidCatch(error, info)"
+  },
+  "gds": {
+    "prefix": "gds",
+    "body": "static getDerivedStateFromProps(nextProps, prevState){\n  return {\n    ${1:nextState}\n  };\n}",
+    "description": "React::getDerivedStateFromProps(nextProps, prevState)"
+  },
+  "bm": {
+    "prefix": "bm",
+    "body": "this.$1 = this.$1.bind(this);",
+    "description": "React::Bind method to this"
+  },
+  "gp": {
+    "prefix": "gp",
+    "body": "this.props.${1:key}",
+    "description": "React::Get property by name"
+  },
+  "gs": {
+    "prefix": "gs",
+    "body": "this.state.${1:key}",
+    "description": "React::Get state property by name"
+  },
+  "ref": {
+    "prefix": "ref",
+    "body": "ref={${1:name} => { this.$1 = $1; }}",
+    "description": "React::Ref"
+  },
+  "pta": {
+    "prefix": "pta",
+    "body": "PropTypes.array,",
+    "description": "PropTypes.array"
+  },
+  "ptar": {
+    "prefix": "ptar",
+    "body": "PropTypes.array.isRequired,",
+    "description": "PropTypes.array.isRequired"
+  },
+  "ptao": {
+    "prefix": "ptao",
+    "body": "PropTypes.arrayOf(${1:propType}),",
+    "description": "PropTypes.arrayOf()"
+  },
+  "ptaor": {
+    "prefix": "ptaor",
+    "body": "PropTypes.arrayOf(${1:propType}).isRequired,",
+    "description": "PropTypes.arrayOf().isRequired"
+  },
+  "ptb": {
+    "prefix": "ptb",
+    "body": "PropTypes.bool,",
+    "description": "PropTypes.bool"
+  },
+  "ptbr": {
+    "prefix": "ptbr",
+    "body": "PropTypes.bool.isRequired,",
+    "description": "PropTypes.bool.isRequired"
+  },
+  "ptf": {
+    "prefix": "ptf",
+    "body": "PropTypes.func,",
+    "description": "PropTypes.func"
+  },
+  "ptfr": {
+    "prefix": "ptfr",
+    "body": "PropTypes.func.isRequired,",
+    "description": "PropTypes.func.isRequired"
+  },
+  "ptn": {
+    "prefix": "ptn",
+    "body": "PropTypes.number,",
+    "description": "PropTypes.number"
+  },
+  "ptnr": {
+    "prefix": "ptnr",
+    "body": "PropTypes.number.isRequired,",
+    "description": "PropTypes.number.isRequired"
+  },
+  "pto": {
+    "prefix": "pto",
+    "body": "PropTypes.object,",
+    "description": "PropTypes.object"
+  },
+  "ptor": {
+    "prefix": "ptor",
+    "body": "PropTypes.object.isRequired,",
+    "description": "PropTypes.object.isRequired"
+  },
+  "ptoo": {
+    "prefix": "ptoo",
+    "body": "PropTypes.objectOf(${1:propType}),",
+    "description": "PropTypes.objectOf()"
+  },
+  "ptoor": {
+    "prefix": "ptoor",
+    "body": "PropTypes.objectOf(${1:propType}).isRequired,",
+    "description": "PropTypes.objectOf().isRequired"
+  },
+  "ptsh": {
+    "prefix": "ptsh",
+    "body": "PropTypes.shape({\n  ${1:object}\n}),",
+    "description": "PropTypes.shape({})"
+  },
+  "ptshr": {
+    "prefix": "ptshr",
+    "body": "PropTypes.shape({\n  ${1:object}\n}).isRequired,",
+    "description": "PropTypes.shape({}).isRequired"
+  },
+  "pts": {
+    "prefix": "pts",
+    "body": "PropTypes.string,",
+    "description": "PropTypes.string"
+  },
+  "ptsr": {
+    "prefix": "ptsr",
+    "body": "PropTypes.string.isRequired,",
+    "description": "PropTypes.string.isRequired"
+  },
+  "ptnd": {
+    "prefix": "ptnd",
+    "body": "PropTypes.node,",
+    "description": "PropTypes.node"
+  },
+  "ptndr": {
+    "prefix": "ptndr",
+    "body": "PropTypes.node.isRequired,",
+    "description": "PropTypes.node.isRequired"
+  },
+  "ptel": {
+    "prefix": "ptel",
+    "body": "PropTypes.element,",
+    "description": "PropTypes.element"
+  },
+  "ptelr": {
+    "prefix": "ptelr",
+    "body": "PropTypes.element.isRequired,",
+    "description": "PropTypes.element.isRequired"
+  },
+  "pti": {
+    "prefix": "pti",
+    "body": "PropTypes.instanceOf(${1:class}),",
+    "description": "PropTypes.instanceOf"
+  },
+  "ptir": {
+    "prefix": "ptir",
+    "body": "PropTypes.instanceOf(${1:class}).isRequired,",
+    "description": "PropTypes.instanceOf.isRequired"
+  },
+  "ptof": {
+    "prefix": "ptof",
+    "body": "PropTypes.oneOf([${1:array}]),",
+    "description": "PropTypes.oneOf([])"
+  },
+  "ptofr": {
+    "prefix": "ptofr",
+    "body": "PropTypes.oneOf([${1:array}]).isRequired,",
+    "description": "PropTypes.oneOf([]).isRequired"
+  },
+  "ptoft": {
+    "prefix": "ptoft",
+    "body": "PropTypes.oneOfType([${1:array}]),",
+    "description": "PropTypes.oneOfType([])"
+  },
+  "ptoftr": {
+    "prefix": "ptoftr",
+    "body": "PropTypes.oneOfType([${1:array}]).isRequired,",
+    "description": "PropTypes.oneOfType([]).isRequired"
+  },
+  "Prom": {
+    "prefix": "Prom",
+    "body": "new Promise((resolve, reject) => {\n  ${1:expressions}\n});",
+    "description": "ES6::Promise"
+  },
+  "me": {
+    "prefix": "me",
+    "body": "module.exports = ${1:expression};",
+    "description": "module.exports = "
+  },
+  "webpack": {
+    "prefix": "webpack",
+    "body": "module.exports = {\n  entry: \"${1:input}\",\n  output: {\n    path: __dirname + \"/dist\",\n    filename: \"${2:output}\",\n  },\n};",
+    "description": "Webpack: Config template"
+  },
+  "imp": {
+    "prefix": "imp",
+    "body": "import { ${1:what} } from \"${2:from};",
+    "description": "import ES6 module"
+  },
+  "impd": {
+    "prefix": "impd",
+    "body": "import ${1:name} from \"${2:from}\";",
+    "description": "import ES6 module"
+  },
+  "ex": {
+    "prefix": "ex",
+    "body": "export ${1:expression};",
+    "description": "export"
+  },
+  "exd": {
+    "prefix": "exd",
+    "body": "export default ${1:expression};",
+    "description": "export default"
+  },
+  "l": {
+    "prefix": "l",
+    "body": "let ${1:name} = ${2:value};",
+    "description": "let foo = bar;"
+  },
+  "c": {
+    "prefix": "c",
+    "body": "const ${1:name} = ${2:value};",
+    "description": "const foo = bar;"
+  },
+  "=>": {
+    "prefix": "=>",
+    "body": "${1:params} => {\n  ${2:expressions}\n}",
+    "description": "Arrow function"
+  },
+  "tc": {
+    "prefix": "tc",
+    "body": "try {\n  ${1:try}\n} catch(e){\n  ${2:catch}\n}",
+    "description": "try/catch"
+  },
+  "sw": {
+    "prefix": "sw",
+    "body": "switch(${1:expression}){\n  ${2:handlers}\n}",
+    "description": "switch"
+  },
+  "swc": {
+    "prefix": "swc",
+    "body": "case ${1:n}:\n  ${2:handler};\n  break;",
+    "description": "switch::case"
+  },
+  "swd": {
+    "prefix": "swd",
+    "body": "default:\n  ${1:handler}\n  break;",
+    "description": "switch::default"
+  },
+  "js": {
+    "prefix": "js",
+    "body": "JSON.stringify(${1:value})",
+    "description": "JSON.stringify"
+  },
+  "jp": {
+    "prefix": "jp",
+    "body": "JSON.parse(${1:string})",
+    "description": "JSON.parse"
+  },
+  "iife": {
+    "prefix": "iife",
+    "body": "void function ${1:name}(${2:signature}){\n  ${3:expressions}\n}(${4:params})",
+    "description": "Immediately-invoked function expression"
+  },
+  "action": {
+    "prefix": "action",
+    "body": "const ${1:name} = \"$1\";\nconst $1 = \"$1_FAILURE\";\nconst $1 = \"$1_SUCCESS\";",
+    "description": "Redux: Action template"
+  },
+  "cl": {
+    "prefix": "cl",
+    "body": "console.log(${1:foo});",
+    "description": "console.log(foo)"
+  },
+  "cw": {
+    "prefix": "cw",
+    "body": "console.warn(${1:foo});",
+    "description": "console.warn(foo)"
+  },
+  "ce": {
+    "prefix": "ce",
+    "body": "console.error(${1:foo});",
+    "description": "console.error(foo)"
+  },
+  "d": {
+    "prefix": "d",
+    "body": "debugger;",
+    "description": "debugger"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "viewport": {
+    "prefix": "viewport",
+    "body": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+    "description": "Responsive Meta Tag"
+  },
+  "script": {
+    "prefix": "script",
+    "body": "<script src=\"$1\"></script>",
+    "description": "Script declaration"
+  },
+  "link": {
+    "prefix": "link",
+    "body": "<link href=\"$1\" rel=\"$2\">",
+    "description": "Link declaration"
+  }
+}

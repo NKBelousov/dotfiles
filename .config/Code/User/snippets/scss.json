@@ -1,0 +1,22 @@
+{
+  "imp": {
+    "prefix": "imp",
+    "body": "@import \"${1:path}\";",
+    "description": "@import"
+  },
+  "inc": {
+    "prefix": "inc",
+    "body": "@include ${1:mixin};",
+    "description": "@include"
+  },
+  "ext": {
+    "prefix": "ext",
+    "body": "@extend ${1:selector};",
+    "description": "@extend"
+  },
+  "mix": {
+    "prefix": "mix",
+    "body": "@mixin ${1:name}(${2:params}){\n  ${3:declarations}\n}",
+    "description": "@mixin"
+  }
+}

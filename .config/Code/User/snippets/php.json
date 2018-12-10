@@ -1,0 +1,22 @@
+{
+  "class": {
+    "prefix": "class",
+    "body": "<?php\n\nclass ${1:name} extends ${2:Parent}\n{\n\t${3:declarations}\n}",
+    "description": "Class declaration"
+  },
+  "interface": {
+    "prefix": "interface",
+    "body": "<?php\n\ninterface ${1:name}\n{\n\t${2:declarations}\n}",
+    "description": "Interface declaration"
+  },
+  "imp": {
+    "prefix": "imp",
+    "body": "implements ${1:Interface}",
+    "description": "implements"
+  },
+  "ext": {
+    "prefix": "ext",
+    "body": "extends ${1:Parent}",
+    "description": "extends"
+  }
+}

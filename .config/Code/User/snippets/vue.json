@@ -1,0 +1,7 @@
+{
+  "sfc": {
+    "prefix": "sfc",
+    "body": "<template>\n  ${1:template}\n</template>\n\n<script>\n  module.exports = {\n    ${2:script}\n  };\n</script>\n\n<style scoped>\n  ${3:style}\n</style>",
+    "description": "Single File Component"
+  }
+}
