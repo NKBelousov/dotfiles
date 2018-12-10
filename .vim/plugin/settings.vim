@@ -58,39 +58,5 @@ let g:lightline = {
 
 let g:jsx_ext_required = 0 " allow jsx in .js files
 let NERDTreeShowHidden = 1
-let g:acp_enableAtStartup = 0
-
-let g:ale_sign_column_always = 1
-let g:ale_sign_error = 'E'
-let g:ale_sign_warning = 'W'
-let g:ale_completion_enabled = 1
-
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
-let g:completor_css_omni_trigger = '([\w-]+|@[\w-]*|[\w-]+:\s*[\w-]*)$'
-let g:completor_scss_omni_trigger = '([\w-]+|@[\w-]*|[\w-]+:\s*[\w-]*)$'
-
-" Enable jsdoc in pangloss/vim-javascript loaded by vim-polyglot
-let g:javascript_plugin_jsdoc = 1
-
-let g:definitive_definitions = {
-  \ 'javascript': '\<\(\(class\|const\|let\|var\)\s\+%1\>\|\(function\s\+\)\=%1\s*(.*)\s*{\|class\s\+%1\s*{\)',
-  \ 'javascript.jsx': {
-  \   'extends': 'javascript',
-  \ },
-  \}
-
-" Change html attributes in jsx files
-let g:user_emmet_settings = {
-  \  'javascript.jsx' : {
-  \      'extends' : 'jsx',
-  \  },
-  \}
-let g:prettier#exec_cmd_async = 1
-let g:prettier#quickfix_enabled=0 " Disables quick-fix to auto open when files have errors
-
-let g:import_cost_split_pos = 'right'
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
