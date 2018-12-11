@@ -44,8 +44,6 @@ daily(){
   local pip=(
   "flake8"
   "jedi"
-  "mps-youtube"
-  "youtube-dl"
   )
   pip install --user ${pip[@]};
   sudo snap install rg;
