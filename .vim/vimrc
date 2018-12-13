@@ -24,7 +24,6 @@ call plug#end()
 
 augroup prepare
   autocmd!
-  autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md PrettierAsync
   autocmd FileType css,scss,less setlocal omnifunc=csscomplete#CompleteCSS
   autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
   autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
