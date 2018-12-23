@@ -7,4 +7,5 @@
     "editor.tabSize": 2,
     "window.zoomLevel": 0,
     "window.menuBarVisibility": "hidden",
+    "workbench.colorTheme": "Solarized Light",
 }
