@@ -2,6 +2,7 @@
 
 source ~/.bash/nvm.sh;
 source ~/.bash/pomodoro.sh;
+source ~/.bash/pwd.sh;
 
 daily(){
   if [[ -z "$DOTFILES_PATH" ]]; then
@@ -58,4 +59,5 @@ daily(){
   npm i -g ${npm_packages[@]};
   cat ~/.config/dconf/palette | dconf load /org/gnome/terminal/ | dconf update;
   vim +PlugInstall +PlugClean +PlugUpdate +PlugUpgrade +qall;
+  notify-send "Ready to work!";
 }
