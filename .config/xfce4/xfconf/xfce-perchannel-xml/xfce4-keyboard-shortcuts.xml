@@ -35,6 +35,7 @@
       <property name="&lt;Primary&gt;Escape" type="string" value="xfdesktop --menu"/>
       <property name="override" type="bool" value="true"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="gnome-terminal --hide-menubar --maximize"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;b" type="string" value="google-chrome"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
