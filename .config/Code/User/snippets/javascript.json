@@ -274,6 +274,31 @@
     "body": "export default ${1:expression};",
     "description": "export default"
   },
+  "react": {
+    "prefix": "react",
+    "body": "import React from \"react\";",
+    "description": "import React from \"react\";",
+  },
+  "reactdom": {
+    "prefix": "reactdom",
+    "body": "import ReactDOM from \"react-dom\";",
+    "description": "import ReactDOM from \"react-dom\";",
+  },
+  "reactc": {
+    "prefix": "reactc",
+    "body": "import React, { Component } from \"react\";",
+    "description": "import React, { Component } from \"react\";",
+  },
+  "reactpc": {
+    "prefix": "reactp",
+    "body": "import React, { PureComponent } from \"react\";",
+    "description": "import React, { PureComponent } from \"react\";",
+  },
+  "reactm": {
+    "prefix": "reactm",
+    "body": "import React, { memo } from \"react\";",
+    "description": "import React, { memo } from \"react\";",
+  },
   "l": {
     "prefix": "l",
     "body": "let ${1:name} = ${2:value};",
@@ -328,6 +353,16 @@
     "prefix": "action",
     "body": "const ${1:name} = \"$1\";\nconst $1 = \"$1_FAILURE\";\nconst $1 = \"$1_SUCCESS\";",
     "description": "Redux: Action template"
+  },
+  "mstp": {
+    "prefix": "mstp",
+    "body": "const mapStateToProps = state => $1;",
+    "description": "Redux: mapStateToProps",
+  },
+  "mdtp": {
+    "prefix": "mdtp",
+    "body": "const mapDispatchToProps = dispatch => $1;",
+    "description": "Redux: mapDispatchToProps",
   },
   "cl": {
     "prefix": "cl",
