@@ -256,7 +256,7 @@
   },
   "imp": {
     "prefix": "imp",
-    "body": "import { ${1:what} } from \"${2:from};",
+    "body": "import { ${1:what} } from \"${2:from}\";",
     "description": "import ES6 module"
   },
   "impd": {
