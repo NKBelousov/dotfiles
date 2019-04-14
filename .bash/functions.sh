@@ -23,6 +23,7 @@ daily(){
   "fonts-powerline"
   "git"
   "htop"
+  "iotop"
   "keepassx"
   "menulibre"
   "numix-gtk-theme"
