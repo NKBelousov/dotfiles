@@ -60,5 +60,10 @@ daily(){
   npm i -g ${npm_packages[@]};
   cat ~/.config/dconf/palette | dconf load /org/gnome/terminal/ | dconf update;
   vim +PlugInstall +PlugClean +PlugUpdate +PlugUpgrade +qall;
+  code-install-extensions;
   notify-send "Ready to work!";
+}
+
+code-install-extensions(){
+  cat ~/.config/Code/User/extensions | xargs -I {} code --install-extension {}
 }
