@@ -1,7 +1,9 @@
 // Place your key bindings in this file to override the defaults
 [
   { "key": "ctrl+alt+s",            "command": "editor.action.sortLinesAscending",
-                                    "when": "textInputFocus" },  
+                                    "when": "textInputFocus" },
   { "key": "ctrl+alt+i",            "command": "editor.action.insertCursorAtEndOfEachLineSelected",
-                                    "when": "editorTextFocus" },                                    
+                                    "when": "editorTextFocus" },
+  { "key": "ctrl+alt+e",            "command": "editor.emmet.action.wrapWithAbbreviation",
+                                    "when": "editorTextFocus" },
 ]
