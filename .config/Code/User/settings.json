@@ -1,12 +1,13 @@
 {
-    "editor.formatOnSave": true,
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingQuotes": "never",
-    "editor.cursorBlinking": "blink",
     "editor.autoIndent": true,
+    "editor.cursorBlinking": "blink",
+    "editor.formatOnSave": true,
     "editor.tabSize": 2,
-    "window.zoomLevel": 0,
+    "eslint.autoFixOnSave": true,
     "window.menuBarVisibility": "hidden",
+    "window.zoomLevel": 0,
     "workbench.colorTheme": "Material Theme",
-    "workbench.iconTheme": "eq-material-theme-icons",
+    "workbench.iconTheme": "material-icon-theme",
 }
