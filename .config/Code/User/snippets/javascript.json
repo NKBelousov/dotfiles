@@ -364,6 +364,21 @@
     "body": "const mapDispatchToProps = dispatch => $1;",
     "description": "Redux: mapDispatchToProps",
   },
+  "jd": {
+    "prefix": "jd",
+    "body": "describe('$1', () => {\n  $2\n});",
+    "description": "Jest: Describe",
+  },
+  "jt": {
+    "prefix": "jt",
+    "body": "it('$1', () => {\n  $2\n});",
+    "description": "Jest: Test",
+  },
+  "jb": {
+    "prefix": "jb",
+    "body": "beforeEach(() => {\n  $2\n});",
+    "description": "Jest: Before Each",
+  },
   "cl": {
     "prefix": "cl",
     "body": "console.log(${1:foo});",
