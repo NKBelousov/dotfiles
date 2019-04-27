@@ -10,6 +10,7 @@
   lga = "!f() { git lg --all $@; }; f"
   lgas = "!f() { git lga --stat $@; }; f"
   lgs = "!f() { git lg --stat $@; }; f"
+  lgp = log -u --pretty=fuller
   ##### Adding
   aa = add --all
   ai = add --interactive
