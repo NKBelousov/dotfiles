@@ -6,4 +6,12 @@
                                     "when": "editorTextFocus" },
   { "key": "ctrl+alt+e",            "command": "editor.emmet.action.wrapWithAbbreviation",
                                     "when": "editorTextFocus" },
+  {
+    "key": "ctrl+alt+w",            "command": "-workbench.action.focusSideBar"},
+  {
+    "key": "ctrl+alt+w",            "when": "!sideBarFocus",
+                                    "command": "workbench.action.focusSideBar"},
+  {
+    "key": "ctrl+alt+w",            "when": "sideBarFocus",
+                                    "command": "workbench.action.focusActiveEditorGroup"},
 ]
