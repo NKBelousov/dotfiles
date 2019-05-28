@@ -299,6 +299,21 @@
     "body": "import React, { memo } from \"react\";",
     "description": "import React, { memo } from \"react\";",
   },
+  "us": {
+    "prefix": "us",
+    "body": "const [${1:value}, ${2:setValue}] = useState(${3:initialValue});",
+    "description": "const [value, setValue] = useState(initialValue)",
+  },
+  "ue": {
+    "prefix": "ue",
+    "body": "useEffect(() => {\n    ${1:expressions}\n}, ${2: deps});",
+    "description": "useEffect(cb)",
+  },
+  "useContext": {
+    "prefix": "uc",
+    "body": "const ${1:value} = useContext(${2:Context});",
+    "description": "const value = useContext(Context)",
+  },
   "l": {
     "prefix": "l",
     "body": "let ${1:name} = ${2:value};",
