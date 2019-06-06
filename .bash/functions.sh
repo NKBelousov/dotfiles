@@ -1,8 +1,6 @@
 #!/bin/bash
 
 source ~/.bash/nvm.sh;
-source ~/.bash/pomodoro.sh;
-source ~/.bash/pwd.sh;
 
 daily(){
   if [[ -z "$DOTFILES_PATH" ]]; then
