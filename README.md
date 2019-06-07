@@ -2,8 +2,6 @@
 
 This is a collection of my configuration files.
 
-![Screenshot of configuration](https://raw.github.com/NKBelousov/dotfiles/master/screenshot.png)
-
 ## Installation
 
 **Warning:** If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need (especially `.bash/env.sh`).
