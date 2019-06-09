@@ -277,42 +277,42 @@
   "react": {
     "prefix": "react",
     "body": "import React from \"react\";",
-    "description": "import React from \"react\";",
+    "description": "import React from \"react\";"
   },
   "reactdom": {
     "prefix": "reactdom",
     "body": "import ReactDOM from \"react-dom\";",
-    "description": "import ReactDOM from \"react-dom\";",
+    "description": "import ReactDOM from \"react-dom\";"
   },
   "reactc": {
     "prefix": "reactc",
     "body": "import React, { Component } from \"react\";",
-    "description": "import React, { Component } from \"react\";",
+    "description": "import React, { Component } from \"react\";"
   },
   "reactpc": {
     "prefix": "reactp",
     "body": "import React, { PureComponent } from \"react\";",
-    "description": "import React, { PureComponent } from \"react\";",
+    "description": "import React, { PureComponent } from \"react\";"
   },
   "reactm": {
     "prefix": "reactm",
     "body": "import React, { memo } from \"react\";",
-    "description": "import React, { memo } from \"react\";",
+    "description": "import React, { memo } from \"react\";"
   },
   "us": {
     "prefix": "us",
     "body": "const [${1:value}, ${2:setValue}] = useState(${3:initialValue});",
-    "description": "const [value, setValue] = useState(initialValue)",
+    "description": "const [value, setValue] = useState(initialValue)"
   },
   "ue": {
     "prefix": "ue",
     "body": "useEffect(() => {\n    ${1:expressions}\n}, ${2: deps});",
-    "description": "useEffect(cb)",
+    "description": "useEffect(cb)"
   },
   "useContext": {
     "prefix": "uc",
     "body": "const ${1:value} = useContext(${2:Context});",
-    "description": "const value = useContext(Context)",
+    "description": "const value = useContext(Context)"
   },
   "l": {
     "prefix": "l",
@@ -366,33 +366,33 @@
   },
   "action": {
     "prefix": "action",
-    "body": "const ${1:name} = \"$1\";\nconst $1 = \"$1_FAILURE\";\nconst $1 = \"$1_SUCCESS\";",
+    "body": "export const ${1:name} = \"${2:namespace}/$1\";\nexport const $1_FAILURE = \"$2/$1_FAILURE\";\nexport const $1_SUCCESS = \"$2/$1_SUCCESS\";",
     "description": "Redux: Action template"
   },
   "mstp": {
     "prefix": "mstp",
     "body": "const mapStateToProps = state => $1;",
-    "description": "Redux: mapStateToProps",
+    "description": "Redux: mapStateToProps"
   },
   "mdtp": {
     "prefix": "mdtp",
     "body": "const mapDispatchToProps = dispatch => $1;",
-    "description": "Redux: mapDispatchToProps",
+    "description": "Redux: mapDispatchToProps"
   },
   "jd": {
     "prefix": "jd",
     "body": "describe('$1', () => {\n  $2\n});",
-    "description": "Jest: Describe",
+    "description": "Jest: Describe"
   },
   "jt": {
     "prefix": "jt",
     "body": "it('$1', () => {\n  $2\n});",
-    "description": "Jest: Test",
+    "description": "Jest: Test"
   },
   "jb": {
     "prefix": "jb",
     "body": "beforeEach(() => {\n  $2\n});",
-    "description": "Jest: Before Each",
+    "description": "Jest: Before Each"
   },
   "cl": {
     "prefix": "cl",
