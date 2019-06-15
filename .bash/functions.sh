@@ -65,3 +65,7 @@ daily(){
 code-install-extensions(){
   cat ~/.config/Code/User/extensions | xargs -I {} code --install-extension {}
 }
+
+code-save-extensions(){
+  cat ~/.config/Code/User/extensions > "${DOTFILES_PATH}.config/Code/User/extensions"
+}
