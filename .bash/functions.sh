@@ -67,5 +67,5 @@ code-install-extensions(){
 }
 
 code-save-extensions(){
-  cat ~/.config/Code/User/extensions > "${DOTFILES_PATH}.config/Code/User/extensions"
+  code --list-extensions > "${DOTFILES_PATH}.config/Code/User/extensions"
 }
