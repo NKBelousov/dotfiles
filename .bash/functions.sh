@@ -63,7 +63,7 @@ daily(){
 }
 
 code-install-extensions(){
-  cat ~/.config/Code/User/extensions | xargs -I {} code --install-extension {}
+  cat ~/.config/Code/User/extensions | xargs -I {} code --install-extension --force {}
 }
 
 code-save-extensions(){
