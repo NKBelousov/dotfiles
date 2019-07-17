@@ -3,6 +3,7 @@
     "editor.autoClosingQuotes": "never",
     "editor.autoIndent": true,
     "editor.cursorBlinking": "blink",
+    "editor.minimap.enabled": false,
     "editor.formatOnSave": true,
     "editor.tabSize": 2,
     "eslint.autoFixOnSave": true,
