@@ -1,17 +1,32 @@
 // Place your key bindings in this file to override the defaults
 [
-  { "key": "ctrl+alt+s",            "command": "editor.action.sortLinesAscending",
-                                    "when": "textInputFocus" },
-  { "key": "ctrl+alt+i",            "command": "editor.action.insertCursorAtEndOfEachLineSelected",
-                                    "when": "editorTextFocus" },
-  { "key": "ctrl+alt+e",            "command": "editor.emmet.action.wrapWithAbbreviation",
-                                    "when": "editorTextFocus" },
   {
-    "key": "ctrl+alt+w",            "command": "-workbench.action.focusSideBar"},
+    "key": "ctrl+alt+s",
+    "command": "editor.action.sortLinesAscending",
+    "when": "textInputFocus"
+  },
   {
-    "key": "ctrl+alt+w",            "when": "!sideBarFocus",
-                                    "command": "workbench.action.focusSideBar"},
+    "key": "ctrl+alt+i",
+    "command": "editor.action.insertCursorAtEndOfEachLineSelected",
+    "when": "editorTextFocus"
+  },
   {
-    "key": "ctrl+alt+w",            "when": "sideBarFocus",
-                                    "command": "workbench.action.focusActiveEditorGroup"},
+    "key": "ctrl+alt+e",
+    "command": "editor.emmet.action.wrapWithAbbreviation",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+w",
+    "command": "-workbench.action.focusSideBar"
+  },
+  {
+    "key": "ctrl+alt+w",
+    "when": "!sideBarFocus",
+    "command": "workbench.action.focusSideBar"
+  },
+  {
+    "key": "ctrl+alt+w",
+    "when": "sideBarFocus",
+    "command": "workbench.action.focusActiveEditorGroup"
+  },
 ]
