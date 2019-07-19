@@ -54,6 +54,7 @@ daily(){
   "diff-so-fancy"
   "np"
   "tldr"
+  "serve"
   )
   npm i -g ${npm_packages[@]};
   cat ~/.config/dconf/palette | dconf load /org/gnome/terminal/ | dconf update;
