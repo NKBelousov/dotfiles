@@ -53,8 +53,9 @@ daily(){
   "create-react-library"
   "diff-so-fancy"
   "np"
-  "tldr"
+  "npx"
   "serve"
+  "tldr"
   )
   npm i -g ${npm_packages[@]};
   cat ~/.config/dconf/palette | dconf load /org/gnome/terminal/ | dconf update;
