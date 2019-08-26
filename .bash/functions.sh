@@ -36,10 +36,10 @@ daily(){
   "vim"
   "xfce4"
   )
-  sudo apt update --yes --force-yes;
-  sudo apt full-upgrade --yes --force-yes;
-  sudo apt autoremove --yes --force-yes;
-  sudo apt autoclean --yes --force-yes;
+  sudo apt update --yes;
+  sudo apt full-upgrade --yes;
+  sudo apt autoremove --yes;
+  sudo apt autoclean --yes;
   sudo apt install ${essential[@]};
   local pip=(
   "flake8"
