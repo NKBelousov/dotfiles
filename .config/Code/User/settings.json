@@ -11,4 +11,8 @@
     "window.zoomLevel": 0,
     "workbench.colorTheme": "Material Theme",
     "workbench.iconTheme": "material-icon-theme",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "javascript.autoClosingTags": false,
+    "javascript.suggest.completeFunctionCalls": true,
+    "javascript.suggest.completeJSDocs": true,
 }
