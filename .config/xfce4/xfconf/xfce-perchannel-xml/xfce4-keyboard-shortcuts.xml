@@ -17,6 +17,9 @@
       <property name="&lt;Primary&gt;Escape" type="empty"/>
       <property name="XF86WWW" type="empty"/>
       <property name="XF86Mail" type="empty"/>
+      <property name="Print" type="empty"/>
+      <property name="Super_L" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="empty"/>
     </property>
     <property name="custom" type="empty">
       <property name="&lt;Alt&gt;F3" type="string" value="xfce4-appfinder">
@@ -35,7 +38,12 @@
       <property name="&lt;Primary&gt;Escape" type="string" value="xfdesktop --menu"/>
       <property name="override" type="bool" value="true"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="gnome-terminal --hide-menubar --maximize"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;b" type="string" value="google-chrome"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;b" type="string" value="google-chrome --profile-directory=&apos;Default&apos;">
+        <property name="startup-notify" type="bool" value="true"/>
+      </property>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;n" type="string" value="google-chrome --profile-directory=&apos;Profile 1&apos;">
+        <property name="startup-notify" type="bool" value="true"/>
+      </property>
     </property>
   </property>
   <property name="xfwm4" type="empty">
@@ -92,6 +100,37 @@
       <property name="&lt;Primary&gt;F10" type="empty"/>
       <property name="&lt;Primary&gt;F11" type="empty"/>
       <property name="&lt;Primary&gt;F12" type="empty"/>
+      <property name="&lt;Control&gt;F3" type="empty"/>
+      <property name="&lt;Control&gt;F4" type="empty"/>
+      <property name="&lt;Control&gt;F5" type="empty"/>
+      <property name="&lt;Control&gt;F6" type="empty"/>
+      <property name="&lt;Control&gt;F7" type="empty"/>
+      <property name="&lt;Control&gt;F8" type="empty"/>
+      <property name="&lt;Control&gt;F9" type="empty"/>
+      <property name="&lt;Control&gt;&lt;Alt&gt;Right" type="empty"/>
+      <property name="&lt;Control&gt;&lt;Alt&gt;d" type="empty"/>
+      <property name="&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;Left" type="empty"/>
+      <property name="&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;Right" type="empty"/>
+      <property name="&lt;Control&gt;&lt;Alt&gt;Down" type="empty"/>
+      <property name="&lt;Alt&gt;&lt;Control&gt;KP_1" type="empty"/>
+      <property name="&lt;Alt&gt;&lt;Control&gt;KP_2" type="empty"/>
+      <property name="&lt;Alt&gt;&lt;Control&gt;KP_3" type="empty"/>
+      <property name="&lt;Alt&gt;&lt;Control&gt;KP_4" type="empty"/>
+      <property name="&lt;Alt&gt;&lt;Control&gt;KP_5" type="empty"/>
+      <property name="&lt;Alt&gt;&lt;Control&gt;KP_6" type="empty"/>
+      <property name="&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;Up" type="empty"/>
+      <property name="&lt;Alt&gt;&lt;Control&gt;KP_8" type="empty"/>
+      <property name="&lt;Alt&gt;&lt;Control&gt;KP_9" type="empty"/>
+      <property name="&lt;Control&gt;&lt;Alt&gt;Up" type="empty"/>
+      <property name="&lt;Control&gt;F10" type="empty"/>
+      <property name="&lt;Alt&gt;&lt;Control&gt;KP_7" type="empty"/>
+      <property name="&lt;Alt&gt;&lt;Control&gt;End" type="empty"/>
+      <property name="&lt;Control&gt;&lt;Alt&gt;Left" type="empty"/>
+      <property name="&lt;Control&gt;F12" type="empty"/>
+      <property name="&lt;Alt&gt;&lt;Control&gt;Home" type="empty"/>
+      <property name="&lt;Control&gt;F2" type="empty"/>
+      <property name="&lt;Control&gt;F1" type="empty"/>
+      <property name="&lt;Control&gt;F11" type="empty"/>
     </property>
     <property name="custom" type="empty">
       <property name="Up" type="string" value="up_key"/>
