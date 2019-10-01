@@ -9,7 +9,7 @@
     "eslint.autoFixOnSave": true,
     "window.menuBarVisibility": "hidden",
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "Material Theme",
+    "workbench.colorTheme": "Solarized Light",
     "workbench.iconTheme": "material-icon-theme",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "javascript.autoClosingTags": false,
