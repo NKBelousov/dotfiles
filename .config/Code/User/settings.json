@@ -15,4 +15,10 @@
     "javascript.autoClosingTags": false,
     "javascript.suggest.completeFunctionCalls": true,
     "javascript.suggest.completeJSDocs": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ]
 }
