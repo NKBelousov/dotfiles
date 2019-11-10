@@ -44,6 +44,12 @@
       <property name="&lt;Primary&gt;&lt;Alt&gt;n" type="string" value="google-chrome --profile-directory=&apos;Profile 1&apos;">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;f" type="string" value="thunar">
+        <property name="startup-notify" type="bool" value="true"/>
+      </property>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;m" type="string" value="thunderbird">
+        <property name="startup-notify" type="bool" value="true"/>
+      </property>
     </property>
   </property>
   <property name="xfwm4" type="empty">
