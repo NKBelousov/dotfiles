@@ -50,10 +50,10 @@ else
   echo "ripgrep is not installed"
 endif
 
-set background=light
-colorscheme PaperColor
+set background=dark
+colorscheme onedark
 let g:lightline = {
-  \ 'colorscheme': 'PaperColor',
+  \ 'colorscheme': 'one',
   \}
 
 let g:jsx_ext_required = 0 " allow jsx in .js files
