@@ -1,15 +1,14 @@
 {
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingQuotes": "never",
-    "editor.autoIndent": true,
+    "editor.autoIndent": "none",
     "editor.cursorBlinking": "blink",
     "editor.minimap.enabled": false,
     "editor.formatOnSave": true,
     "editor.tabSize": 2,
-    "eslint.autoFixOnSave": true,
     "window.menuBarVisibility": "hidden",
-    "window.zoomLevel": 0,
-    "workbench.colorTheme": "Solarized Light",
+    "window.zoomLevel": 2,
+    "workbench.colorTheme": "Community Material Theme Ocean High Contrast",
     "workbench.iconTheme": "material-icon-theme",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "javascript.autoClosingTags": false,
@@ -20,5 +19,9 @@
         "javascriptreact",
         "typescript",
         "typescriptreact"
-    ]
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "material-icon-theme.activeIconPack": "react_redux"
 }
