@@ -1,15 +1,24 @@
 {
+    "workbench.colorTheme": "Community Material Theme Ocean High Contrast",
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.activeIconPack": "react_redux",
+    "window.menuBarVisibility": "hidden",
+    "window.zoomLevel": 2,
+    "editor.autoSurround": "never",
+    "editor.autoClosingOvertype": "never",
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingQuotes": "never",
     "editor.autoIndent": "none",
+    "editor.fontFamily": "'JetBrains Mono'",
+    "editor.fontSize": 15,
+    "editor.fontLigatures": true,
     "editor.cursorBlinking": "blink",
     "editor.minimap.enabled": false,
     "editor.formatOnSave": true,
     "editor.tabSize": 2,
-    "window.menuBarVisibility": "hidden",
-    "window.zoomLevel": 2,
-    "workbench.colorTheme": "Community Material Theme Ocean High Contrast",
-    "workbench.iconTheme": "material-icon-theme",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
     "javascript.updateImportsOnFileMove.enabled": "always",
     "javascript.autoClosingTags": false,
     "javascript.suggest.completeFunctionCalls": true,
@@ -19,9 +28,5 @@
         "javascriptreact",
         "typescript",
         "typescriptreact"
-    ],
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
-    "material-icon-theme.activeIconPack": "react_redux"
+    ]
 }
