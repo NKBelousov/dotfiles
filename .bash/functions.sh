@@ -60,6 +60,7 @@ daily(){
   npm i -g ${npm_packages[@]};
   cat ~/.config/dconf/palette | dconf load /org/gnome/terminal/ | dconf update;
   vim +PlugInstall +PlugClean +PlugUpdate +PlugUpgrade +qall;
+  code-uninstall-unused-extensions;
   code-install-extensions;
   notify-send "Ready to work!";
 }
@@ -70,4 +71,8 @@ code-install-extensions(){
 
 code-save-extensions(){
   code --list-extensions > "${DOTFILES_PATH}.config/Code/User/extensions"
+}
+
+code-uninstall-unused-extensions(){
+  diff ~/.config/Code/User/extensions ~/Projects/dotfiles/.config/Code/User/extensions | grep '<' | cut -d ' ' -f 2 | xargs -I {} code --uninstall-extension {};
 }
