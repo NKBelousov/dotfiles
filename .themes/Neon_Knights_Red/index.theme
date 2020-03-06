@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Neon Knights Red
+Comment=Neon Dark Theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+Name=Neon Knights Red
+GtkTheme=Neon_Knights_Red
+MetacityTheme=Neon_Knights_Red
+IconTheme=Neon-Knights-Red-Folders
+CursorTheme=DMZ-White
+ButtonLayout=:minimize,maximize,close
+

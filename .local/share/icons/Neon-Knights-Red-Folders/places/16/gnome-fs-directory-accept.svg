@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="svg6">
+  <defs id="defs3051">
+    <style id="current-color-scheme">
+      .ColorScheme-Text {
+        color:#f9f9f9;
+      }
+      .ColorScheme-Highlight {
+        color:#E0DFD8;
+	  </style>
+	</defs>
+  <path
+     style="fill:#ff0400;stroke-width:0.78200001;marker:none"
+     d="m 3.306,2.132 c 0,0 -1.176,-0.024 -1.176,1.15 L 2.186,7.074 C 2.41,6.947 2.647,6.979 2.876,6.909 L 2.832,3.894 c 0,-0.497 0.25,-0.74 0.5,-0.859 C 3.581,2.915 3.83,2.92 3.83,2.92 h 2.66 l 1.84,1.84 4.347,0.29 0.408,0.021 0.757,0.601 0.026,-0.802 C 13.908,3.698 12.694,3.697 12.694,3.697 H 8.391 L 6.826,2.132 Z"
+     class="ColorScheme-Highlight"
+     id="path4"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:currentColor;fill-opacity:1;stroke:none"
+     d="M 7.609,4.48 6.044,6.043 H 3.306 c 0,0 -1.174,0 -1.174,1.174 v 6.65 h 10.562 c 0,0 1.174,0 1.174,-1.174 L 13.87,5.627 c 0,-1.173 -1.176,-1.149 -1.176,-1.149 z m 0.445,0.633 h 4.041 c 0,0 0.989,-0.02 0.989,0.936 v 6.148 c 0,0.956 -1.018,0.957 -1.018,0.957 H 2.89 L 2.888,7.729 c 0,-0.957 1.02,-0.957 1.02,-0.957 h 2.379 l 0.41,-0.384 z"
+     class="ColorScheme-Text"
+     id="path6"
+     inkscape:connector-curvature="0" />
+</svg>
