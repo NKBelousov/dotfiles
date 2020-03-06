@@ -14,20 +14,11 @@ daily(){
   cd -;
   \. ~/.bashrc;
   local essential=(
-  "acpi"
-  "composer"
   "curl"
-  "exuberant-ctags"
   "fonts-powerline"
   "git"
   "htop"
   "iotop"
-  "keepassx"
-  "menulibre"
-  "numix-gtk-theme"
-  "python-pip"
-  "python3-pip"
-  "ranger"
   "snapd"
   "taskwarrior"
   "thunar"
@@ -41,11 +32,6 @@ daily(){
   sudo apt autoremove --yes;
   sudo apt autoclean --yes;
   sudo apt install ${essential[@]};
-  local pip=(
-  "flake8"
-  "jedi"
-  )
-  pip install --user ${pip[@]};
   sudo snap install rg;
   nvm-check;
   local npm_packages=(
