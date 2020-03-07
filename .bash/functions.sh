@@ -26,6 +26,7 @@ daily(){
   "tree"
   "vim"
   "xfce4"
+  "xfce4-terminal"
   )
   sudo apt update --yes;
   sudo apt full-upgrade --yes;
