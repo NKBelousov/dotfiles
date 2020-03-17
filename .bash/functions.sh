@@ -45,7 +45,6 @@ daily(){
   "tldr"
   )
   npm i -g ${npm_packages[@]};
-  cat ~/.config/dconf/palette | dconf load /org/gnome/terminal/ | dconf update;
   vim +PlugInstall +PlugClean +PlugUpdate +PlugUpgrade +qall;
   code-uninstall-unused-extensions;
   code-install-extensions;
