@@ -6,7 +6,7 @@
     "when": "textInputFocus"
   },
   {
-    "key": "ctrl+alt+i",
+    "key": "ctrl+m",
     "command": "editor.action.insertCursorAtEndOfEachLineSelected",
     "when": "editorTextFocus"
   },
@@ -28,5 +28,9 @@
     "key": "ctrl+alt+w",
     "when": "sideBarFocus",
     "command": "workbench.action.focusActiveEditorGroup"
+  },
+  {
+    "key": "ctrl+m",
+    "command": "-editor.action.toggleTabFocusMode"
   },
 ]
