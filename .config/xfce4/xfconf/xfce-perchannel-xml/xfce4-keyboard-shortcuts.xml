@@ -12,6 +12,7 @@
       </property>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="empty"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="empty"/>
       <property name="XF86Display" type="empty"/>
       <property name="&lt;Super&gt;p" type="empty"/>
       <property name="&lt;Primary&gt;Escape" type="empty"/>
@@ -19,7 +20,6 @@
       <property name="XF86Mail" type="empty"/>
       <property name="Print" type="empty"/>
       <property name="Super_L" type="empty"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="empty"/>
     </property>
     <property name="custom" type="empty">
       <property name="&lt;Alt&gt;F3" type="string" value="xfce4-appfinder">
@@ -155,7 +155,6 @@
       <property name="&lt;Alt&gt;F4" type="string" value="close_window_key"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;Left" type="string" value="move_window_left_key"/>
       <property name="&lt;Alt&gt;F6" type="string" value="stick_window_key"/>
-      <property name="&lt;Alt&gt;F10" type="string" value="maximize_window_key"/>
       <property name="&lt;Alt&gt;F12" type="string" value="above_key"/>
       <property name="&lt;Alt&gt;F9" type="string" value="hide_window_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Down" type="string" value="down_workspace_key"/>
@@ -193,13 +192,14 @@
       <property name="&lt;Alt&gt;KP_Insert" type="string" value="maximize_horiz_key"/>
       <property name="&lt;Alt&gt;KP_Delete" type="string" value="maximize_vert_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;i" type="string" value="tile_up_key"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;k" type="string" value="tile_down_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;j" type="string" value="tile_left_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="string" value="tile_right_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;u" type="string" value="tile_up_left_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;o" type="string" value="tile_up_right_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;m" type="string" value="tile_down_left_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;period" type="string" value="tile_down_right_key"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;comma" type="string" value="tile_down_key"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;k" type="string" value="maximize_window_key"/>
     </property>
   </property>
   <property name="providers" type="array">
