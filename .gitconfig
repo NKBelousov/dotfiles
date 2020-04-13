@@ -11,7 +11,7 @@
   lgas = "!f() { git lga --stat $@; }; f"
   lgs = "!f() { git lg --stat $@; }; f"
   lgp = log -u --pretty=fuller
-  rlg = reflog --date=iso
+  rlg = reflog --format='%C(auto)%h %<|(20)%gd %C(blue)%cr%C(reset) %gs (%s)'
   ##### Adding
   aa = add --all
   ai = add --interactive
