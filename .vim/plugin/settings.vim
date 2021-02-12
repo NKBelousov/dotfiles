@@ -23,8 +23,6 @@ set fileformats=unix,dos
 set fileencodings=utf-8,cp1251,koi8-r,ucs-2,cp866
 
 set relativenumber " show line numbers relative to current
-set cursorline " highlight current line
-set cursorcolumn " highlight current column
 set colorcolumn=80 " show vertical line over 80 character limit
 set showcmd " show partial command in the last line of the screen
 set laststatus=2 " always show status line
@@ -50,11 +48,8 @@ else
   echo "ripgrep is not installed"
 endif
 
-set background=dark
-colorscheme onedark
-let g:lightline = {
-  \ 'colorscheme': 'one',
-  \}
+set background=light
+colorscheme desert
 
 let g:jsx_ext_required = 0 " allow jsx in .js files
 let NERDTreeShowHidden = 1
